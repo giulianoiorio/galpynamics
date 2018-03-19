@@ -1,4 +1,0 @@
-numpy>=1.9
-scipy>=0.19
-matplotlib
-emcee

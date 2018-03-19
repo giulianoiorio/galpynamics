@@ -1,3 +1,4 @@
+#cython: language_level=3, boundscheck=False
 from __future__ import print_function
 import pip
 import time
