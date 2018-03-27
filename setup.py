@@ -41,11 +41,11 @@ except:
 
 
 
-from setuptools import setup
+#from setuptools import setup
 import shutil
 import os
 from Cython.Distutils import build_ext
-from distutils.core import Extension
+from distutils.core import setup, Extension
 from Cython.Build import cythonize
 import sysconfig
 import numpy
@@ -96,44 +96,44 @@ np_inc=numpy.get_include()
 
 
 gh=['galpynamics/src/pot_halo/pot_c_ext/general_halo.pyx']
-gh_ext=Extension('galpynamics/src/pot_halo/pot_c_ext/general_halo',sources=gh)
+gh_ext=Extension('galpynamics.src.pot_halo.pot_c_ext.general_halo',sources=gh)
 
 ih=['galpynamics/src/pot_halo/pot_c_ext/isothermal_halo.pyx']
-ih_ext=Extension('galpynamics/src/pot_halo/pot_c_ext/isothermal_halo',sources=ih)
+ih_ext=Extension('galpynamics.src.pot_halo.pot_c_ext.isothermal_halo',sources=ih)
 
 infw=['galpynamics/src/pot_halo/pot_c_ext/nfw_halo.pyx']
-infw_ext=Extension('galpynamics/src/pot_halo/pot_c_ext/nfw_halo',sources=infw)
+infw_ext=Extension('galpynamics.src.pot_halo.pot_c_ext.nfw_halo',sources=infw)
 
 iab=['galpynamics/src/pot_halo/pot_c_ext/alfabeta_halo.pyx']
-iab_ext=Extension('galpynamics/src/pot_halo/pot_c_ext/alfabeta_halo',sources=iab,libraries=cy_gsl_lib,library_dirs=[cy_gsl_lib_dic],include_dirs=[cy_gsl_inc_cy])
+iab_ext=Extension('galpynamics.src.pot_halo.pot_c_ext.alfabeta_halo',sources=iab,libraries=cy_gsl_lib,library_dirs=[cy_gsl_lib_dic],include_dirs=[cy_gsl_inc_cy])
 
 ph=['galpynamics/src/pot_halo/pot_c_ext/plummer_halo.pyx']
-ph_ext=Extension('galpynamics/src/pot_halo/pot_c_ext/plummer_halo',sources=ph)
+ph_ext=Extension('galpynamics.src.pot_halo.pot_c_ext.plummer_halo',sources=ph)
 
 eh=['galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx']
-eh_ext=Extension('galpynamics/src/pot_halo/pot_c_ext/einasto_halo',sources=eh,libraries=cy_gsl_lib,library_dirs=[cy_gsl_lib_dic],include_dirs=[cy_gsl_inc_cy])
+eh_ext=Extension('galpynamics.src.pot_halo.pot_c_ext.einasto_halo',sources=eh,libraries=cy_gsl_lib,library_dirs=[cy_gsl_lib_dic],include_dirs=[cy_gsl_inc_cy])
 
 exh=['galpynamics/src/pot_halo/pot_c_ext/exponential_halo.pyx']
-exh_ext=Extension('galpynamics/src/pot_halo/pot_c_ext/exponential_halo',sources=exh)
+exh_ext=Extension('galpynamics.src.pot_halo.pot_c_ext.exponential_halo',sources=exh)
 
 
 vh=['galpynamics/src/pot_halo/pot_c_ext/valy_halo.pyx']
-vh_ext=Extension('galpynamics/src/pot_halo/pot_c_ext/valy_halo',sources=vh)
+vh_ext=Extension('galpynamics.src.pot_halo.pot_c_ext.valy_halo',sources=vh)
 
 gd=['galpynamics/src/pot_disc/pot_c_ext/integrand_functions.pyx']
-gd_ext=Extension('galpynamics/src/pot_disc/pot_c_ext/integrand_functions',libraries=cy_gsl_lib,library_dirs=[cy_gsl_lib_dic],include_dirs=[cy_gsl_inc_cy, np_inc],sources=gd)
+gd_ext=Extension('galpynamics.src.pot_disc.pot_c_ext.integrand_functions',libraries=cy_gsl_lib,library_dirs=[cy_gsl_lib_dic],include_dirs=[cy_gsl_inc_cy, np_inc],sources=gd)
 
 rd=['galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx']
-rd_ext=Extension('galpynamics/src/pot_disc/pot_c_ext/rdens_law',sources=rd)
+rd_ext=Extension('galpynamics.src.pot_disc.pot_c_ext.rdens_law',sources=rd)
 
 fd=['galpynamics/src/pot_disc/pot_c_ext/rflare_law.pyx']
-fd_ext=Extension('galpynamics/src/pot_disc/pot_c_ext/rflare_law',sources=fd)
+fd_ext=Extension('galpynamics.src.pot_disc.pot_c_ext.rflare_law',sources=fd)
 
 zd=['galpynamics/src/pot_disc/pot_c_ext/zdens_law.pyx']
-zd_ext=Extension('galpynamics/src/pot_disc/pot_c_ext/zdens_law',sources=zd)
+zd_ext=Extension('galpynamics.src.pot_disc.pot_c_ext.zdens_law',sources=zd)
 
 vcirc=['galpynamics/src/pot_disc/pot_c_ext/integrand_vcirc.pyx']
-vcirc_ext=Extension('galpynamics/src/pot_disc/pot_c_ext/integrand_vcirc', sources=vcirc,libraries=cy_gsl_lib,library_dirs=[cy_gsl_lib_dic],include_dirs=[cy_gsl_inc_cy, np_inc])
+vcirc_ext=Extension('galpynamics.src.pot_disc.pot_c_ext.integrand_vcirc', sources=vcirc,libraries=cy_gsl_lib,library_dirs=[cy_gsl_lib_dic],include_dirs=[cy_gsl_inc_cy, np_inc])
 
 #ext_modules=cythonize([cy_ext,gh_ext,ih_ext,infw_ext,gd_ext,rd_ext,fd_ext])
 
