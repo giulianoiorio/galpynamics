@@ -105,7 +105,7 @@ cdef double  _potential_einasto(double R, double Z, double mcut, double d0, doub
     m0=m_calc(R,Z,e)
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.einasto_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.einasto_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'integrand_einasto')
 
 
@@ -135,7 +135,7 @@ cdef double[:,:]  _potential_einasto_array(double[:] R, double[:] Z, int nlen, d
 
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.einasto_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.einasto_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'integrand_einasto')
 
 
@@ -173,7 +173,7 @@ cdef double[:,:]  _potential_einasto_grid(double[:] R, double[:] Z, int nlenR, i
 
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.einasto_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.einasto_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'integrand_einasto')
 
     c=0
@@ -267,7 +267,7 @@ cdef double _vcirc_einasto(double R, double d0, double rs, double n, double e, d
         double result
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.einasto_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.einasto_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'vcirc_integrand_einasto')
 
     intvcirc=quad(fintegrand,0.,R,args=(R,rs,n,e),epsabs=toll,epsrel=toll)[0]
@@ -300,7 +300,7 @@ cdef double[:,:] _vcirc_einasto_array(double[:] R, int nlen, double d0, double r
 
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.einasto_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.einasto_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'vcirc_integrand_einasto')
 
     for  i in range(nlen):

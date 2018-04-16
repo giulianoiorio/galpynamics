@@ -417,7 +417,7 @@ cdef double _potential_disc(double R, double Z, int zlaw, double sigma0, double 
 
 
     #Integ
-    import discH.src.pot_disc.pot_c_ext.integrand_functions as mod
+    import galpynamics.src.pot_disc.pot_c_ext.integrand_functions as mod
     if zlaw==0:
         fintegrand=LowLevelCallable.from_cython(mod,'integrand_zexp')
     elif zlaw==1:
@@ -482,7 +482,7 @@ cdef double[:,:] _potential_disc_array(double[:] R, double[:] Z, int nlen , int 
 
 
     #Integ
-    import discH.src.pot_disc.pot_c_ext.integrand_functions as mod
+    import galpynamics.src.pot_disc.pot_c_ext.integrand_functions as mod
     if zlaw==0:
         fintegrand=LowLevelCallable.from_cython(mod,'integrand_zexp')
     elif zlaw==1:
@@ -556,7 +556,7 @@ cdef double[:,:] _potential_disc_grid(double[:] R, double[:] Z, int nlenR, int n
 
 
     #Integ
-    import discH.src.pot_disc.pot_c_ext.integrand_functions as mod
+    import galpynamics.src.pot_disc.pot_c_ext.integrand_functions as mod
     if zlaw==0:
         fintegrand=LowLevelCallable.from_cython(mod,'integrand_zexp')
     elif zlaw==1:
@@ -701,7 +701,7 @@ cdef double _potential_disc_thin(double R, double Z, double sigma0, double check
 
 
     #Integ
-    import discH.src.pot_disc.pot_c_ext.integrand_functions as mod
+    import galpynamics.src.pot_disc.pot_c_ext.integrand_functions as mod
     fintegrand=LowLevelCallable.from_cython(mod,'integrand_zdirac')
 
     cdef:
@@ -746,7 +746,7 @@ cdef double[:,:] _potential_disc_thin_array(double[:] R, double[:] Z, int nlen, 
 
 
     #Integ
-    import discH.src.pot_disc.pot_c_ext.integrand_functions as mod
+    import galpynamics.src.pot_disc.pot_c_ext.integrand_functions as mod
     fintegrand=LowLevelCallable.from_cython(mod,'integrand_zdirac')
 
     cdef:
@@ -800,7 +800,7 @@ cdef double[:,:] _potential_disc_thin_grid(double[:] R, double[:] Z, int nlenR, 
 
 
     #Integ
-    import discH.src.pot_disc.pot_c_ext.integrand_functions as mod
+    import galpynamics.src.pot_disc.pot_c_ext.integrand_functions as mod
     fintegrand=LowLevelCallable.from_cython(mod,'integrand_zdirac')
 
     cdef:

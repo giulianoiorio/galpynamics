@@ -91,7 +91,7 @@ cdef double _potential_nfw(double R, double Z, double mcut, double d0, double rs
 
     m0=m_calc(R,Z,e)
 
-    import discH.src.pot_halo.pot_c_ext.nfw_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.nfw_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'integrand_hnfw')
 
     intpot=quad(fintegrand,0.,m0,args=(R,Z,mcut,d0,rs,e),epsabs=toll,epsrel=toll)[0]
@@ -132,7 +132,7 @@ cdef double[:,:]  _potential_nfw_array(double[:] R, double[:] Z, int nlen, doubl
 
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.nfw_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.nfw_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'integrand_hnfw')
 
     for  i in range(nlen):
@@ -184,7 +184,7 @@ cdef double[:,:]  _potential_nfw_grid(double[:] R, double[:] Z, int nlenR, int n
 
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.nfw_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.nfw_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'integrand_hnfw')
 
     c=0
@@ -327,7 +327,7 @@ cdef double _vcirc_nfw(double R, double d0, double rs, double e, double toll):
         double rc=rs
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.nfw_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.nfw_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'vcirc_integrand_nfw')
 
     intvcirc=quad(fintegrand,0.,R,args=(R,rc,e),epsabs=toll,epsrel=toll)[0]
@@ -359,7 +359,7 @@ cdef double[:,:] _vcirc_nfw_array(double[:] R, int nlen, double d0, double rs, d
 
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.nfw_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.nfw_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'vcirc_integrand_nfw')
 
     for  i in range(nlen):

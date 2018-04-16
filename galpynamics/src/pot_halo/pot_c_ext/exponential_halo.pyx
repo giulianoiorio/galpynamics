@@ -63,7 +63,7 @@ cdef double  _potential_exponential(double R, double Z, double mcut, double d0, 
     m0=m_calc(R,Z,e)
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.exponential_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.exponential_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'integrand_exponential')
 
     intpot=quad(fintegrand,0.,m0,args=(R,Z,mcut,d0,rb,e),epsabs=toll,epsrel=toll)[0]
@@ -91,7 +91,7 @@ cdef double[:,:]  _potential_exponential_array(double[:] R, double[:] Z, int nle
 
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.exponential_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.exponential_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'integrand_exponential')
 
 
@@ -129,7 +129,7 @@ cdef double[:,:]  _potential_exponential_grid(double[:] R, double[:] Z, int nlen
 
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.exponential_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.exponential_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'integrand_exponential')
 
     c=0
@@ -217,7 +217,7 @@ cdef double _vcirc_exponential(double R, double d0, double rb, double e, double 
         double result
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.exponential_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.exponential_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'vcirc_integrand_exponential')
 
     intvcirc=quad(fintegrand,0.,R,args=(R,rb,e),epsabs=toll,epsrel=toll)[0]
@@ -249,7 +249,7 @@ cdef double[:,:] _vcirc_exponential_array(double[:] R, int nlen, double d0, doub
 
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.exponential_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.exponential_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'vcirc_integrand_exponential')
 
     for  i in range(nlen):

@@ -84,7 +84,7 @@ cdef double  _potential_iso(double R, double Z, double mcut, double d0, double r
     m0=m_calc(R,Z,e)
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.isothermal_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.isothermal_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'integrand_hiso')
 
     intpot=quad(fintegrand,0.,m0,args=(R,Z,mcut,d0,rc,e),epsabs=toll,epsrel=toll)[0]
@@ -127,7 +127,7 @@ cdef double[:,:]  _potential_iso_array(double[:] R, double[:] Z, int nlen, doubl
 
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.isothermal_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.isothermal_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'integrand_hiso')
 
     for  i in range(nlen):
@@ -183,7 +183,7 @@ cdef double[:,:]  _potential_iso_grid(double[:] R, double[:] Z, int nlenR, int n
 
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.isothermal_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.isothermal_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'integrand_hiso')
 
     c=0
@@ -332,7 +332,7 @@ cdef double _vcirc_iso(double R, double d0, double rc, double e, double toll):
         double result
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.isothermal_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.isothermal_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'vcirc_integrand_iso')
 
     intvcirc=quad(fintegrand,0.,R,args=(R,rc,e),epsabs=toll,epsrel=toll)[0]
@@ -364,7 +364,7 @@ cdef double[:,:] _vcirc_iso_array(double[:] R, int nlen, double d0, double rc, d
 
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.isothermal_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.isothermal_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'vcirc_integrand_iso')
 
     for  i in range(nlen):

@@ -102,7 +102,7 @@ cdef double  _potential_alfabeta(double R, double Z, double mcut, double d0, dou
     m0=m_calc(R,Z,e)
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.alfabeta_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.alfabeta_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'integrand_alfabeta')
 
     intpot=quad(fintegrand,0.,m0,args=(R,Z,mcut,d0,alfa, beta, rc,e),epsabs=toll,epsrel=toll)[0]
@@ -144,7 +144,7 @@ cdef double[:,:]  _potential_alfabeta_array(double[:] R, double[:] Z, int nlen, 
 
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.alfabeta_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.alfabeta_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'integrand_alfabeta')
 
     for  i in range(nlen):
@@ -200,7 +200,7 @@ cdef double[:,:]  _potential_alfabeta_grid(double[:] R, double[:] Z, int nlenR, 
 
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.alfabeta_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.alfabeta_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'integrand_alfabeta')
 
     c=0
@@ -317,7 +317,7 @@ cdef double _vcirc_alfabeta(double R, double d0, double rc, double alpha, double
         double result
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.alfabeta_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.alfabeta_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'vcirc_integrand_afabeta')
 
     intvcirc=quad(fintegrand,0.,R,args=(R,rc,alpha,beta,e),epsabs=toll,epsrel=toll)[0]
@@ -349,7 +349,7 @@ cdef double[:,:] _vcirc_alfabeta_array(double[:] R, int nlen, double d0, double 
 
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.alfabeta_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.alfabeta_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'vcirc_integrand_alfabeta')
 
     for  i in range(nlen):

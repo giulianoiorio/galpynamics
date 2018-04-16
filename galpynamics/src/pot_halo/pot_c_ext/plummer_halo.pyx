@@ -61,7 +61,7 @@ cdef double  _potential_plummer(double R, double Z, double mcut, double d0, doub
     m0=m_calc(R,Z,e)
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.plummer_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.plummer_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'integrand_plummer')
 
     intpot=quad(fintegrand,0.,m0,args=(R,Z,mcut,d0,rc,e),epsabs=toll,epsrel=toll)[0]
@@ -88,7 +88,7 @@ cdef double[:,:]  _potential_plummer_array(double[:] R, double[:] Z, int nlen, d
 
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.plummer_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.plummer_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'integrand_plummer')
 
 
@@ -130,7 +130,7 @@ cdef double[:,:]  _potential_plummer_grid(double[:] R, double[:] Z, int nlenR, i
 
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.plummer_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.plummer_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'integrand_plummer')
 
     c=0
@@ -254,7 +254,7 @@ cdef double _vcirc_plummer(double R, double d0, double rc, double e, double toll
         double result
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.plummer_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.plummer_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'vcirc_integrand_plummer')
 
     intvcirc=quad(fintegrand,0.,R,args=(R,rc,e),epsabs=toll,epsrel=toll)[0]
@@ -286,7 +286,7 @@ cdef double[:,:] _vcirc_plummer_array(double[:] R, int nlen, double d0, double r
 
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.plummer_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.plummer_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'vcirc_integrand_plummer')
 
     for  i in range(nlen):

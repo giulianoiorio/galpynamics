@@ -493,7 +493,7 @@ cdef double _vcirc_disc(double R, int zlaw, double sigma0, double checkrd, doubl
 
 
     #Integ
-    import discH.src.pot_disc.pot_c_ext.integrand_vcirc as mod
+    import galpynamics.src.pot_disc.pot_c_ext.integrand_vcirc as mod
     if zlaw==0:
         fintegrand=LowLevelCallable.from_cython(mod,'integrand_vcirc_zexp')
     elif zlaw==1:
@@ -565,7 +565,7 @@ cpdef double[:,:] _vcirc_disc_array(double[:] R, int nlen, int zlaw, double sigm
 
 
     #Integ
-    import discH.src.pot_disc.pot_c_ext.integrand_vcirc as mod
+    import galpynamics.src.pot_disc.pot_c_ext.integrand_vcirc as mod
     if zlaw==0:
         fintegrand=LowLevelCallable.from_cython(mod,'integrand_vcirc_zexp')
     elif zlaw==1:
@@ -705,7 +705,7 @@ cdef double _vcirc_disc_thin(double R, double sigma0, double checkrd,  double[:]
 
 
     #Integ
-    import discH.src.pot_disc.pot_c_ext.integrand_vcirc as mod
+    import galpynamics.src.pot_disc.pot_c_ext.integrand_vcirc as mod
     fintegrand=LowLevelCallable.from_cython(mod,'integrand_vcirc_zdirac')
 
     cdef:
@@ -759,7 +759,7 @@ cpdef double[:,:] _vcirc_disc_thin_array(double[:] R, int nlen, double sigma0, d
 
 
     #Integ
-    import discH.src.pot_disc.pot_c_ext.integrand_vcirc as mod
+    import galpynamics.src.pot_disc.pot_c_ext.integrand_vcirc as mod
     fintegrand=LowLevelCallable.from_cython(mod,'integrand_vcirc_zdirac')
 
 

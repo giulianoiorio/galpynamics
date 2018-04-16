@@ -63,7 +63,7 @@ cdef double  _potential_valy(double R, double Z, double mcut, double d0, double 
     m0=m_calc(R,Z,e)
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.valy_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.valy_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'integrand_valy')
 
     intpot=quad(fintegrand,0.,m0,args=(R,Z,mcut,d0,rb,e),epsabs=toll,epsrel=toll)[0]
@@ -91,7 +91,7 @@ cdef double[:,:]  _potential_valy_array(double[:] R, double[:] Z, int nlen, doub
 
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.valy_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.valy_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'integrand_valy')
 
 
@@ -129,7 +129,7 @@ cdef double[:,:]  _potential_valy_grid(double[:] R, double[:] Z, int nlenR, int 
 
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.valy_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.valy_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'integrand_valy')
 
     c=0
@@ -217,7 +217,7 @@ cdef double _vcirc_valy(double R, double d0, double rb, double e, double toll):
         double result
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.valy_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.valy_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'vcirc_integrand_valy')
 
     intvcirc=quad(fintegrand,0.,R,args=(R,rb,e),epsabs=toll,epsrel=toll)[0]
@@ -249,7 +249,7 @@ cdef double[:,:] _vcirc_valy_array(double[:] R, int nlen, double d0, double rb, 
 
 
     #Integ
-    import discH.src.pot_halo.pot_c_ext.valy_halo as mod
+    import galpynamics.src.pot_halo.pot_c_ext.valy_halo as mod
     fintegrand=LowLevelCallable.from_cython(mod,'vcirc_integrand_valy')
 
     for  i in range(nlen):
