@@ -32,7 +32,7 @@ def test_isothermal_halo():
     try:
         a=galpynamics.isothermal_halo(d0,rc,e,mcut)
         t1=timer()
-        a.potential(R,Z,grid=False, toll=1e-4,nproc=4)
+        a.potential(R,Z,grid=False, toll=1e-4,nproc=2)
         t2=timer()
         timem=t2-t1
         checkm='Success'
@@ -59,7 +59,7 @@ def test_isothermal_halo():
     try:
         a = galpynamics.isothermal_halo(d0, rc, e, mcut)
         t1 = timer()
-        a.potential(R, Z, grid=False, toll=1e-4, nproc=4)
+        a.potential(R, Z, grid=False, toll=1e-4, nproc=2)
         t2 = timer()
         timem=t2-t1
         checkm = 'Success'
