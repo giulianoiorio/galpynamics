@@ -409,6 +409,30 @@ class NFW_halo(halo):
 
         return cls(d0=d0, rs=rs, e=e, mcut=mcut)
 
+    @classmethod
+    def cosmoM(cls, c, M200, H=67, e=0, mcut=100):
+        """
+
+        :param c:
+        :param M200:  Msun
+        :param H:  km/s/Mpc
+        :return:
+        """
+
+
+        rho_crit=8340.*(H/67.)*(H/67.)
+        lc=np.log(1+c)
+        denc=c/(1+c)
+        delta_c=(c*c*c) / (lc - denc)
+        d0=rho_crit*delta_c
+
+        num=3*M200
+        den=(c*c*c)*rho_crit*(800*np.pi)
+        rs = num / den
+
+
+        return cls(d0=d0, rs=rs, e=e, mcut=mcut)
+
 
     def _potential_serial(self, R, Z, grid=False, toll=1e-4, mcut=None):
         """Calculate the potential in R and Z using a serial code
