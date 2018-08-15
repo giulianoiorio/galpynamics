@@ -88,7 +88,7 @@ class galpotential:
 
         return arr
 
-    def potential(self,R,Z,grid=False,nproc=2, toll=1e-4, Rcut=None, zcut=None, mcut=None,external_potential=None, output='1D',show_comp=True):
+    def potential(self,R,Z,grid=False,nproc=2, toll=1e-4, Rcut=None, zcut=None, mcut=None,external_potential=None, output='1D',show_comp=True, verbose=False):
 
 
         if output=='1D': Dgrid=False
@@ -101,7 +101,7 @@ class galpotential:
         self.external_potential=external_potential
 
         #External potential
-        print('External potential: ',end='')
+        if verbose: print('External potential: ',end='')
         sys.stdout.flush()
         if external_potential is not None:
             if len(external_potential)!=len(grid_final):
@@ -116,7 +116,7 @@ class galpotential:
         #Calc potential
         i=0
         for comp in self.dynamic_components:
-            print('Calculating Potential of the %ith component (%s)...'%(i+1,comp.name),end='')
+            if verbose: print('Calculating Potential of the %ith component (%s)...'%(i+1,comp.name),end='')
             sys.stdout.flush()
             if isinstance(comp, halo):
                 tini=time.time()
@@ -127,7 +127,7 @@ class galpotential:
                 grid_tmp = comp.potential(R,Z,grid=grid,toll=toll,Rcut=Rcut, zcut=zcut, nproc=nproc,output='1D')
                 tfin=time.time()
             tottime=tfin-tini
-            print('Done (%.2f s)'%tottime)
+            if verbose: print('Done (%.2f s)'%tottime)
             if i==0:
                 grid_final[:,0]=grid_tmp[:,0]
                 grid_final[:,1]=grid_tmp[:,1]
@@ -139,7 +139,7 @@ class galpotential:
                 grid_final[:,2]+=grid_tmp[:,2]
                 grid_complete[:,2+i]=grid_tmp[:,2]
             i+=1
-        grid_complete[:,-1]=np.sum(grid_complete[:,2:-2],axis=1)
+        grid_complete[:,-1]=np.sum(grid_complete[:,2:-1],axis=1)
 
         self.potential_grid=grid_final
         self.potential_grid_complete=grid_complete
@@ -302,10 +302,25 @@ class galpotential:
 
     def dynamic_components_info(self):
 
-        i=0
         print('Number of dynamical components: ',self.ncomp)
-        for comp in self.dynamic_components:
+        for i,comp in enumerate(self.dynamic_components):
 
             print('Components:',i)
             print(comp)
             i+=1
+            
+            
+    def __str__(self):
+        s='%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% \n'
+        s+='Number of dynamical components: %i \n'%self.ncomp
+        for i,comp in enumerate(self.dynamic_components):
+            s+='-------------------\n'
+            s+='Components: %i \n'%i
+            s+=comp.__str__()
+            s+='-------------------\n'
+            i+=1
+        s+='%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% \n'
+                
+            
+        return s
+            

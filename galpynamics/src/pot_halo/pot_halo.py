@@ -99,7 +99,7 @@ class halo(object):
         else:
             self.mcut=mcut
 
-        if nproc==1 or ndim<100000:
+        if nproc==1 or ndim<1000:
             ret_array = self._potential_serial(R=R,Z=Z,grid=grid,toll=toll,mcut=mcut)
         else:
             ret_array = self._potential_parallel(R=R, Z=Z, grid=grid, toll=toll, mcut=mcut,nproc=nproc)
@@ -257,6 +257,7 @@ class halo(object):
 
         return s
 
+'''
 #TODO: la vcirc dell alone isotermo e analitica per ogni e, implementare la formula nella mia tesi
 class isothermal_halo(halo):
 
@@ -306,12 +307,13 @@ class isothermal_halo(halo):
         pardo.set_func(potential_iso)
 
         if len(R)!=len(Z) or grid==True:
-
-            htab=pardo.run_grid(R,args=(Z,self.d0,self.rc,self.e, mcut,self.toll,grid))
+            
+            
+            htab=pardo.run_grid(R,args=(Z,self.d0,self.rc,self.e, mcut,self.toll,grid),_sorted='sort')
 
         else:
 
-            htab = pardo.run(R,Z, args=(self.d0, self.rc, self.e, mcut, self.toll, grid))
+            htab = pardo.run(R,Z, args=(self.d0, self.rc, self.e, mcut, self.toll, grid),_sorted='input')
 
 
         return htab
@@ -323,8 +325,9 @@ class isothermal_halo(halo):
         :return:
         """
         self.set_toll(toll)
-
-        return np.array(vcirc_iso(R, self.d0, self.rc, self.e, toll=self.toll))
+        
+        
+        return np.array(vcirc_iso(R[idx_sort], self.d0, self.rc, self.e, toll=self.toll))
 
     def _vcirc_parallel(self, R, toll=1e-4, nproc=1):
         """Calculate the Vcirc in R using a parallelized code
@@ -339,7 +342,7 @@ class isothermal_halo(halo):
         pardo=ParDo(nproc=nproc)
         pardo.set_func(vcirc_iso)
 
-        htab=pardo.run_grid(R,args=(self.d0, self.rc, self.e, self.toll))
+        htab=pardo.run_grid(R,args=(self.d0, self.rc, self.e, self.toll), _sorted='input')
 
         return htab
 
@@ -470,11 +473,11 @@ class NFW_halo(halo):
 
         if len(R)!=len(Z) or grid==True:
 
-            htab=pardo.run_grid(R,args=(Z,self.d0,self.rc,self.e, mcut,self.toll,grid))
+            htab=pardo.run_grid(R,args=(Z,self.d0,self.rc,self.e, mcut,self.toll,grid),_sorted='sort')
 
         else:
 
-            htab = pardo.run(R,Z, args=(self.d0, self.rc, self.e, mcut, self.toll, grid))
+            htab = pardo.run(R,Z, args=(self.d0, self.rc, self.e, mcut, self.toll, grid),_sorted='input')
 
 
         return htab
@@ -502,7 +505,7 @@ class NFW_halo(halo):
         pardo=ParDo(nproc=nproc)
         pardo.set_func(vcirc_nfw)
 
-        htab=pardo.run_grid(R,args=(self.d0, self.rc, self.e, self.toll))
+        htab=pardo.run_grid(R,args=(self.d0, self.rc, self.e, self.toll),_sorted='input')
 
         return htab
 
@@ -592,11 +595,11 @@ class alfabeta_halo(halo):
 
         if len(R)!=len(Z) or grid==True:
 
-            htab=pardo.run_grid(R,args=(Z,self.d0,self.alfa,self.beta,self.rc,self.e, mcut,self.toll,grid))
+            htab=pardo.run_grid(R,args=(Z,self.d0,self.alfa,self.beta,self.rc,self.e, mcut,self.toll,grid),_sorted='sort')
 
         else:
 
-            htab = pardo.run(R,Z, args=(self.d0, self.alfa, self.beta, self.rc, self.e, mcut, self.toll, grid))
+            htab = pardo.run(R,Z, args=(self.d0, self.alfa, self.beta, self.rc, self.e, mcut, self.toll, grid),_sorted='input')
 
 
         return htab
@@ -624,7 +627,7 @@ class alfabeta_halo(halo):
         pardo=ParDo(nproc=nproc)
         pardo.set_func(vcirc_alfabeta)
 
-        htab=pardo.run_grid(R,args=(self.d0, self.rc, self.alfa, self.beta, self.e, self.toll))
+        htab=pardo.run_grid(R,args=(self.d0, self.rc, self.alfa, self.beta, self.e, self.toll),_sorted='input')
 
         return htab
 
@@ -774,11 +777,11 @@ class plummer_halo(halo):
 
         if len(R)!=len(Z) or grid==True:
 
-            htab=pardo.run_grid(R,args=(Z,self.d0, self.rc,self.e, mcut,self.toll,grid))
+            htab=pardo.run_grid(R,args=(Z,self.d0, self.rc,self.e, mcut,self.toll,grid),_sorted='sort')
 
         else:
 
-            htab = pardo.run(R,Z, args=(self.d0, self.rc, self.e, mcut, self.toll, grid))
+            htab = pardo.run(R,Z, args=(self.d0, self.rc, self.e, mcut, self.toll, grid),_sorted='input')
 
 
         return htab
@@ -806,7 +809,7 @@ class plummer_halo(halo):
         pardo=ParDo(nproc=nproc)
         pardo.set_func(vcirc_plummer)
 
-        htab=pardo.run_grid(R,args=(self.d0, self.rc, self.e, self.toll))
+        htab=pardo.run_grid(R,args=(self.d0, self.rc, self.e, self.toll),_sorted='input')
 
         return htab
 
@@ -905,11 +908,11 @@ class einasto_halo(halo):
 
         if len(R)!=len(Z) or grid==True:
 
-            htab=pardo.run_grid(R,args=(Z,self.d0,self.rc, self.n, self.e, mcut,self.toll,grid))
+            htab=pardo.run_grid(R,args=(Z,self.d0,self.rc, self.n, self.e, mcut,self.toll,grid),_sorted='sort')
 
         else:
 
-            htab = pardo.run(R,Z, args=(self.d0, self.rc, self.n, self.e, mcut, self.toll, grid))
+            htab = pardo.run(R,Z, args=(self.d0, self.rc, self.n, self.e, mcut, self.toll, grid),_sorted='input')
         cpdef
 
         return htab
@@ -952,7 +955,7 @@ class einasto_halo(halo):
         pardo=ParDo(nproc=nproc)
         pardo.set_func(vcirc_alfabeta)
 
-        htab=pardo.run_grid(R,args=(self.d0, self.rs, self.n, self.e,self.toll))
+        htab=pardo.run_grid(R,args=(self.d0, self.rs, self.n, self.e,self.toll),_sorted='input')
 
         return htab
 
@@ -1055,11 +1058,11 @@ class valy_halo(halo):
 
         if len(R)!=len(Z) or grid==True:
 
-            htab=pardo.run_grid(R,args=(Z,self.d0, self.rc,self.e, mcut,self.toll,grid))
+            htab=pardo.run_grid(R,args=(Z,self.d0, self.rc,self.e, mcut,self.toll,grid),_sorted='sort')
 
         else:
 
-            htab = pardo.run(R,Z, args=(self.d0, self.rc, self.e, mcut, self.toll, grid))
+            htab = pardo.run(R,Z, args=(self.d0, self.rc, self.e, mcut, self.toll, grid),_sorted='input')
 
 
         return htab
@@ -1088,7 +1091,7 @@ class valy_halo(halo):
         pardo=ParDo(nproc=nproc)
         pardo.set_func(vcirc_valy)
 
-        htab=pardo.run_grid(R,args=(self.d0, self.rc, self.e, self.toll))
+        htab=pardo.run_grid(R,args=(self.d0, self.rc, self.e, self.toll),_sorted='input')
 
         return htab
 
@@ -1184,11 +1187,11 @@ class exponential_halo(halo):
 
         if len(R)!=len(Z) or grid==True:
 
-            htab=pardo.run_grid(R,args=(Z,self.d0, self.rc,self.e, mcut,self.toll,grid))
+            htab=pardo.run_grid(R,args=(Z,self.d0, self.rc,self.e, mcut,self.toll,grid),_sorted='sort')
 
         else:
 
-            htab = pardo.run(R,Z, args=(self.d0, self.rc, self.e, mcut, self.toll, grid))
+            htab = pardo.run(R,Z, args=(self.d0, self.rc, self.e, mcut, self.toll, grid),_sorted='input')
 
 
         return htab
@@ -1217,7 +1220,7 @@ class exponential_halo(halo):
         pardo=ParDo(nproc=nproc)
         pardo.set_func(vcirc_exponential)
 
-        htab=pardo.run_grid(R,args=(self.d0, self.rc, self.e, self.toll))
+        htab=pardo.run_grid(R,args=(self.d0, self.rc, self.e, self.toll),_sorted='input')
 
         return htab
 
@@ -1248,3 +1251,4 @@ class exponential_halo(halo):
         s+='mcut: %.3f \n'%self.mcut
 
         return s
+'''

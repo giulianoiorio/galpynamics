@@ -369,11 +369,13 @@ class disc(object):
         pardo=ParDo(nproc=nproc)
         pardo.set_func(potential_disc)
 
-        R=np.sort(R)
-        Z=np.sort(Z)
+        
 
         if len(R)!=len(Z) or grid==True:
-
+            
+            R=np.sort(R)
+            Z=np.sort(Z)
+            
             htab = pardo.run_grid(R,args=(Z,self.sigma0,self.rparam,self.fparam,self.zlaw,self.rlaw,self.flaw, Rcut, zcut, toll,grid))
 
         else:
@@ -400,11 +402,11 @@ class disc(object):
 
         if len(R)!=len(Z) or grid==True:
 
-            htab = pardo.run_grid(R,args=(Z,self.sigma0,self.rparam,self.rlaw, Rcut, toll, grid))
+            htab = pardo.run_grid(R,args=(Z,self.sigma0,self.rparam,self.rlaw, Rcut, toll, grid),_sorted='sort')
 
         else:
 
-            htab = pardo.run(R, Z, args=(self.sigma0,self.rparam,self.rlaw, Rcut, toll, grid))
+            htab = pardo.run(R, Z, args=(self.sigma0,self.rparam,self.rlaw, Rcut, toll, grid),_sorted='input')
 
 
         return htab
@@ -461,11 +463,12 @@ class disc(object):
 
     def _vcirc_parallel(self, R, toll=1e-4, Rcut=None, zcut=None, nproc=2, **kwargs):
 
-
+        #print('DEBUG')
+        #print(R)
         pardo=ParDo(nproc=nproc)
         pardo.set_func(vcirc_disc)
 
-        htab = pardo.run_grid(R, args=(self.sigma0, self.rparam, self.fparam, self.zlaw, self.rlaw, self.flaw, Rcut, zcut, toll))
+        htab = pardo.run_grid(R, args=(self.sigma0, self.rparam, self.fparam, self.zlaw, self.rlaw, self.flaw, Rcut, zcut, toll),_sorted='input')
 
         return htab
 
@@ -475,7 +478,7 @@ class disc(object):
         pardo=ParDo(nproc=nproc)
         pardo.set_func(vcirc_disc_thin)
 
-        htab = pardo.run_grid(R, args=(self.sigma0, self.rparam, self.rlaw, Rcut, toll))
+        htab = pardo.run_grid(R, args=(self.sigma0, self.rparam, self.rlaw, Rcut, toll),_sorted='input')
 
         return htab
 

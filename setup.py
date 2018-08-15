@@ -149,7 +149,7 @@ ext_modules=cythonize([gh_ext,ih_ext,infw_ext,gd_ext,rd_ext,fd_ext,iab_ext,ph_ex
 
 setup(
 		name='galpynamics',
-		version='0.1.dev0',
+		version='0.2.dev0',
 		author='Giuliano Iorio',
 		author_email='',
 		url='',
@@ -157,7 +157,7 @@ setup(
 		packages=['galpynamics','galpynamics/src','galpynamics/src/pot_halo','galpynamics/src/pot_halo/pot_c_ext','galpynamics/src/pardo','galpynamics/src/pot_disc', 'galpynamics/src/pot_disc/pot_c_ext', 'galpynamics/src/galpotential', 'galpynamics/src/discHeight', 'galpynamics/src/discHeight/c_ext' , 'galpynamics/src/fitlib' ],
         ext_modules=ext_modules,
         include_dirs=[np_inc,cython_gsl.get_include()],
-        install_requires=['numpy>=1.9', 'scipy>=0.19', 'matplotlib','emcee'],
+        install_requires=['numpy>=1.9', 'scipy>=0.19', 'matplotlib','emcee', 'termcolor'],
 		zip_safe=False
 )
 

@@ -46,7 +46,7 @@ class ParDo:
         self.output.put(self.func(*args))
 
 
-    def run_grid(self, array, args, _sorted=True):
+    def run_grid(self, array, args, _sorted='sort'):
         """Run func in parallel
         It parallelizes the func dividing the first argument in chunks.
         If _sorted=True, the ouput is re-sorted following the input order of the first array
@@ -64,12 +64,19 @@ class ParDo:
         if self.n == 1:
             self.process[0] = mp.Process(target=target, args=(array[:],) + args)
         else:
-            dim = int(len(array) / self.n)
-            for i in range(self.n - 1):
-                start = int(dim * i)
-                end = int(dim * (i + 1))
+            #dim = int(len(array) / self.n)
+            dim = len(array) // self.n
+            dimr = len(array) % self.n
+            start = 0
+            end = 0
+            for i in range(self.n):
+                #start = int(dim * i)
+                #end = int(dim * (i + 1))
+                start = end
+                if i<dimr: end = start + dim +1
+                else: end = start + dim
                 self.process[i] = mp.Process(target=target, args=(array[start:end],) + args)
-            self.process[-1] = mp.Process(target=target, args=(array[end:],) + args)
+            #self.process[-1] = mp.Process(target=target, args=(array[end:],) + args)
 
         # Run
         ##start
@@ -81,20 +88,26 @@ class ParDo:
         for p in self.process:
             p.join()
         ##Order
-        if _sorted:
+        if _sorted=='sort':
             #original_order=np.argsort(array, kind='mergesort')
             #final_order = np.argsort(results[:, 0], kind='mergesort')
             #results[original_order]=results[final_order]
             idx_sort=np.argsort(results[:,0], kind='mergesort')
             results=results[idx_sort]
-        else:
+        elif _sorted=='input':
+            original_order=np.argsort(array, kind='mergesort')
+            final_order = np.argsort(results[:, 0], kind='mergesort')
+            results[original_order]=results[final_order]
+        elif _sorted is None:
             pass
-
+        else:
+            raise ValueError('Sorted option %s not valid (it should be sort, input or None'%str(_sorted))
+            
         return results
 
 
 
-    def run(self, array1, array2, args, _sorted=True):
+    def run(self, array1, array2, args, _sorted='input'):
         """Run func in parallel
         It parallelizes the func dividing the first and second argument in chunks.
         If _sorted=True, the ouput is re-sorted following the input order of the first array
@@ -115,12 +128,25 @@ class ParDo:
         if self.n == 1:
             self.process[0] = mp.Process(target=target, args=(array1[:],array2[:]) + args)
         else:
-            dim = int(len(array1) / self.n)
-            for i in range(self.n - 1):
-                start = int(dim * i)
-                end = int(dim * (i + 1))
+            #dim = int(len(array1) / self.n)
+            dim = len(array1) // self.n
+            dimr = len(array1) % self.n
+            start = 0
+            end = 0
+            for i in range(self.n):
+                #start = int(dim * i)
+                #end = int(dim * (i + 1))
+                #DEBUG
+                #print('DEBUG')
+                #print(start,end)
+                #print(array1)
+                #print(array1[start:end], array2[start:end])
+                #
+                start = end
+                if i<dimr: end = start + dim +1
+                else: end = start + dim
                 self.process[i] = mp.Process(target=target, args=(array1[start:end],array2[start:end]) + args)
-            self.process[-1] = mp.Process(target=target, args=(array1[end:],array2[end:]) + args)
+            #self.process[-1] = mp.Process(target=target, args=(array1[end:],array2[end:]) + args)
 
 
         # Run
@@ -133,11 +159,16 @@ class ParDo:
         for p in self.process:
             p.join()
         ##Order
-        if _sorted:
+        if _sorted=='input':
             original_order=np.argsort(array1, kind='mergesort')
             final_order = np.argsort(results[:, 0], kind='mergesort')
             results[original_order]=results[final_order]
-        else:
+        elif _sorted=='sort':
+            idx_sort=np.argsort(results[:,0], kind='mergesort')
+            results=results[idx_sort]
+        elif _sorted is None:
             pass
+        else:
+            raise ValueError('Sorted option %s not valid (it should be sort, input or None'%str(_sorted))
 
         return results

@@ -1,0 +1,7 @@
+v0.2dev0 (15-08-2018)
+==================
+
+- Resolved bugs on the parallel estimate of potential and vcirc
+- Resolved bug on the estimate of a combined Galpotential model (essentially it didn't take into account the external potential component in the final estimate of potential)
+- Added the MWBinney11 and MWMcMillan17 MW dynamical models based on the works of Binney+11 and McMillan+17
+-Added a test script for the potentials implementation
