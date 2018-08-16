@@ -1,7 +1,7 @@
 #cython: language_level=3, boundscheck=False, cdivision=True, wraparound=False
 from libc.math cimport sqrt, log, asin, exp, fabs, cosh
 from cython_gsl cimport *
-from .rdens_law cimport poly_exponential, gaussian, fratlaw, poly_exponential_der, gaussian_der, fratlaw_der
+from .rdens_law cimport poly_exponential, gaussian, fratlaw, mcmillanlaw, poly_exponential_der, gaussian_der, fratlaw_der, mcmillanlaw_der
 from .rflare_law cimport poly_flare, constant, tanh_flare, asinh_flare, poly_flare_der, constant_der, tanh_flare_der, asinh_flare_der
 from .zdens_law cimport zexp, zexp_der, zgau, zgau_der, zsech2, zsech2_der
 from scipy._lib._ccallback import LowLevelCallable
@@ -44,6 +44,10 @@ cdef double rhoder_zexp(double u, double l, double checkrd, double checkfl, doub
     elif checkrdi==3:
         densr      = gaussian(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
         densr_der  = gaussian_der(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
+        
+    elif checkrdi==4:
+        densr      = mcmillanlaw(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
+        densr_der  = mcmillanlaw_der(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
 
     #Flare law
     if checkfli==0 :
@@ -170,6 +174,10 @@ cdef double rhoder_zgau(double u, double l, double checkrd, double checkfl, doub
     elif checkrdi==3:
         densr      = gaussian(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
         densr_der  = gaussian_der(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
+
+    elif checkrdi==4:
+        densr      = mcmillanlaw(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
+        densr_der  = mcmillanlaw_der(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
 
 
     #Flare law
@@ -302,6 +310,10 @@ cdef double rhoder_zsech2(double u, double l, double checkrd, double checkfl, do
     elif checkrdi==3:
         densr      = gaussian(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
         densr_der  = gaussian_der(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
+        
+    elif checkrdi==4:
+        densr      = mcmillanlaw(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
+        densr_der  = mcmillanlaw_der(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
 
     #Flare law
     if checkfli==0 :
@@ -413,6 +425,8 @@ cdef double rhoder_zdirac(double u,  double checkrd, double d0, double d1, doubl
     if   checkrdi==1: densr_der = poly_exponential_der(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
     elif checkrdi==2: densr_der = fratlaw_der(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
     elif checkrdi==3: densr_der = gaussian_der(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
+    elif checkrdi==4: densr_der = mcmillanlaw_der(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
+    
 
     rhoder  =   densr_der
 

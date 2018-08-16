@@ -149,7 +149,7 @@ ext_modules=cythonize([gh_ext,ih_ext,infw_ext,gd_ext,rd_ext,fd_ext,iab_ext,ph_ex
 
 setup(
 		name='galpynamics',
-		version='0.2.dev0',
+		version='0.2.1dev0',
 		author='Giuliano Iorio',
 		author_email='',
 		url='',

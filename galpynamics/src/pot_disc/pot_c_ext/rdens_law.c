@@ -1531,6 +1531,7 @@ static PyThread_type_lock __pyx_memoryview_thread_locks[8];
 static double __pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_poly_exponential(double, double, double, double, double, double, double, double, double, double, double); /*proto*/
 static double __pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_gaussian(double, double, double, double, double, double, double, double, double, double, double); /*proto*/
 static double __pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_fratlaw(double, double, double, double, double, double, double, double, double, double, double); /*proto*/
+static double __pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_mcmillanlaw(double, double, double, double, double, double, double, double, double, double, double); /*proto*/
 static PyObject *__pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_rdens(PyObject *, PyObject *, double, double, double, double, double, double, double, double, double, double, int __pyx_skip_dispatch); /*proto*/
 static struct __pyx_array_obj *__pyx_array_new(PyObject *, Py_ssize_t, char *, char *, char *); /*proto*/
 static void *__pyx_align_pointer(void *, size_t); /*proto*/
@@ -1829,6 +1830,7 @@ static PyObject *__pyx_int_0;
 static PyObject *__pyx_int_1;
 static PyObject *__pyx_int_2;
 static PyObject *__pyx_int_3;
+static PyObject *__pyx_int_4;
 static PyObject *__pyx_int_184977713;
 static PyObject *__pyx_int_neg_1;
 static PyObject *__pyx_tuple_;
@@ -2562,6 +2564,164 @@ static double __pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_fratlaw
 /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":145
  * 
  * 
+ * cdef double mcmillanlaw(double R, double a0, double a1, double a2, double a3, double a4, double a5, double a6, double a7, double a8, double a9) nogil:             # <<<<<<<<<<<<<<
+ * 
+ *     cdef:
+ */
+
+static double __pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_mcmillanlaw(double __pyx_v_R, double __pyx_v_a0, double __pyx_v_a1, CYTHON_UNUSED double __pyx_v_a2, CYTHON_UNUSED double __pyx_v_a3, CYTHON_UNUSED double __pyx_v_a4, CYTHON_UNUSED double __pyx_v_a5, CYTHON_UNUSED double __pyx_v_a6, CYTHON_UNUSED double __pyx_v_a7, CYTHON_UNUSED double __pyx_v_a8, CYTHON_UNUSED double __pyx_v_a9) {
+  double __pyx_v_Rd;
+  double __pyx_v_Rm;
+  double __pyx_v_xd;
+  double __pyx_v_xm;
+  double __pyx_r;
+
+  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":148
+ * 
+ *     cdef:
+ *         double Rd=a0             # <<<<<<<<<<<<<<
+ *         double Rm=a1
+ *         double  xd, xm
+ */
+  __pyx_v_Rd = __pyx_v_a0;
+
+  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":149
+ *     cdef:
+ *         double Rd=a0
+ *         double Rm=a1             # <<<<<<<<<<<<<<
+ *         double  xd, xm
+ * 
+ */
+  __pyx_v_Rm = __pyx_v_a1;
+
+  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":153
+ * 
+ * 
+ *     xm=Rm/R             # <<<<<<<<<<<<<<
+ *     xd=R/Rd
+ * 
+ */
+  __pyx_v_xm = (__pyx_v_Rm / __pyx_v_R);
+
+  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":154
+ * 
+ *     xm=Rm/R
+ *     xd=R/Rd             # <<<<<<<<<<<<<<
+ * 
+ * 
+ */
+  __pyx_v_xd = (__pyx_v_R / __pyx_v_Rd);
+
+  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":157
+ * 
+ * 
+ *     return exp(-xm -xd)             # <<<<<<<<<<<<<<
+ * 
+ * 
+ */
+  __pyx_r = exp(((-__pyx_v_xm) - __pyx_v_xd));
+  goto __pyx_L0;
+
+  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":145
+ * 
+ * 
+ * cdef double mcmillanlaw(double R, double a0, double a1, double a2, double a3, double a4, double a5, double a6, double a7, double a8, double a9) nogil:             # <<<<<<<<<<<<<<
+ * 
+ *     cdef:
+ */
+
+  /* function exit code */
+  __pyx_L0:;
+  return __pyx_r;
+}
+
+/* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":160
+ * 
+ * 
+ * cdef double mcmillanlaw_der(double R, double a0, double a1, double a2, double a3, double a4, double a5, double a6, double a7, double a8, double a9) nogil:             # <<<<<<<<<<<<<<
+ * 
+ *     cdef:
+ */
+
+static double __pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_mcmillanlaw_der(double __pyx_v_R, double __pyx_v_a0, double __pyx_v_a1, CYTHON_UNUSED double __pyx_v_a2, CYTHON_UNUSED double __pyx_v_a3, CYTHON_UNUSED double __pyx_v_a4, CYTHON_UNUSED double __pyx_v_a5, CYTHON_UNUSED double __pyx_v_a6, CYTHON_UNUSED double __pyx_v_a7, CYTHON_UNUSED double __pyx_v_a8, CYTHON_UNUSED double __pyx_v_a9) {
+  double __pyx_v_Rd;
+  double __pyx_v_Rm;
+  double __pyx_v_xd;
+  double __pyx_v_xm;
+  double __pyx_v_A;
+  double __pyx_r;
+
+  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":163
+ * 
+ *     cdef:
+ *         double Rd=a0             # <<<<<<<<<<<<<<
+ *         double Rm=a1
+ *         double  xd, xm, A
+ */
+  __pyx_v_Rd = __pyx_v_a0;
+
+  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":164
+ *     cdef:
+ *         double Rd=a0
+ *         double Rm=a1             # <<<<<<<<<<<<<<
+ *         double  xd, xm, A
+ * 
+ */
+  __pyx_v_Rm = __pyx_v_a1;
+
+  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":168
+ * 
+ * 
+ *     xm=Rm/R             # <<<<<<<<<<<<<<
+ *     xd=R/Rd
+ *     A= (Rm/(R*R)) + (-1/Rd)
+ */
+  __pyx_v_xm = (__pyx_v_Rm / __pyx_v_R);
+
+  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":169
+ * 
+ *     xm=Rm/R
+ *     xd=R/Rd             # <<<<<<<<<<<<<<
+ *     A= (Rm/(R*R)) + (-1/Rd)
+ * 
+ */
+  __pyx_v_xd = (__pyx_v_R / __pyx_v_Rd);
+
+  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":170
+ *     xm=Rm/R
+ *     xd=R/Rd
+ *     A= (Rm/(R*R)) + (-1/Rd)             # <<<<<<<<<<<<<<
+ * 
+ *     return A*exp(-xm -xd)
+ */
+  __pyx_v_A = ((__pyx_v_Rm / (__pyx_v_R * __pyx_v_R)) + (-1.0 / __pyx_v_Rd));
+
+  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":172
+ *     A= (Rm/(R*R)) + (-1/Rd)
+ * 
+ *     return A*exp(-xm -xd)             # <<<<<<<<<<<<<<
+ * 
+ * 
+ */
+  __pyx_r = (__pyx_v_A * exp(((-__pyx_v_xm) - __pyx_v_xd)));
+  goto __pyx_L0;
+
+  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":160
+ * 
+ * 
+ * cdef double mcmillanlaw_der(double R, double a0, double a1, double a2, double a3, double a4, double a5, double a6, double a7, double a8, double a9) nogil:             # <<<<<<<<<<<<<<
+ * 
+ *     cdef:
+ */
+
+  /* function exit code */
+  __pyx_L0:;
+  return __pyx_r;
+}
+
+/* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":175
+ * 
+ * 
  * cpdef rdens(R, checkrd,  double a0, double a1, double a2, double a3, double a4, double a5, double a6, double a7, double a8, double a9):             # <<<<<<<<<<<<<<
  *     """
  *     Return Sup density
@@ -2589,32 +2749,32 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_rden
   int __pyx_t_11;
   __Pyx_RefNannySetupContext("rdens", 0);
 
-  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":157
+  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":187
  *         double Rtmp
  * 
  *     checkrdi=int(checkrd)             # <<<<<<<<<<<<<<
  *     #Flare law
  *     if checkrdi==1:
  */
-  __pyx_t_1 = __Pyx_PyNumber_Int(__pyx_v_checkrd); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 157, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyNumber_Int(__pyx_v_checkrd); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 187, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_checkrdi = __pyx_t_1;
   __pyx_t_1 = 0;
 
-  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":159
+  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":189
  *     checkrdi=int(checkrd)
  *     #Flare law
  *     if checkrdi==1:             # <<<<<<<<<<<<<<
  *         rdens_func        = poly_exponential
  *     elif checkrdi==2:
  */
-  __pyx_t_1 = __Pyx_PyInt_EqObjC(__pyx_v_checkrdi, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 159, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_EqObjC(__pyx_v_checkrdi, __pyx_int_1, 1, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 189, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 159, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 189, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":160
+    /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":190
  *     #Flare law
  *     if checkrdi==1:
  *         rdens_func        = poly_exponential             # <<<<<<<<<<<<<<
@@ -2623,7 +2783,7 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_rden
  */
     __pyx_v_rdens_func = __pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_poly_exponential;
 
-    /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":159
+    /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":189
  *     checkrdi=int(checkrd)
  *     #Flare law
  *     if checkrdi==1:             # <<<<<<<<<<<<<<
@@ -2633,20 +2793,20 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_rden
     goto __pyx_L3;
   }
 
-  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":161
+  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":191
  *     if checkrdi==1:
  *         rdens_func        = poly_exponential
  *     elif checkrdi==2:             # <<<<<<<<<<<<<<
  *         rdens_func        = fratlaw
  *     elif checkrdi==3:
  */
-  __pyx_t_1 = __Pyx_PyInt_EqObjC(__pyx_v_checkrdi, __pyx_int_2, 2, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 161, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_EqObjC(__pyx_v_checkrdi, __pyx_int_2, 2, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 191, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 161, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 191, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":162
+    /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":192
  *         rdens_func        = poly_exponential
  *     elif checkrdi==2:
  *         rdens_func        = fratlaw             # <<<<<<<<<<<<<<
@@ -2655,7 +2815,7 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_rden
  */
     __pyx_v_rdens_func = __pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_fratlaw;
 
-    /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":161
+    /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":191
  *     if checkrdi==1:
  *         rdens_func        = poly_exponential
  *     elif checkrdi==2:             # <<<<<<<<<<<<<<
@@ -2665,40 +2825,72 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_rden
     goto __pyx_L3;
   }
 
-  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":163
+  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":193
  *     elif checkrdi==2:
  *         rdens_func        = fratlaw
  *     elif checkrdi==3:             # <<<<<<<<<<<<<<
  *         rdens_func        = gaussian
- * 
+ *     elif checkrdi==4:
  */
-  __pyx_t_1 = __Pyx_PyInt_EqObjC(__pyx_v_checkrdi, __pyx_int_3, 3, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 163, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_EqObjC(__pyx_v_checkrdi, __pyx_int_3, 3, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 193, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 163, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 193, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   if (__pyx_t_2) {
 
-    /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":164
+    /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":194
  *         rdens_func        = fratlaw
  *     elif checkrdi==3:
  *         rdens_func        = gaussian             # <<<<<<<<<<<<<<
- * 
- *     if isinstance(R, int) or isinstance(R, float):
+ *     elif checkrdi==4:
+ *         rdens_func        = mcmillanlaw
  */
     __pyx_v_rdens_func = __pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_gaussian;
 
-    /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":163
+    /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":193
  *     elif checkrdi==2:
  *         rdens_func        = fratlaw
  *     elif checkrdi==3:             # <<<<<<<<<<<<<<
  *         rdens_func        = gaussian
+ *     elif checkrdi==4:
+ */
+    goto __pyx_L3;
+  }
+
+  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":195
+ *     elif checkrdi==3:
+ *         rdens_func        = gaussian
+ *     elif checkrdi==4:             # <<<<<<<<<<<<<<
+ *         rdens_func        = mcmillanlaw
+ * 
+ */
+  __pyx_t_1 = __Pyx_PyInt_EqObjC(__pyx_v_checkrdi, __pyx_int_4, 4, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 195, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_1); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 195, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  if (__pyx_t_2) {
+
+    /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":196
+ *         rdens_func        = gaussian
+ *     elif checkrdi==4:
+ *         rdens_func        = mcmillanlaw             # <<<<<<<<<<<<<<
+ * 
+ *     if isinstance(R, int) or isinstance(R, float):
+ */
+    __pyx_v_rdens_func = __pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_mcmillanlaw;
+
+    /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":195
+ *     elif checkrdi==3:
+ *         rdens_func        = gaussian
+ *     elif checkrdi==4:             # <<<<<<<<<<<<<<
+ *         rdens_func        = mcmillanlaw
  * 
  */
   }
   __pyx_L3:;
 
-  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":166
- *         rdens_func        = gaussian
+  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":198
+ *         rdens_func        = mcmillanlaw
  * 
  *     if isinstance(R, int) or isinstance(R, float):             # <<<<<<<<<<<<<<
  *         ret=np.array([[R, 0]])
@@ -2717,19 +2909,19 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_rden
   __pyx_L5_bool_binop_done:;
   if (__pyx_t_2) {
 
-    /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":167
+    /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":199
  * 
  *     if isinstance(R, int) or isinstance(R, float):
  *         ret=np.array([[R, 0]])             # <<<<<<<<<<<<<<
  * 
  *         ret[0,1]=rdens_func(R, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9)
  */
-    __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 167, __pyx_L1_error)
+    __pyx_t_5 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 199, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
-    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_array); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 167, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_array); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 199, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __pyx_t_5 = PyList_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 167, __pyx_L1_error)
+    __pyx_t_5 = PyList_New(2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 199, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     __Pyx_INCREF(__pyx_v_R);
     __Pyx_GIVEREF(__pyx_v_R);
@@ -2737,7 +2929,7 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_rden
     __Pyx_INCREF(__pyx_int_0);
     __Pyx_GIVEREF(__pyx_int_0);
     PyList_SET_ITEM(__pyx_t_5, 1, __pyx_int_0);
-    __pyx_t_7 = PyList_New(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 167, __pyx_L1_error)
+    __pyx_t_7 = PyList_New(1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 199, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_GIVEREF(__pyx_t_5);
     PyList_SET_ITEM(__pyx_t_7, 0, __pyx_t_5);
@@ -2753,14 +2945,14 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_rden
       }
     }
     if (!__pyx_t_5) {
-      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 167, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 199, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __Pyx_GOTREF(__pyx_t_1);
     } else {
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_6)) {
         PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_7};
-        __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_6, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 167, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyFunction_FastCall(__pyx_t_6, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 199, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
@@ -2769,20 +2961,20 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_rden
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_6)) {
         PyObject *__pyx_temp[2] = {__pyx_t_5, __pyx_t_7};
-        __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_6, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 167, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyCFunction_FastCall(__pyx_t_6, __pyx_temp+1-1, 1+1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 199, __pyx_L1_error)
         __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       } else
       #endif
       {
-        __pyx_t_8 = PyTuple_New(1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 167, __pyx_L1_error)
+        __pyx_t_8 = PyTuple_New(1+1); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 199, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_8);
         __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_t_5); __pyx_t_5 = NULL;
         __Pyx_GIVEREF(__pyx_t_7);
         PyTuple_SET_ITEM(__pyx_t_8, 0+1, __pyx_t_7);
         __pyx_t_7 = 0;
-        __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_8, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 167, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_8, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 199, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
         __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
       }
@@ -2791,21 +2983,21 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_rden
     __pyx_v_ret = __pyx_t_1;
     __pyx_t_1 = 0;
 
-    /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":169
+    /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":201
  *         ret=np.array([[R, 0]])
  * 
  *         ret[0,1]=rdens_func(R, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9)             # <<<<<<<<<<<<<<
  * 
  *     elif isinstance(R, list) or isinstance(R, tuple) or isinstance(R, np.ndarray):
  */
-    __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_R); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 169, __pyx_L1_error)
-    __pyx_t_1 = PyFloat_FromDouble(__pyx_v_rdens_func(__pyx_t_9, __pyx_v_a0, __pyx_v_a1, __pyx_v_a2, __pyx_v_a3, __pyx_v_a4, __pyx_v_a5, __pyx_v_a6, __pyx_v_a7, __pyx_v_a8, __pyx_v_a9)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 169, __pyx_L1_error)
+    __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_R); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 201, __pyx_L1_error)
+    __pyx_t_1 = PyFloat_FromDouble(__pyx_v_rdens_func(__pyx_t_9, __pyx_v_a0, __pyx_v_a1, __pyx_v_a2, __pyx_v_a3, __pyx_v_a4, __pyx_v_a5, __pyx_v_a6, __pyx_v_a7, __pyx_v_a8, __pyx_v_a9)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 201, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    if (unlikely(PyObject_SetItem(__pyx_v_ret, __pyx_tuple_, __pyx_t_1) < 0)) __PYX_ERR(0, 169, __pyx_L1_error)
+    if (unlikely(PyObject_SetItem(__pyx_v_ret, __pyx_tuple_, __pyx_t_1) < 0)) __PYX_ERR(0, 201, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-    /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":166
- *         rdens_func        = gaussian
+    /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":198
+ *         rdens_func        = mcmillanlaw
  * 
  *     if isinstance(R, int) or isinstance(R, float):             # <<<<<<<<<<<<<<
  *         ret=np.array([[R, 0]])
@@ -2814,7 +3006,7 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_rden
     goto __pyx_L4;
   }
 
-  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":171
+  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":203
  *         ret[0,1]=rdens_func(R, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9)
  * 
  *     elif isinstance(R, list) or isinstance(R, tuple) or isinstance(R, np.ndarray):             # <<<<<<<<<<<<<<
@@ -2835,36 +3027,36 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_rden
     __pyx_t_2 = __pyx_t_3;
     goto __pyx_L7_bool_binop_done;
   }
-  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 171, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 203, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_ndarray); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 171, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_ndarray); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 203, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_3 = PyObject_IsInstance(__pyx_v_R, __pyx_t_6); if (unlikely(__pyx_t_3 == ((int)-1))) __PYX_ERR(0, 171, __pyx_L1_error)
+  __pyx_t_3 = PyObject_IsInstance(__pyx_v_R, __pyx_t_6); if (unlikely(__pyx_t_3 == ((int)-1))) __PYX_ERR(0, 203, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __pyx_t_4 = (__pyx_t_3 != 0);
   __pyx_t_2 = __pyx_t_4;
   __pyx_L7_bool_binop_done:;
   if (__pyx_t_2) {
 
-    /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":173
+    /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":205
  *     elif isinstance(R, list) or isinstance(R, tuple) or isinstance(R, np.ndarray):
  * 
  *         ret=np.zeros(shape=(len(R),2))             # <<<<<<<<<<<<<<
  *         ret[:,0]=R
  * 
  */
-    __pyx_t_6 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 173, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_GetModuleGlobalName(__pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 205, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 173, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 205, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 173, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 205, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_10 = PyObject_Length(__pyx_v_R); if (unlikely(__pyx_t_10 == ((Py_ssize_t)-1))) __PYX_ERR(0, 173, __pyx_L1_error)
-    __pyx_t_8 = PyInt_FromSsize_t(__pyx_t_10); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 173, __pyx_L1_error)
+    __pyx_t_10 = PyObject_Length(__pyx_v_R); if (unlikely(__pyx_t_10 == ((Py_ssize_t)-1))) __PYX_ERR(0, 205, __pyx_L1_error)
+    __pyx_t_8 = PyInt_FromSsize_t(__pyx_t_10); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 205, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_8);
-    __pyx_t_7 = PyTuple_New(2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 173, __pyx_L1_error)
+    __pyx_t_7 = PyTuple_New(2); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 205, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_GIVEREF(__pyx_t_8);
     PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_8);
@@ -2872,45 +3064,45 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_rden
     __Pyx_GIVEREF(__pyx_int_2);
     PyTuple_SET_ITEM(__pyx_t_7, 1, __pyx_int_2);
     __pyx_t_8 = 0;
-    if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_shape, __pyx_t_7) < 0) __PYX_ERR(0, 173, __pyx_L1_error)
+    if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_shape, __pyx_t_7) < 0) __PYX_ERR(0, 205, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-    __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_empty_tuple, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 173, __pyx_L1_error)
+    __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_empty_tuple, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 205, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     __pyx_v_ret = __pyx_t_7;
     __pyx_t_7 = 0;
 
-    /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":174
+    /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":206
  * 
  *         ret=np.zeros(shape=(len(R),2))
  *         ret[:,0]=R             # <<<<<<<<<<<<<<
  * 
  *         for i in range(len(R)):
  */
-    if (unlikely(PyObject_SetItem(__pyx_v_ret, __pyx_tuple__3, __pyx_v_R) < 0)) __PYX_ERR(0, 174, __pyx_L1_error)
+    if (unlikely(PyObject_SetItem(__pyx_v_ret, __pyx_tuple__3, __pyx_v_R) < 0)) __PYX_ERR(0, 206, __pyx_L1_error)
 
-    /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":176
+    /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":208
  *         ret[:,0]=R
  * 
  *         for i in range(len(R)):             # <<<<<<<<<<<<<<
  *             Rtmp=ret[i,0]
  *             ret[i,1]= rdens_func(Rtmp, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9)
  */
-    __pyx_t_10 = PyObject_Length(__pyx_v_R); if (unlikely(__pyx_t_10 == ((Py_ssize_t)-1))) __PYX_ERR(0, 176, __pyx_L1_error)
+    __pyx_t_10 = PyObject_Length(__pyx_v_R); if (unlikely(__pyx_t_10 == ((Py_ssize_t)-1))) __PYX_ERR(0, 208, __pyx_L1_error)
     for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
       __pyx_v_i = __pyx_t_11;
 
-      /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":177
+      /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":209
  * 
  *         for i in range(len(R)):
  *             Rtmp=ret[i,0]             # <<<<<<<<<<<<<<
  *             ret[i,1]= rdens_func(Rtmp, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9)
  * 
  */
-      __pyx_t_7 = __Pyx_PyInt_From_int(__pyx_v_i); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 177, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyInt_From_int(__pyx_v_i); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 209, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
-      __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 177, __pyx_L1_error)
+      __pyx_t_6 = PyTuple_New(2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 209, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_GIVEREF(__pyx_t_7);
       PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_t_7);
@@ -2918,25 +3110,25 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_rden
       __Pyx_GIVEREF(__pyx_int_0);
       PyTuple_SET_ITEM(__pyx_t_6, 1, __pyx_int_0);
       __pyx_t_7 = 0;
-      __pyx_t_7 = PyObject_GetItem(__pyx_v_ret, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 177, __pyx_L1_error)
+      __pyx_t_7 = PyObject_GetItem(__pyx_v_ret, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 209, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_t_7); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 177, __pyx_L1_error)
+      __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_t_7); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 209, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
       __pyx_v_Rtmp = __pyx_t_9;
 
-      /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":178
+      /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":210
  *         for i in range(len(R)):
  *             Rtmp=ret[i,0]
  *             ret[i,1]= rdens_func(Rtmp, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9)             # <<<<<<<<<<<<<<
  * 
  * 
  */
-      __pyx_t_7 = PyFloat_FromDouble(__pyx_v_rdens_func(__pyx_v_Rtmp, __pyx_v_a0, __pyx_v_a1, __pyx_v_a2, __pyx_v_a3, __pyx_v_a4, __pyx_v_a5, __pyx_v_a6, __pyx_v_a7, __pyx_v_a8, __pyx_v_a9)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 178, __pyx_L1_error)
+      __pyx_t_7 = PyFloat_FromDouble(__pyx_v_rdens_func(__pyx_v_Rtmp, __pyx_v_a0, __pyx_v_a1, __pyx_v_a2, __pyx_v_a3, __pyx_v_a4, __pyx_v_a5, __pyx_v_a6, __pyx_v_a7, __pyx_v_a8, __pyx_v_a9)); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 210, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
-      __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_i); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 178, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_i); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 210, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 178, __pyx_L1_error)
+      __pyx_t_1 = PyTuple_New(2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 210, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __Pyx_GIVEREF(__pyx_t_6);
       PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_6);
@@ -2944,12 +3136,12 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_rden
       __Pyx_GIVEREF(__pyx_int_1);
       PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_int_1);
       __pyx_t_6 = 0;
-      if (unlikely(PyObject_SetItem(__pyx_v_ret, __pyx_t_1, __pyx_t_7) < 0)) __PYX_ERR(0, 178, __pyx_L1_error)
+      if (unlikely(PyObject_SetItem(__pyx_v_ret, __pyx_t_1, __pyx_t_7) < 0)) __PYX_ERR(0, 210, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
     }
 
-    /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":171
+    /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":203
  *         ret[0,1]=rdens_func(R, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9)
  * 
  *     elif isinstance(R, list) or isinstance(R, tuple) or isinstance(R, np.ndarray):             # <<<<<<<<<<<<<<
@@ -2959,7 +3151,7 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_rden
   }
   __pyx_L4:;
 
-  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":181
+  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":213
  * 
  * 
  *     return ret             # <<<<<<<<<<<<<<
@@ -2967,12 +3159,12 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_rden
  * 
  */
   __Pyx_XDECREF(__pyx_r);
-  if (unlikely(!__pyx_v_ret)) { __Pyx_RaiseUnboundLocalError("ret"); __PYX_ERR(0, 181, __pyx_L1_error) }
+  if (unlikely(!__pyx_v_ret)) { __Pyx_RaiseUnboundLocalError("ret"); __PYX_ERR(0, 213, __pyx_L1_error) }
   __Pyx_INCREF(__pyx_v_ret);
   __pyx_r = __pyx_v_ret;
   goto __pyx_L0;
 
-  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":145
+  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":175
  * 
  * 
  * cpdef rdens(R, checkrd,  double a0, double a1, double a2, double a3, double a4, double a5, double a6, double a7, double a8, double a9):             # <<<<<<<<<<<<<<
@@ -3059,71 +3251,71 @@ static PyObject *__pyx_pw_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_1rd
         case  1:
         if (likely((values[1] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_checkrd)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("rdens", 1, 12, 12, 1); __PYX_ERR(0, 145, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("rdens", 1, 12, 12, 1); __PYX_ERR(0, 175, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_a0)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("rdens", 1, 12, 12, 2); __PYX_ERR(0, 145, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("rdens", 1, 12, 12, 2); __PYX_ERR(0, 175, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_a1)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("rdens", 1, 12, 12, 3); __PYX_ERR(0, 145, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("rdens", 1, 12, 12, 3); __PYX_ERR(0, 175, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
         if (likely((values[4] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_a2)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("rdens", 1, 12, 12, 4); __PYX_ERR(0, 145, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("rdens", 1, 12, 12, 4); __PYX_ERR(0, 175, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
         if (likely((values[5] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_a3)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("rdens", 1, 12, 12, 5); __PYX_ERR(0, 145, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("rdens", 1, 12, 12, 5); __PYX_ERR(0, 175, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
         if (likely((values[6] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_a4)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("rdens", 1, 12, 12, 6); __PYX_ERR(0, 145, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("rdens", 1, 12, 12, 6); __PYX_ERR(0, 175, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  7:
         if (likely((values[7] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_a5)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("rdens", 1, 12, 12, 7); __PYX_ERR(0, 145, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("rdens", 1, 12, 12, 7); __PYX_ERR(0, 175, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  8:
         if (likely((values[8] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_a6)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("rdens", 1, 12, 12, 8); __PYX_ERR(0, 145, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("rdens", 1, 12, 12, 8); __PYX_ERR(0, 175, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  9:
         if (likely((values[9] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_a7)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("rdens", 1, 12, 12, 9); __PYX_ERR(0, 145, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("rdens", 1, 12, 12, 9); __PYX_ERR(0, 175, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 10:
         if (likely((values[10] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_a8)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("rdens", 1, 12, 12, 10); __PYX_ERR(0, 145, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("rdens", 1, 12, 12, 10); __PYX_ERR(0, 175, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 11:
         if (likely((values[11] = PyDict_GetItem(__pyx_kwds, __pyx_n_s_a9)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("rdens", 1, 12, 12, 11); __PYX_ERR(0, 145, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("rdens", 1, 12, 12, 11); __PYX_ERR(0, 175, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "rdens") < 0)) __PYX_ERR(0, 145, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "rdens") < 0)) __PYX_ERR(0, 175, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 12) {
       goto __pyx_L5_argtuple_error;
@@ -3143,20 +3335,20 @@ static PyObject *__pyx_pw_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_1rd
     }
     __pyx_v_R = values[0];
     __pyx_v_checkrd = values[1];
-    __pyx_v_a0 = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_a0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 145, __pyx_L3_error)
-    __pyx_v_a1 = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_a1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 145, __pyx_L3_error)
-    __pyx_v_a2 = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_a2 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 145, __pyx_L3_error)
-    __pyx_v_a3 = __pyx_PyFloat_AsDouble(values[5]); if (unlikely((__pyx_v_a3 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 145, __pyx_L3_error)
-    __pyx_v_a4 = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_a4 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 145, __pyx_L3_error)
-    __pyx_v_a5 = __pyx_PyFloat_AsDouble(values[7]); if (unlikely((__pyx_v_a5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 145, __pyx_L3_error)
-    __pyx_v_a6 = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_a6 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 145, __pyx_L3_error)
-    __pyx_v_a7 = __pyx_PyFloat_AsDouble(values[9]); if (unlikely((__pyx_v_a7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 145, __pyx_L3_error)
-    __pyx_v_a8 = __pyx_PyFloat_AsDouble(values[10]); if (unlikely((__pyx_v_a8 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 145, __pyx_L3_error)
-    __pyx_v_a9 = __pyx_PyFloat_AsDouble(values[11]); if (unlikely((__pyx_v_a9 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 145, __pyx_L3_error)
+    __pyx_v_a0 = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_a0 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 175, __pyx_L3_error)
+    __pyx_v_a1 = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_a1 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 175, __pyx_L3_error)
+    __pyx_v_a2 = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_a2 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 175, __pyx_L3_error)
+    __pyx_v_a3 = __pyx_PyFloat_AsDouble(values[5]); if (unlikely((__pyx_v_a3 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 175, __pyx_L3_error)
+    __pyx_v_a4 = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_a4 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 175, __pyx_L3_error)
+    __pyx_v_a5 = __pyx_PyFloat_AsDouble(values[7]); if (unlikely((__pyx_v_a5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 175, __pyx_L3_error)
+    __pyx_v_a6 = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_a6 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 175, __pyx_L3_error)
+    __pyx_v_a7 = __pyx_PyFloat_AsDouble(values[9]); if (unlikely((__pyx_v_a7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 175, __pyx_L3_error)
+    __pyx_v_a8 = __pyx_PyFloat_AsDouble(values[10]); if (unlikely((__pyx_v_a8 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 175, __pyx_L3_error)
+    __pyx_v_a9 = __pyx_PyFloat_AsDouble(values[11]); if (unlikely((__pyx_v_a9 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 175, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("rdens", 1, 12, 12, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 145, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("rdens", 1, 12, 12, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 175, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("galpynamics.src.pot_disc.pot_c_ext.rdens_law.rdens", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -3175,7 +3367,7 @@ static PyObject *__pyx_pf_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_rde
   PyObject *__pyx_t_1 = NULL;
   __Pyx_RefNannySetupContext("rdens", 0);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_rdens(__pyx_v_R, __pyx_v_checkrd, __pyx_v_a0, __pyx_v_a1, __pyx_v_a2, __pyx_v_a3, __pyx_v_a4, __pyx_v_a5, __pyx_v_a6, __pyx_v_a7, __pyx_v_a8, __pyx_v_a9, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 145, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_rdens(__pyx_v_R, __pyx_v_checkrd, __pyx_v_a0, __pyx_v_a1, __pyx_v_a2, __pyx_v_a3, __pyx_v_a4, __pyx_v_a5, __pyx_v_a6, __pyx_v_a7, __pyx_v_a8, __pyx_v_a9, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 175, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -16812,7 +17004,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {0, 0, 0, 0, 0, 0, 0}
 };
 static int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 176, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 208, __pyx_L1_error)
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(1, 131, __pyx_L1_error)
   __pyx_builtin_MemoryError = __Pyx_GetBuiltinName(__pyx_n_s_MemoryError); if (!__pyx_builtin_MemoryError) __PYX_ERR(1, 146, __pyx_L1_error)
   __pyx_builtin_enumerate = __Pyx_GetBuiltinName(__pyx_n_s_enumerate); if (!__pyx_builtin_enumerate) __PYX_ERR(1, 149, __pyx_L1_error)
@@ -16829,28 +17021,28 @@ static int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":169
+  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":201
  *         ret=np.array([[R, 0]])
  * 
  *         ret[0,1]=rdens_func(R, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9)             # <<<<<<<<<<<<<<
  * 
  *     elif isinstance(R, list) or isinstance(R, tuple) or isinstance(R, np.ndarray):
  */
-  __pyx_tuple_ = PyTuple_Pack(2, __pyx_int_0, __pyx_int_1); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 169, __pyx_L1_error)
+  __pyx_tuple_ = PyTuple_Pack(2, __pyx_int_0, __pyx_int_1); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 201, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
 
-  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":174
+  /* "galpynamics/src/pot_disc/pot_c_ext/rdens_law.pyx":206
  * 
  *         ret=np.zeros(shape=(len(R),2))
  *         ret[:,0]=R             # <<<<<<<<<<<<<<
  * 
  *         for i in range(len(R)):
  */
-  __pyx_slice__2 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__2)) __PYX_ERR(0, 174, __pyx_L1_error)
+  __pyx_slice__2 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__2)) __PYX_ERR(0, 206, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__2);
   __Pyx_GIVEREF(__pyx_slice__2);
-  __pyx_tuple__3 = PyTuple_Pack(2, __pyx_slice__2, __pyx_int_0); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 174, __pyx_L1_error)
+  __pyx_tuple__3 = PyTuple_Pack(2, __pyx_slice__2, __pyx_int_0); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 206, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
@@ -17134,6 +17326,7 @@ static int __Pyx_InitGlobals(void) {
   __pyx_int_1 = PyInt_FromLong(1); if (unlikely(!__pyx_int_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_2 = PyInt_FromLong(2); if (unlikely(!__pyx_int_2)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_3 = PyInt_FromLong(3); if (unlikely(!__pyx_int_3)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_int_4 = PyInt_FromLong(4); if (unlikely(!__pyx_int_4)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_184977713 = PyInt_FromLong(184977713L); if (unlikely(!__pyx_int_184977713)) __PYX_ERR(0, 1, __pyx_L1_error)
   __pyx_int_neg_1 = PyInt_FromLong(-1); if (unlikely(!__pyx_int_neg_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   return 0;
@@ -17289,6 +17482,8 @@ static int __pyx_pymod_exec_rdens_law(PyObject *__pyx_pyinit_module)
   if (__Pyx_ExportFunction("gaussian_der", (void (*)(void))__pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_gaussian_der, "double (double, double, double, double, double, double, double, double, double, double, double)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   if (__Pyx_ExportFunction("fratlaw", (void (*)(void))__pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_fratlaw, "double (double, double, double, double, double, double, double, double, double, double, double)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   if (__Pyx_ExportFunction("fratlaw_der", (void (*)(void))__pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_fratlaw_der, "double (double, double, double, double, double, double, double, double, double, double, double)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (__Pyx_ExportFunction("mcmillanlaw", (void (*)(void))__pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_mcmillanlaw, "double (double, double, double, double, double, double, double, double, double, double, double)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (__Pyx_ExportFunction("mcmillanlaw_der", (void (*)(void))__pyx_f_11galpynamics_3src_8pot_disc_9pot_c_ext_9rdens_law_mcmillanlaw_der, "double (double, double, double, double, double, double, double, double, double, double, double)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   /*--- Type init code ---*/
   __pyx_vtabptr_array = &__pyx_vtable_array;
   __pyx_vtable_array.get_memview = (PyObject *(*)(struct __pyx_array_obj *))__pyx_array_get_memview;

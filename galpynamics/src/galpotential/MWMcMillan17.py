@@ -1,5 +1,6 @@
 from __future__ import division, print_function
-from ..pot_disc.pot_disc import  Exponential_disc
+from ..pot_disc.Exponential_disc import  Exponential_disc
+from ..pot_disc.McMillan_disc import  McMillan_disc
 from ..pot_halo.NFW_halo import  NFW_halo
 from ..pot_halo.alfabeta_halo import  alfabeta_halo
 from .galpotential import galpotential
@@ -16,10 +17,26 @@ class MWMcMillan17(galpotential):
         #Halo
         d0=8.53702e+06
         rs=19.5725
-        mcut=1000
+        mcut=500
         q=1.0
         e=np.sqrt(1-q*q)
         halo=NFW_halo(d0=d0, rs=rs, mcut=mcut, e=e)
+        #HI disc
+        sigma0=53.1e6 #Msun/Kpc^2
+        Rd=7
+        Rm=4
+        zd=0.085*2
+        Rcut=50
+        zcut=50
+        HId=McMillan_disc.thick(sigma0=sigma0, Rd=Rd, Rm=Rm, zd=zd, Rcut=Rcut, zcut=zcut, zlaw='sech2')
+        #H2 disc
+        sigma0=2180e6 #Msun/Kpc^2
+        Rd=1.5
+        Rm=12
+        zd=0.045*2
+        Rcut=50
+        zcut=50
+        H2d=McMillan_disc.thick(sigma0=sigma0, Rd=Rd, Rm=Rm, zd=zd, Rcut=Rcut, zcut=zcut, zlaw='sech2')
         #Thin disc
         sigma0=8.95679e+08
         Rd=2.49955
@@ -44,7 +61,7 @@ class MWMcMillan17(galpotential):
         e=np.sqrt(1-q*q)
         bulge=alfabeta_halo(d0=d0,  alfa=alfa, beta=beta, rs=rs,mcut=mcut,e=e)
         
-        super(MWMcMillan17,self).__init__(dynamic_components=(tkd,tnd,bulge,halo))
+        super(MWMcMillan17,self).__init__(dynamic_components=(tkd,tnd,HId, H2d, bulge,halo))
         
         
     def remove_components(self,idx=()):

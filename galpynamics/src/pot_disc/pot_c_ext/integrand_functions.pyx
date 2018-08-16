@@ -1,7 +1,7 @@
 #cython: language_level=3, boundscheck=False, cdivision=True, wraparound=False
 from libc.math cimport sqrt, log, asin, exp, fabs, cosh
 from cython_gsl cimport *
-from .rdens_law cimport poly_exponential, gaussian, fratlaw
+from .rdens_law cimport poly_exponential, gaussian, fratlaw, mcmillanlaw
 from .rflare_law cimport poly_flare, constant, tanh_flare, asinh_flare
 from scipy._lib._ccallback import LowLevelCallable
 from scipy.integrate import nquad, quad
@@ -38,6 +38,7 @@ cdef double zexp(double u, double l, double checkrd, double checkfl, double d0, 
     if checkrdi==1: densr= poly_exponential(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
     elif checkrdi==2: densr= fratlaw(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
     elif checkrdi==3: densr= gaussian(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
+    elif checkrdi==4: densr= mcmillanlaw(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
 
     #Flare law
     if checkfli==0 : zd=constant(u, f0, f1, f2,f3,f4,f5, f6, f7, f8, f9)
@@ -139,6 +140,7 @@ cdef double zgau(double u, double l, double checkrd, double checkfl, double d0, 
     if checkrdi==1: densr= poly_exponential(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
     elif checkrdi==2: densr= fratlaw(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
     elif checkrdi==3: densr= gaussian(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
+    elif checkrdi==4: densr= mcmillanlaw(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
 
     #Flare law
     if checkfli==0 : zd=constant(u, f0, f1, f2,f3,f4,f5, f6, f7, f8, f9)
@@ -240,6 +242,7 @@ cdef double zsech2(double u, double l, double checkrd, double checkfl, double d0
     if checkrdi==1: densr= poly_exponential(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
     elif checkrdi==2: densr= fratlaw(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
     elif checkrdi==3: densr= gaussian(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
+    elif checkrdi==4: densr= mcmillanlaw(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
 
 
     #Flare law
@@ -341,6 +344,7 @@ cdef double zdirac(double u,  double checkrd, double d0, double d1, double d2, d
     if checkrdi==1: densr= poly_exponential(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
     elif checkrdi==2: densr= fratlaw(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
     elif checkrdi==3: densr= gaussian(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
+    elif checkrdi==4: densr= mcmillanlaw(u, d0, d1, d2, d3, d4, d5, d6, d7, d8, d9)
 
     #return 3.
     return densr

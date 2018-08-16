@@ -10,9 +10,17 @@ from .src.pot_halo.valy_halo import valy_halo
 from .src.pot_halo.exponential_halo import exponential_halo
 
 from .src.pot_disc.pot_c_ext.integrand_functions import potential_disc
-from .src.pot_disc.pot_disc import Exponential_disc, Frat_disc, Gaussian_disc, PolyExponential_disc
+#from .src.pot_disc.pot_disc import Exponential_disc, Frat_disc, Gaussian_disc, PolyExponential_disc
 from .src.pot_disc.pot_c_ext.rflare_law import flare
 from .src.pot_disc.pot_c_ext.rdens_law import rdens
+
+
+from .src.pot_disc.Exponential_disc import Exponential_disc
+from .src.pot_disc.Gaussian_disc import Gaussian_disc
+from .src.pot_disc.PolyExponential_disc import PolyExponential_disc
+from .src.pot_disc.Frat_disc import Frat_disc
+from .src.pot_disc.McMillan_disc import McMillan_disc
+
 
 
 from .src.galpotential.galpotential import galpotential

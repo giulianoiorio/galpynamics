@@ -1,5 +1,5 @@
 from __future__ import division, print_function
-from ..pot_disc.pot_disc import  Exponential_disc
+from ..pot_disc.Exponential_disc import  Exponential_disc
 from ..pot_halo.NFW_halo import  NFW_halo
 from ..pot_halo.alfabeta_halo import  alfabeta_halo
 from .galpotential import galpotential

@@ -141,6 +141,36 @@ cdef double fratlaw_der(double R, double a0, double a1, double a2, double a3, do
 
     return parta+partb
 
+    
+cdef double mcmillanlaw(double R, double a0, double a1, double a2, double a3, double a4, double a5, double a6, double a7, double a8, double a9) nogil:
+
+    cdef:
+        double Rd=a0
+        double Rm=a1
+        double  xd, xm
+
+
+    xm=Rm/R
+    xd=R/Rd
+    
+
+    return exp(-xm -xd)
+
+    
+cdef double mcmillanlaw_der(double R, double a0, double a1, double a2, double a3, double a4, double a5, double a6, double a7, double a8, double a9) nogil:
+
+    cdef:
+        double Rd=a0
+        double Rm=a1
+        double  xd, xm, A
+
+
+    xm=Rm/R
+    xd=R/Rd
+    A= (Rm/(R*R)) + (-1/Rd)
+
+    return A*exp(-xm -xd)
+    
 
 cpdef rdens(R, checkrd,  double a0, double a1, double a2, double a3, double a4, double a5, double a6, double a7, double a8, double a9):
     """
@@ -162,6 +192,8 @@ cpdef rdens(R, checkrd,  double a0, double a1, double a2, double a3, double a4, 
         rdens_func        = fratlaw
     elif checkrdi==3:
         rdens_func        = gaussian
+    elif checkrdi==4:
+        rdens_func        = mcmillanlaw
 
     if isinstance(R, int) or isinstance(R, float):
         ret=np.array([[R, 0]])

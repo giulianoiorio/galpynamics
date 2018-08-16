@@ -36,6 +36,7 @@ def _fit_utility(f,rfit_array,p0):
 
     return popt, pcov
 
+
 def _fit_utility_poly(degree,rfit_array):
 
 
@@ -54,7 +55,7 @@ def _fit_utility_poly(degree,rfit_array):
 
 
     return popt[::-1], 0
-
+'''
 #########PolyExp
 def _funco(x,R):
 
@@ -171,7 +172,7 @@ def _fit_utility_fratlaw(rfit_array,nproc=1):
 
     return best_pars, best_like, samples
 ###########
-
+'''
 
 class disc(object):
     """
@@ -610,7 +611,7 @@ class disc(object):
             s+='Rlimit: %.3f kpc \n'%self.Rlimit
         return s
 
-
+'''
 class Exponential_disc(disc):
 
     def __init__(self,sigma0,Rd,fparam,zlaw='gau',flaw='poly',Rcut=50, zcut=30):
@@ -1828,3 +1829,4 @@ class Frat_disc(disc):
         else:
             s+='Rlimit: %.3f kpc \n'%self.Rlimit
         return s
+'''

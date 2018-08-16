@@ -146,7 +146,7 @@ def test_halo_component(halo_component, neval=1000):
     
     print('*'*50)
     
-'''
+
 #Isothermal halo
 d0=3
 rc=2
@@ -205,7 +205,7 @@ e=0.5
 mcut=100
 _to_test=galpynamics.exponential_halo(d0=d0, rb=rb, e=e, mcut=mcut)
 test_halo_component(_to_test, 50000)
-'''
+
 #MWBinney11
 _to_test=galpynamics.MWBinney11()
 test_halo_component(_to_test, 100)
