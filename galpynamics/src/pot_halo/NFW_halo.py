@@ -71,7 +71,7 @@ class NFW_halo(halo):
 
         num=3*M200
         den=(c*c*c)*rho_crit*(800*np.pi)
-        rs = num / den
+        rs = (num / den)**(1./3.)
 
 
         return cls(d0=d0, rs=rs, e=e, mcut=mcut)
