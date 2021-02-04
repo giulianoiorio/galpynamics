@@ -1,6 +1,7 @@
 from __future__ import division, print_function
 from .pot_c_ext.isothermal_halo import potential_iso,  vcirc_iso
 from .pot_c_ext.nfw_halo import potential_nfw, vcirc_nfw
+from .pot_c_ext.core_nfw_halo import potential_core_nfw, vcirc_core_nfw
 from .pot_c_ext.alfabeta_halo import potential_alfabeta, vcirc_alfabeta
 from .pot_c_ext.plummer_halo import potential_plummer, vcirc_plummer
 from .pot_c_ext.einasto_halo import potential_einasto, vcirc_einasto

@@ -3,7 +3,6 @@ from ..pot_disc.Exponential_disc import  Exponential_disc
 from ..pot_disc.McMillan_disc import  McMillan_disc
 from ..pot_halo.NFW_halo import  NFW_halo
 from ..pot_halo.alfabeta_halo import  alfabeta_halo
-from ..pot_halo.truncated_alfabeta_halo import  truncated_alfabeta_halo
 from .galpotential import galpotential
 import numpy as np
 
@@ -57,10 +56,11 @@ class MWMcMillan17(galpotential):
         rs=0.075
         alfa=0
         beta=1.8
-        rcut=2.1
+        mcut=2.1
         q=0.5
         e=np.sqrt(1-q*q)
-        bulge=truncated_alfabeta_halo(d0=d0,  alfa=alfa, beta=beta, rs=rs, rcut=rcut,e=e)        
+        bulge=alfabeta_halo(d0=d0,  alfa=alfa, beta=beta, rs=rs,mcut=mcut,e=e)
+        
         super(MWMcMillan17,self).__init__(dynamic_components=(tkd,tnd,HId, H2d, bulge,halo))
         
         

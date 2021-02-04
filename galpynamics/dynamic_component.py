@@ -12,6 +12,7 @@ from .src.pot_disc.McMillan_disc import McMillan_disc
 #HALOes
 from .src.pot_halo.isothermal_halo import isothermal_halo
 from .src.pot_halo.NFW_halo import NFW_halo
+from .src.pot_halo.core_NFW_halo import core_NFW_halo
 from .src.pot_halo.alfabeta_halo import alfabeta_halo
 from .src.pot_halo.truncated_alfabeta_halo import truncated_alfabeta_halo
 from .src.pot_halo.hernquist_halo import hernquist_halo

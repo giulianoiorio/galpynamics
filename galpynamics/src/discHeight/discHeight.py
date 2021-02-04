@@ -29,7 +29,7 @@ class discHeight(object):
 
         df=galpotential(dynamic_components=self.dynamic_components)
         self.external_potential=external_potential
-
+        print("EEE",self.dynamic_components)
         df.potential(R,Z,grid=grid,nproc=nproc, toll=toll, Rcut=Rcut, zcut=zcut, mcut=mcut,external_potential=external_potential)
         self.fixed_potential_grid=df.potential_grid
 
