@@ -14,12 +14,12 @@
         "library_dirs": [
             "/usr/local/lib"
         ],
-        "name": "galpynamics.src.pot_halo.pot_c_ext.einasto_halo",
+        "name": "galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo",
         "sources": [
-            "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx"
+            "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx"
         ]
     },
-    "module_name": "galpynamics.src.pot_halo.pot_c_ext.einasto_halo"
+    "module_name": "galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo"
 }
 END: Cython Metadata */
 
@@ -608,8 +608,8 @@ static CYTHON_INLINE float __PYX_NAN() {
   #endif
 #endif
 
-#define __PYX_HAVE__galpynamics__src__pot_halo__pot_c_ext__einasto_halo
-#define __PYX_HAVE_API__galpynamics__src__pot_halo__pot_c_ext__einasto_halo
+#define __PYX_HAVE__galpynamics__src__pot_halo__pot_c_ext__truncated_alfabeta_halo
+#define __PYX_HAVE_API__galpynamics__src__pot_halo__pot_c_ext__truncated_alfabeta_halo
 /* Early includes */
 #include <math.h>
 #include <string.h>
@@ -934,7 +934,7 @@ static const char *__pyx_filename;
 
 
 static const char *__pyx_f[] = {
-  "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx",
+  "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx",
   "__init__.pxd",
   "stringsource",
   "type.pxd",
@@ -1365,48 +1365,48 @@ enum  {
   __pyx_e_10cython_gsl_GSL_ETOLG = 31,
   __pyx_e_10cython_gsl_GSL_EOF = 32
 };
-struct __pyx_opt_args_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_potential_einasto;
-struct __pyx_opt_args_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_vcirc_einasto;
+struct __pyx_opt_args_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_potential_truncated_alfabeta;
+struct __pyx_opt_args_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_vcirc_truncated_alfabeta;
 
-/* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":8
+/* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":8
  * import numpy as np
  * cimport numpy as np
  * ctypedef double * double_ptr             # <<<<<<<<<<<<<<
  * ctypedef void * void_ptr
  * from cython_gsl cimport *
  */
-typedef double *__pyx_t_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_double_ptr;
+typedef double *__pyx_t_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_double_ptr;
 
-/* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":9
+/* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":9
  * cimport numpy as np
  * ctypedef double * double_ptr
  * ctypedef void * void_ptr             # <<<<<<<<<<<<<<
  * from cython_gsl cimport *
  * 
  */
-typedef void *__pyx_t_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_void_ptr;
+typedef void *__pyx_t_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_void_ptr;
 
-/* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":203
+/* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":192
  * 
  * 
- * cpdef potential_einasto(R, Z, d0, rs, n, e, mcut, toll=1e-4, grid=False):             # <<<<<<<<<<<<<<
+ * cpdef potential_truncated_alfabeta(R, Z, d0, rs, alfa, beta, rcut, e, mcut, toll=1e-4, grid=False):             # <<<<<<<<<<<<<<
  * 
  *     if isinstance(R, float) or isinstance(R, int):
  */
-struct __pyx_opt_args_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_potential_einasto {
+struct __pyx_opt_args_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_potential_truncated_alfabeta {
   int __pyx_n;
   PyObject *toll;
   PyObject *grid;
 };
 
-/* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":315
+/* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":308
  * 
  * 
- * cpdef vcirc_einasto(R, d0, rs, n, e, toll=1e-4):             # <<<<<<<<<<<<<<
- *     """Calculate the Vcirc on the plane of an isothermal halo.
+ * cpdef vcirc_truncated_alfabeta(R, d0, rs, alfa, beta, rcut, e, toll=1e-4):             # <<<<<<<<<<<<<<
+ *     """Calculate the Vcirc on the plane of a truncated alfabeta halo halo.
  * 
  */
-struct __pyx_opt_args_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_vcirc_einasto {
+struct __pyx_opt_args_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_vcirc_truncated_alfabeta {
   int __pyx_n;
   PyObject *toll;
 };
@@ -2464,12 +2464,12 @@ static CYTHON_INLINE char *__pyx_f_5numpy__util_dtypestring(PyArray_Descr *, cha
 
 /* Module declarations from 'cython_gsl' */
 
-/* Module declarations from 'galpynamics.src.pot_halo.pot_c_ext.einasto_halo' */
+/* Module declarations from 'galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo' */
 static PyTypeObject *__pyx_array_type = 0;
 static PyTypeObject *__pyx_MemviewEnum_type = 0;
 static PyTypeObject *__pyx_memoryview_type = 0;
 static PyTypeObject *__pyx_memoryviewslice_type = 0;
-static double __pyx_v_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_PI;
+static double __pyx_v_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_PI;
 static PyObject *generic = 0;
 static PyObject *strided = 0;
 static PyObject *indirect = 0;
@@ -2477,16 +2477,15 @@ static PyObject *contiguous = 0;
 static PyObject *indirect_contiguous = 0;
 static int __pyx_memoryview_thread_locks_used;
 static PyThread_type_lock __pyx_memoryview_thread_locks[8];
-static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_dn_func(double); /*proto*/
-static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_dens_einasto(double, void *); /*proto*/
-static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_psi_einasto(double, double, double, double, double); /*proto*/
-static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__potential_einasto(double, double, double, double, double, double, double, double); /*proto*/
-static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__potential_einasto_array(__Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, double, double); /*proto*/
-static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__potential_einasto_grid(__Pyx_memviewslice, __Pyx_memviewslice, int, int, double, double, double, double, double, double); /*proto*/
-static PyObject *__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_potential_einasto(PyObject *, PyObject *, PyObject *, PyObject *, PyObject *, PyObject *, PyObject *, int __pyx_skip_dispatch, struct __pyx_opt_args_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_potential_einasto *__pyx_optional_args); /*proto*/
-static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__vcirc_einasto(double, double, double, double, double, double); /*proto*/
-static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__vcirc_einasto_array(__Pyx_memviewslice, int, double, double, double, double, double); /*proto*/
-static PyObject *__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_vcirc_einasto(PyObject *, PyObject *, PyObject *, PyObject *, PyObject *, int __pyx_skip_dispatch, struct __pyx_opt_args_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_vcirc_einasto *__pyx_optional_args); /*proto*/
+static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_psi_truncated_alfabeta(double, double, double, double, double, double, double); /*proto*/
+static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo__potential_truncated_alfabeta(double, double, double, double, double, double, double, double, double, double); /*proto*/
+static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo__potential_truncated_alfabeta_array(__Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, double, double, double, double); /*proto*/
+static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo__potential_truncated_alfabeta_grid(__Pyx_memviewslice, __Pyx_memviewslice, int, int, double, double, double, double, double, double, double, double); /*proto*/
+static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_dens_truncated_alfabeta(double, void *); /*proto*/
+static PyObject *__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_potential_truncated_alfabeta(PyObject *, PyObject *, PyObject *, PyObject *, PyObject *, PyObject *, PyObject *, PyObject *, PyObject *, int __pyx_skip_dispatch, struct __pyx_opt_args_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_potential_truncated_alfabeta *__pyx_optional_args); /*proto*/
+static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo__vcirc_truncated_alfabeta(double, double, double, double, double, double, double, double); /*proto*/
+static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo__vcirc_truncated_alfabeta_array(__Pyx_memviewslice, int, double, double, double, double, double, double, double); /*proto*/
+static PyObject *__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_vcirc_truncated_alfabeta(PyObject *, PyObject *, PyObject *, PyObject *, PyObject *, PyObject *, PyObject *, int __pyx_skip_dispatch, struct __pyx_opt_args_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_vcirc_truncated_alfabeta *__pyx_optional_args); /*proto*/
 static struct __pyx_array_obj *__pyx_array_new(PyObject *, Py_ssize_t, char *, char *, char *); /*proto*/
 static void *__pyx_align_pointer(void *, size_t); /*proto*/
 static PyObject *__pyx_memoryview_new(PyObject *, int, int, __Pyx_TypeInfo *); /*proto*/
@@ -2521,11 +2520,11 @@ static void __pyx_memoryview_slice_assign_scalar(__Pyx_memviewslice *, int, size
 static void __pyx_memoryview__slice_assign_scalar(char *, Py_ssize_t *, Py_ssize_t *, int, size_t, void *); /*proto*/
 static PyObject *__pyx_unpickle_Enum__set_state(struct __pyx_MemviewEnum_obj *, PyObject *); /*proto*/
 static __Pyx_TypeInfo __Pyx_TypeInfo_double = { "double", NULL, sizeof(double), { 0 }, 0, 'R', 0, 0 };
-#define __Pyx_MODULE_NAME "galpynamics.src.pot_halo.pot_c_ext.einasto_halo"
-extern int __pyx_module_is_main_galpynamics__src__pot_halo__pot_c_ext__einasto_halo;
-int __pyx_module_is_main_galpynamics__src__pot_halo__pot_c_ext__einasto_halo = 0;
+#define __Pyx_MODULE_NAME "galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo"
+extern int __pyx_module_is_main_galpynamics__src__pot_halo__pot_c_ext__truncated_alfabeta_halo;
+int __pyx_module_is_main_galpynamics__src__pot_halo__pot_c_ext__truncated_alfabeta_halo = 0;
 
-/* Implementation of 'galpynamics.src.pot_halo.pot_c_ext.einasto_halo' */
+/* Implementation of 'galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo' */
 static PyObject *__pyx_builtin_range;
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_RuntimeError;
@@ -2543,15 +2542,16 @@ static const char __pyx_k_Z[] = "Z";
 static const char __pyx_k_c[] = "c";
 static const char __pyx_k_d[] = "d";
 static const char __pyx_k_e[] = "e";
-static const char __pyx_k_n[] = "n";
 static const char __pyx_k_d0[] = "d0";
 static const char __pyx_k_id[] = "id";
 static const char __pyx_k_np[] = "np";
 static const char __pyx_k_rs[] = "rs";
 static const char __pyx_k_new[] = "__new__";
 static const char __pyx_k_obj[] = "obj";
+static const char __pyx_k_alfa[] = "alfa";
 static const char __pyx_k_args[] = "args";
 static const char __pyx_k_base[] = "base";
+static const char __pyx_k_beta[] = "beta";
 static const char __pyx_k_dict[] = "__dict__";
 static const char __pyx_k_grid[] = "grid";
 static const char __pyx_k_main[] = "__main__";
@@ -2561,6 +2561,7 @@ static const char __pyx_k_name[] = "name";
 static const char __pyx_k_ndim[] = "ndim";
 static const char __pyx_k_pack[] = "pack";
 static const char __pyx_k_quad[] = "quad";
+static const char __pyx_k_rcut[] = "rcut";
 static const char __pyx_k_size[] = "size";
 static const char __pyx_k_step[] = "step";
 static const char __pyx_k_stop[] = "stop";
@@ -2620,7 +2621,6 @@ static const char __pyx_k_pyx_PickleError[] = "__pyx_PickleError";
 static const char __pyx_k_scipy_integrate[] = "scipy.integrate";
 static const char __pyx_k_setstate_cython[] = "__setstate_cython__";
 static const char __pyx_k_LowLevelCallable[] = "LowLevelCallable";
-static const char __pyx_k_integrand_einasto[] = "integrand_einasto";
 static const char __pyx_k_pyx_unpickle_Enum[] = "__pyx_unpickle_Enum";
 static const char __pyx_k_cline_in_traceback[] = "cline_in_traceback";
 static const char __pyx_k_strided_and_direct[] = "<strided and direct>";
@@ -2630,11 +2630,11 @@ static const char __pyx_k_scipy__lib__ccallback[] = "scipy._lib._ccallback";
 static const char __pyx_k_MemoryView_of_r_object[] = "<MemoryView of %r object>";
 static const char __pyx_k_MemoryView_of_r_at_0x_x[] = "<MemoryView of %r at 0x%x>";
 static const char __pyx_k_contiguous_and_indirect[] = "<contiguous and indirect>";
-static const char __pyx_k_vcirc_integrand_einasto[] = "vcirc_integrand_einasto";
 static const char __pyx_k_Cannot_index_with_type_s[] = "Cannot index with type '%s'";
 static const char __pyx_k_Invalid_shape_in_axis_d_d[] = "Invalid shape in axis %d: %d.";
 static const char __pyx_k_itemsize_0_for_cython_array[] = "itemsize <= 0 for cython.array";
 static const char __pyx_k_ndarray_is_not_C_contiguous[] = "ndarray is not C contiguous";
+static const char __pyx_k_integrand_truncated_alfabeta[] = "integrand_truncated_alfabeta";
 static const char __pyx_k_unable_to_allocate_array_data[] = "unable to allocate array data.";
 static const char __pyx_k_strided_and_direct_or_indirect[] = "<strided and direct or indirect>";
 static const char __pyx_k_numpy_core_multiarray_failed_to[] = "numpy.core.multiarray failed to import";
@@ -2652,12 +2652,13 @@ static const char __pyx_k_Non_native_byte_order_not_suppor[] = "Non-native byte 
 static const char __pyx_k_Out_of_bounds_on_buffer_access_a[] = "Out of bounds on buffer access (axis %d)";
 static const char __pyx_k_R_and_Z_have_different_dimension[] = "R and Z have different dimension";
 static const char __pyx_k_Unable_to_convert_item_to_object[] = "Unable to convert item to object";
-static const char __pyx_k_galpynamics_src_pot_halo_pot_c_e[] = "galpynamics.src.pot_halo.pot_c_ext.einasto_halo";
+static const char __pyx_k_galpynamics_src_pot_halo_pot_c_e[] = "galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo";
 static const char __pyx_k_got_differing_extents_in_dimensi[] = "got differing extents in dimension %d (got %d and %d)";
 static const char __pyx_k_ndarray_is_not_Fortran_contiguou[] = "ndarray is not Fortran contiguous";
 static const char __pyx_k_no_default___reduce___due_to_non[] = "no default __reduce__ due to non-trivial __cinit__";
 static const char __pyx_k_numpy_core_umath_failed_to_impor[] = "numpy.core.umath failed to import";
 static const char __pyx_k_unable_to_allocate_shape_and_str[] = "unable to allocate shape and strides.";
+static const char __pyx_k_vcirc_integrand_truncated_alfabe[] = "vcirc_integrand_truncated_alfabeta";
 static const char __pyx_k_Format_string_allocated_too_shor_2[] = "Format string allocated too short.";
 static PyObject *__pyx_n_s_;
 static PyObject *__pyx_n_s_ASCII;
@@ -2692,10 +2693,12 @@ static PyObject *__pyx_kp_s_Unable_to_convert_item_to_object;
 static PyObject *__pyx_n_s_ValueError;
 static PyObject *__pyx_n_s_View_MemoryView;
 static PyObject *__pyx_n_s_Z;
+static PyObject *__pyx_n_s_alfa;
 static PyObject *__pyx_n_s_allocate_buffer;
 static PyObject *__pyx_n_s_args;
 static PyObject *__pyx_n_s_array;
 static PyObject *__pyx_n_s_base;
+static PyObject *__pyx_n_s_beta;
 static PyObject *__pyx_n_s_c;
 static PyObject *__pyx_n_u_c;
 static PyObject *__pyx_n_s_class;
@@ -2725,14 +2728,13 @@ static PyObject *__pyx_kp_s_got_differing_extents_in_dimensi;
 static PyObject *__pyx_n_s_grid;
 static PyObject *__pyx_n_s_id;
 static PyObject *__pyx_n_s_import;
-static PyObject *__pyx_n_u_integrand_einasto;
+static PyObject *__pyx_n_u_integrand_truncated_alfabeta;
 static PyObject *__pyx_n_s_itemsize;
 static PyObject *__pyx_kp_s_itemsize_0_for_cython_array;
 static PyObject *__pyx_n_s_main;
 static PyObject *__pyx_n_s_mcut;
 static PyObject *__pyx_n_s_memview;
 static PyObject *__pyx_n_s_mode;
-static PyObject *__pyx_n_s_n;
 static PyObject *__pyx_n_s_name;
 static PyObject *__pyx_n_s_name_2;
 static PyObject *__pyx_kp_u_ndarray_is_not_C_contiguous;
@@ -2757,6 +2759,7 @@ static PyObject *__pyx_n_s_pyx_unpickle_Enum;
 static PyObject *__pyx_n_s_pyx_vtable;
 static PyObject *__pyx_n_s_quad;
 static PyObject *__pyx_n_s_range;
+static PyObject *__pyx_n_s_rcut;
 static PyObject *__pyx_n_s_reduce;
 static PyObject *__pyx_n_s_reduce_cython;
 static PyObject *__pyx_n_s_reduce_ex;
@@ -2782,10 +2785,10 @@ static PyObject *__pyx_kp_s_unable_to_allocate_shape_and_str;
 static PyObject *__pyx_kp_u_unknown_dtype_code_in_numpy_pxd;
 static PyObject *__pyx_n_s_unpack;
 static PyObject *__pyx_n_s_update;
-static PyObject *__pyx_n_u_vcirc_integrand_einasto;
+static PyObject *__pyx_n_u_vcirc_integrand_truncated_alfabe;
 static PyObject *__pyx_n_s_where;
-static PyObject *__pyx_pf_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_potential_einasto(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_R, PyObject *__pyx_v_Z, PyObject *__pyx_v_d0, PyObject *__pyx_v_rs, PyObject *__pyx_v_n, PyObject *__pyx_v_e, PyObject *__pyx_v_mcut, PyObject *__pyx_v_toll, PyObject *__pyx_v_grid); /* proto */
-static PyObject *__pyx_pf_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_2vcirc_einasto(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_R, PyObject *__pyx_v_d0, PyObject *__pyx_v_rs, PyObject *__pyx_v_n, PyObject *__pyx_v_e, PyObject *__pyx_v_toll); /* proto */
+static PyObject *__pyx_pf_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_potential_truncated_alfabeta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_R, PyObject *__pyx_v_Z, PyObject *__pyx_v_d0, PyObject *__pyx_v_rs, PyObject *__pyx_v_alfa, PyObject *__pyx_v_beta, PyObject *__pyx_v_rcut, PyObject *__pyx_v_e, PyObject *__pyx_v_mcut, PyObject *__pyx_v_toll, PyObject *__pyx_v_grid); /* proto */
+static PyObject *__pyx_pf_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_2vcirc_truncated_alfabeta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_R, PyObject *__pyx_v_d0, PyObject *__pyx_v_rs, PyObject *__pyx_v_alfa, PyObject *__pyx_v_beta, PyObject *__pyx_v_rcut, PyObject *__pyx_v_e, PyObject *__pyx_v_toll); /* proto */
 static int __pyx_pf_5numpy_7ndarray___getbuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_pf_5numpy_7ndarray_2__releasebuffer__(PyArrayObject *__pyx_v_self, Py_buffer *__pyx_v_info); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array___cinit__(struct __pyx_array_obj *__pyx_v_self, PyObject *__pyx_v_shape, Py_ssize_t __pyx_v_itemsize, PyObject *__pyx_v_format, PyObject *__pyx_v_mode, int __pyx_v_allocate_buffer); /* proto */
@@ -2879,215 +2882,91 @@ static PyObject *__pyx_tuple__35;
 static PyObject *__pyx_codeobj__36;
 /* Late includes */
 
-/* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":15
+/* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":16
  * 
  * 
- * cdef double dn_func(double n) nogil:             # <<<<<<<<<<<<<<
- * 
- *     cdef:
- */
-
-static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_dn_func(double __pyx_v_n) {
-  double __pyx_v_n2;
-  double __pyx_v_n3;
-  double __pyx_v_n4;
-  double __pyx_v_a0;
-  double __pyx_v_a1;
-  double __pyx_v_a2;
-  double __pyx_v_a3;
-  double __pyx_v_a4;
-  double __pyx_v_a5;
-  double __pyx_r;
-
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":18
- * 
- *     cdef:
- *         double n2=n*n             # <<<<<<<<<<<<<<
- *         double n3=n2*n
- *         double n4=n3*n
- */
-  __pyx_v_n2 = (__pyx_v_n * __pyx_v_n);
-
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":19
- *     cdef:
- *         double n2=n*n
- *         double n3=n2*n             # <<<<<<<<<<<<<<
- *         double n4=n3*n
- *         double a0=3*n
- */
-  __pyx_v_n3 = (__pyx_v_n2 * __pyx_v_n);
-
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":20
- *         double n2=n*n
- *         double n3=n2*n
- *         double n4=n3*n             # <<<<<<<<<<<<<<
- *         double a0=3*n
- *         double a1=-1./3.
- */
-  __pyx_v_n4 = (__pyx_v_n3 * __pyx_v_n);
-
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":21
- *         double n3=n2*n
- *         double n4=n3*n
- *         double a0=3*n             # <<<<<<<<<<<<<<
- *         double a1=-1./3.
- *         double a2=8./(1215.*n)
- */
-  __pyx_v_a0 = (3.0 * __pyx_v_n);
-
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":22
- *         double n4=n3*n
- *         double a0=3*n
- *         double a1=-1./3.             # <<<<<<<<<<<<<<
- *         double a2=8./(1215.*n)
- *         double a3=184./(229635.*n2)
- */
-  __pyx_v_a1 = (-1. / 3.);
-
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":23
- *         double a0=3*n
- *         double a1=-1./3.
- *         double a2=8./(1215.*n)             # <<<<<<<<<<<<<<
- *         double a3=184./(229635.*n2)
- *         double a4=1048/(31000725.*n3)
- */
-  __pyx_v_a2 = (8. / (1215. * __pyx_v_n));
-
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":24
- *         double a1=-1./3.
- *         double a2=8./(1215.*n)
- *         double a3=184./(229635.*n2)             # <<<<<<<<<<<<<<
- *         double a4=1048/(31000725.*n3)
- *         double a5=-17557576/(1242974068875.*n4)
- */
-  __pyx_v_a3 = (184. / (229635. * __pyx_v_n2));
-
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":25
- *         double a2=8./(1215.*n)
- *         double a3=184./(229635.*n2)
- *         double a4=1048/(31000725.*n3)             # <<<<<<<<<<<<<<
- *         double a5=-17557576/(1242974068875.*n4)
- * 
- */
-  __pyx_v_a4 = (1048.0 / (31000725. * __pyx_v_n3));
-
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":26
- *         double a3=184./(229635.*n2)
- *         double a4=1048/(31000725.*n3)
- *         double a5=-17557576/(1242974068875.*n4)             # <<<<<<<<<<<<<<
- * 
- *     return a0+a1+a2+a3+a4+a5
- */
-  __pyx_v_a5 = (-17557576.0 / (1242974068875. * __pyx_v_n4));
-
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":28
- *         double a5=-17557576/(1242974068875.*n4)
- * 
- *     return a0+a1+a2+a3+a4+a5             # <<<<<<<<<<<<<<
- * 
- * cdef double dens_einasto(double m, void * params) nogil:
- */
-  __pyx_r = (((((__pyx_v_a0 + __pyx_v_a1) + __pyx_v_a2) + __pyx_v_a3) + __pyx_v_a4) + __pyx_v_a5);
-  goto __pyx_L0;
-
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":15
- * 
- * 
- * cdef double dn_func(double n) nogil:             # <<<<<<<<<<<<<<
+ * cdef double dens_truncated_alfabeta(double m, void * params) nogil:             # <<<<<<<<<<<<<<
  * 
  *     cdef:
  */
 
-  /* function exit code */
-  __pyx_L0:;
-  return __pyx_r;
-}
-
-/* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":30
- *     return a0+a1+a2+a3+a4+a5
- * 
- * cdef double dens_einasto(double m, void * params) nogil:             # <<<<<<<<<<<<<<
- * 
- *     cdef:
- */
-
-static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_dens_einasto(double __pyx_v_m, void *__pyx_v_params) {
+static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_dens_truncated_alfabeta(double __pyx_v_m, void *__pyx_v_params) {
   double __pyx_v_d0;
   double __pyx_v_rs;
-  double __pyx_v_n;
-  double __pyx_v_dn;
+  double __pyx_v_alfa;
+  double __pyx_v_beta;
+  double __pyx_v_rcut;
   double __pyx_v_x;
-  double __pyx_v_ee;
   double __pyx_r;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":33
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":19
  * 
  *     cdef:
  *         double d0 = (<double_ptr> params)[0]             # <<<<<<<<<<<<<<
  *         double rs = (<double_ptr> params)[1]
- *         double n  = (<double_ptr> params)[2]
+ *         double alfa = (<double_ptr> params)[2]
  */
-  __pyx_v_d0 = (((__pyx_t_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_double_ptr)__pyx_v_params)[0]);
+  __pyx_v_d0 = (((__pyx_t_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_double_ptr)__pyx_v_params)[0]);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":34
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":20
  *     cdef:
  *         double d0 = (<double_ptr> params)[0]
  *         double rs = (<double_ptr> params)[1]             # <<<<<<<<<<<<<<
- *         double n  = (<double_ptr> params)[2]
- *         double dn=dn_func(n)
+ *         double alfa = (<double_ptr> params)[2]
+ *         double beta = (<double_ptr> params)[3]
  */
-  __pyx_v_rs = (((__pyx_t_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_double_ptr)__pyx_v_params)[1]);
+  __pyx_v_rs = (((__pyx_t_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_double_ptr)__pyx_v_params)[1]);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":35
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":21
  *         double d0 = (<double_ptr> params)[0]
  *         double rs = (<double_ptr> params)[1]
- *         double n  = (<double_ptr> params)[2]             # <<<<<<<<<<<<<<
- *         double dn=dn_func(n)
- *         double x=m/rs
+ *         double alfa = (<double_ptr> params)[2]             # <<<<<<<<<<<<<<
+ *         double beta = (<double_ptr> params)[3]
+ *         double rcut = (<double_ptr> params)[4]
  */
-  __pyx_v_n = (((__pyx_t_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_double_ptr)__pyx_v_params)[2]);
+  __pyx_v_alfa = (((__pyx_t_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_double_ptr)__pyx_v_params)[2]);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":36
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":22
  *         double rs = (<double_ptr> params)[1]
- *         double n  = (<double_ptr> params)[2]
- *         double dn=dn_func(n)             # <<<<<<<<<<<<<<
+ *         double alfa = (<double_ptr> params)[2]
+ *         double beta = (<double_ptr> params)[3]             # <<<<<<<<<<<<<<
+ *         double rcut = (<double_ptr> params)[4]
  *         double x=m/rs
- *         double ee=dn*pow(x,1/n)
  */
-  __pyx_v_dn = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_dn_func(__pyx_v_n);
+  __pyx_v_beta = (((__pyx_t_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_double_ptr)__pyx_v_params)[3]);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":37
- *         double n  = (<double_ptr> params)[2]
- *         double dn=dn_func(n)
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":23
+ *         double alfa = (<double_ptr> params)[2]
+ *         double beta = (<double_ptr> params)[3]
+ *         double rcut = (<double_ptr> params)[4]             # <<<<<<<<<<<<<<
+ *         double x=m/rs
+ *     return 2.*m*d0*pow(x,-alfa)*pow(1+x,alfa-beta)*exp(-pow(m/rcut,2.))
+ */
+  __pyx_v_rcut = (((__pyx_t_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_double_ptr)__pyx_v_params)[4]);
+
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":24
+ *         double beta = (<double_ptr> params)[3]
+ *         double rcut = (<double_ptr> params)[4]
  *         double x=m/rs             # <<<<<<<<<<<<<<
- *         double ee=dn*pow(x,1/n)
+ *     return 2.*m*d0*pow(x,-alfa)*pow(1+x,alfa-beta)*exp(-pow(m/rcut,2.))
  * 
  */
   __pyx_v_x = (__pyx_v_m / __pyx_v_rs);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":38
- *         double dn=dn_func(n)
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":25
+ *         double rcut = (<double_ptr> params)[4]
  *         double x=m/rs
- *         double ee=dn*pow(x,1/n)             # <<<<<<<<<<<<<<
+ *     return 2.*m*d0*pow(x,-alfa)*pow(1+x,alfa-beta)*exp(-pow(m/rcut,2.))             # <<<<<<<<<<<<<<
  * 
- *     return 2.*m*d0*exp(-ee)
+ * cdef double psi_truncated_alfabeta(double d0, double rs, double alfa, double beta, double rcut, double m,  double toll) nogil:
  */
-  __pyx_v_ee = (__pyx_v_dn * pow(__pyx_v_x, (1.0 / __pyx_v_n)));
-
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":40
- *         double ee=dn*pow(x,1/n)
- * 
- *     return 2.*m*d0*exp(-ee)             # <<<<<<<<<<<<<<
- * 
- * cdef double psi_einasto(double d0, double rs, double n, double m,  double toll) nogil:
- */
-  __pyx_r = (((2. * __pyx_v_m) * __pyx_v_d0) * exp((-__pyx_v_ee)));
+  __pyx_r = (((((2. * __pyx_v_m) * __pyx_v_d0) * pow(__pyx_v_x, (-__pyx_v_alfa))) * pow((1.0 + __pyx_v_x), (__pyx_v_alfa - __pyx_v_beta))) * exp((-pow((__pyx_v_m / __pyx_v_rcut), 2.))));
   goto __pyx_L0;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":30
- *     return a0+a1+a2+a3+a4+a5
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":16
  * 
- * cdef double dens_einasto(double m, void * params) nogil:             # <<<<<<<<<<<<<<
+ * 
+ * cdef double dens_truncated_alfabeta(double m, void * params) nogil:             # <<<<<<<<<<<<<<
  * 
  *     cdef:
  */
@@ -3097,51 +2976,69 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_den
   return __pyx_r;
 }
 
-/* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":42
- *     return 2.*m*d0*exp(-ee)
+/* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":27
+ *     return 2.*m*d0*pow(x,-alfa)*pow(1+x,alfa-beta)*exp(-pow(m/rcut,2.))
  * 
- * cdef double psi_einasto(double d0, double rs, double n, double m,  double toll) nogil:             # <<<<<<<<<<<<<<
+ * cdef double psi_truncated_alfabeta(double d0, double rs, double alfa, double beta, double rcut, double m,  double toll) nogil:             # <<<<<<<<<<<<<<
  * 
  *     cdef:
  */
 
-static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_psi_einasto(double __pyx_v_d0, double __pyx_v_rs, double __pyx_v_n, double __pyx_v_m, double __pyx_v_toll) {
+static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_psi_truncated_alfabeta(double __pyx_v_d0, double __pyx_v_rs, double __pyx_v_alfa, double __pyx_v_beta, double __pyx_v_rcut, double __pyx_v_m, double __pyx_v_toll) {
   double __pyx_v_result;
   double __pyx_v_error;
   gsl_function __pyx_v_F;
-  double __pyx_v_params[3];
+  double __pyx_v_params[5];
   gsl_integration_workspace *__pyx_v_W;
   double __pyx_r;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":50
- *         double params[3]
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":35
+ *         double params[5]
  * 
  *     params[0] = d0             # <<<<<<<<<<<<<<
  *     params[1] = rs
- *     params[2] = n
+ *     params[2] = alfa
  */
   (__pyx_v_params[0]) = __pyx_v_d0;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":51
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":36
  * 
  *     params[0] = d0
  *     params[1] = rs             # <<<<<<<<<<<<<<
- *     params[2] = n
- * 
+ *     params[2] = alfa
+ *     params[3] = beta
  */
   (__pyx_v_params[1]) = __pyx_v_rs;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":52
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":37
  *     params[0] = d0
  *     params[1] = rs
- *     params[2] = n             # <<<<<<<<<<<<<<
+ *     params[2] = alfa             # <<<<<<<<<<<<<<
+ *     params[3] = beta
+ *     params[4] = rcut
+ */
+  (__pyx_v_params[2]) = __pyx_v_alfa;
+
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":38
+ *     params[1] = rs
+ *     params[2] = alfa
+ *     params[3] = beta             # <<<<<<<<<<<<<<
+ *     params[4] = rcut
+ * 
+ */
+  (__pyx_v_params[3]) = __pyx_v_beta;
+
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":39
+ *     params[2] = alfa
+ *     params[3] = beta
+ *     params[4] = rcut             # <<<<<<<<<<<<<<
  * 
  *     W = gsl_integration_workspace_alloc (1000)
  */
-  (__pyx_v_params[2]) = __pyx_v_n;
+  (__pyx_v_params[4]) = __pyx_v_rcut;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":54
- *     params[2] = n
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":41
+ *     params[4] = rcut
  * 
  *     W = gsl_integration_workspace_alloc (1000)             # <<<<<<<<<<<<<<
  * 
@@ -3149,25 +3046,25 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_psi
  */
   __pyx_v_W = gsl_integration_workspace_alloc(0x3E8);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":57
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":44
  * 
  * 
- *     F.function = &dens_einasto             # <<<<<<<<<<<<<<
+ *     F.function = &dens_truncated_alfabeta             # <<<<<<<<<<<<<<
  *     F.params = params
  * 
  */
-  __pyx_v_F.function = (&__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_dens_einasto);
+  __pyx_v_F.function = (&__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_dens_truncated_alfabeta);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":58
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":45
  * 
- *     F.function = &dens_einasto
+ *     F.function = &dens_truncated_alfabeta
  *     F.params = params             # <<<<<<<<<<<<<<
  * 
  * 
  */
   __pyx_v_F.params = __pyx_v_params;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":61
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":48
  * 
  * 
  *     gsl_integration_qag(&F, 0, m, toll, toll, 1000, GSL_INTEG_GAUSS15, W, &result, &error)             # <<<<<<<<<<<<<<
@@ -3176,7 +3073,7 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_psi
  */
   (void)(gsl_integration_qag((&__pyx_v_F), 0.0, __pyx_v_m, __pyx_v_toll, __pyx_v_toll, 0x3E8, GSL_INTEG_GAUSS15, __pyx_v_W, (&__pyx_v_result), (&__pyx_v_error)));
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":62
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":49
  * 
  *     gsl_integration_qag(&F, 0, m, toll, toll, 1000, GSL_INTEG_GAUSS15, W, &result, &error)
  *     gsl_integration_workspace_free(W)             # <<<<<<<<<<<<<<
@@ -3185,20 +3082,20 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_psi
  */
   gsl_integration_workspace_free(__pyx_v_W);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":64
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":51
  *     gsl_integration_workspace_free(W)
  * 
  *     return result             # <<<<<<<<<<<<<<
  * 
- * cdef double integrand_einasto(int nn, double *data) nogil:
+ * cdef double integrand_truncated_alfabeta(int nn, double *data) nogil:
  */
   __pyx_r = __pyx_v_result;
   goto __pyx_L0;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":42
- *     return 2.*m*d0*exp(-ee)
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":27
+ *     return 2.*m*d0*pow(x,-alfa)*pow(1+x,alfa-beta)*exp(-pow(m/rcut,2.))
  * 
- * cdef double psi_einasto(double d0, double rs, double n, double m,  double toll) nogil:             # <<<<<<<<<<<<<<
+ * cdef double psi_truncated_alfabeta(double d0, double rs, double alfa, double beta, double rcut, double m,  double toll) nogil:             # <<<<<<<<<<<<<<
  * 
  *     cdef:
  */
@@ -3208,22 +3105,24 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_psi
   return __pyx_r;
 }
 
-/* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":66
+/* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":53
  *     return result
  * 
- * cdef double integrand_einasto(int nn, double *data) nogil:             # <<<<<<<<<<<<<<
+ * cdef double integrand_truncated_alfabeta(int nn, double *data) nogil:             # <<<<<<<<<<<<<<
  * 
  * 
  */
 
-static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_integrand_einasto(CYTHON_UNUSED int __pyx_v_nn, double *__pyx_v_data) {
+static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_integrand_truncated_alfabeta(CYTHON_UNUSED int __pyx_v_nn, double *__pyx_v_data) {
   double __pyx_v_m;
   double __pyx_v_R;
   double __pyx_v_Z;
   double __pyx_v_mcut;
   double __pyx_v_d0;
   double __pyx_v_rs;
-  double __pyx_v_n;
+  double __pyx_v_alfa;
+  double __pyx_v_beta;
+  double __pyx_v_rcut;
   double __pyx_v_e;
   double __pyx_v_toll;
   double __pyx_v_psi;
@@ -3231,7 +3130,7 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_int
   double __pyx_r;
   int __pyx_t_1;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":70
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":57
  * 
  *     cdef:
  *         double m = data[0]             # <<<<<<<<<<<<<<
@@ -3240,7 +3139,7 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_int
  */
   __pyx_v_m = (__pyx_v_data[0]);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":72
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":59
  *         double m = data[0]
  * 
  *     if m==0.: return 0 #Xi diverge to infinity when m tends to 0, but the integrand tends to 0             # <<<<<<<<<<<<<<
@@ -3253,7 +3152,7 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_int
     goto __pyx_L0;
   }
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":75
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":62
  * 
  *     cdef:
  *         double R = data[1]             # <<<<<<<<<<<<<<
@@ -3262,7 +3161,7 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_int
  */
   __pyx_v_R = (__pyx_v_data[1]);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":76
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":63
  *     cdef:
  *         double R = data[1]
  *         double Z = data[2]             # <<<<<<<<<<<<<<
@@ -3271,7 +3170,7 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_int
  */
   __pyx_v_Z = (__pyx_v_data[2]);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":77
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":64
  *         double R = data[1]
  *         double Z = data[2]
  *         double mcut = data[3]             # <<<<<<<<<<<<<<
@@ -3280,78 +3179,96 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_int
  */
   __pyx_v_mcut = (__pyx_v_data[3]);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":78
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":65
  *         double Z = data[2]
  *         double mcut = data[3]
  *         double d0 = data[4]             # <<<<<<<<<<<<<<
  *         double rs = data[5]
- *         double n = data[6]
+ *         double alfa = data[6]
  */
   __pyx_v_d0 = (__pyx_v_data[4]);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":79
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":66
  *         double mcut = data[3]
  *         double d0 = data[4]
  *         double rs = data[5]             # <<<<<<<<<<<<<<
- *         double n = data[6]
- *         double e = data[7]
+ *         double alfa = data[6]
+ *         double beta = data[7]
  */
   __pyx_v_rs = (__pyx_v_data[5]);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":80
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":67
  *         double d0 = data[4]
  *         double rs = data[5]
- *         double n = data[6]             # <<<<<<<<<<<<<<
- *         double e = data[7]
- *         double toll = data[8]
+ *         double alfa = data[6]             # <<<<<<<<<<<<<<
+ *         double beta = data[7]
+ *         double rcut = data[8]
  */
-  __pyx_v_n = (__pyx_v_data[6]);
+  __pyx_v_alfa = (__pyx_v_data[6]);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":81
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":68
  *         double rs = data[5]
- *         double n = data[6]
- *         double e = data[7]             # <<<<<<<<<<<<<<
- *         double toll = data[8]
+ *         double alfa = data[6]
+ *         double beta = data[7]             # <<<<<<<<<<<<<<
+ *         double rcut = data[8]
+ *         double e = data[9]
+ */
+  __pyx_v_beta = (__pyx_v_data[7]);
+
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":69
+ *         double alfa = data[6]
+ *         double beta = data[7]
+ *         double rcut = data[8]             # <<<<<<<<<<<<<<
+ *         double e = data[9]
+ *         double toll = data[10]
+ */
+  __pyx_v_rcut = (__pyx_v_data[8]);
+
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":70
+ *         double beta = data[7]
+ *         double rcut = data[8]
+ *         double e = data[9]             # <<<<<<<<<<<<<<
+ *         double toll = data[10]
  *         double psi, result #, num, den
  */
-  __pyx_v_e = (__pyx_v_data[7]);
+  __pyx_v_e = (__pyx_v_data[9]);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":82
- *         double n = data[6]
- *         double e = data[7]
- *         double toll = data[8]             # <<<<<<<<<<<<<<
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":71
+ *         double rcut = data[8]
+ *         double e = data[9]
+ *         double toll = data[10]             # <<<<<<<<<<<<<<
  *         double psi, result #, num, den
  * 
  */
-  __pyx_v_toll = (__pyx_v_data[8]);
+  __pyx_v_toll = (__pyx_v_data[10]);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":85
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":74
  *         double psi, result #, num, den
  * 
- *     if (m<=mcut): psi=psi_einasto(d0, rs, n, m, toll)             # <<<<<<<<<<<<<<
- *     else: psi=psi_einasto(d0, rs, n, mcut, toll)
+ *     if (m<=mcut): psi=psi_truncated_alfabeta(d0, rs, alfa, beta, rcut, m, toll)             # <<<<<<<<<<<<<<
+ *     else: psi=psi_truncated_alfabeta(d0, rs, alfa, beta, rcut, mcut, toll)
  * 
  */
   __pyx_t_1 = ((__pyx_v_m <= __pyx_v_mcut) != 0);
   if (__pyx_t_1) {
-    __pyx_v_psi = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_psi_einasto(__pyx_v_d0, __pyx_v_rs, __pyx_v_n, __pyx_v_m, __pyx_v_toll);
+    __pyx_v_psi = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_psi_truncated_alfabeta(__pyx_v_d0, __pyx_v_rs, __pyx_v_alfa, __pyx_v_beta, __pyx_v_rcut, __pyx_v_m, __pyx_v_toll);
     goto __pyx_L4;
   }
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":86
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":75
  * 
- *     if (m<=mcut): psi=psi_einasto(d0, rs, n, m, toll)
- *     else: psi=psi_einasto(d0, rs, n, mcut, toll)             # <<<<<<<<<<<<<<
+ *     if (m<=mcut): psi=psi_truncated_alfabeta(d0, rs, alfa, beta, rcut, m, toll)
+ *     else: psi=psi_truncated_alfabeta(d0, rs, alfa, beta, rcut, mcut, toll)             # <<<<<<<<<<<<<<
  * 
  *     result=integrand_core(m, R, Z, e, psi)
  */
   /*else*/ {
-    __pyx_v_psi = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_psi_einasto(__pyx_v_d0, __pyx_v_rs, __pyx_v_n, __pyx_v_mcut, __pyx_v_toll);
+    __pyx_v_psi = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_psi_truncated_alfabeta(__pyx_v_d0, __pyx_v_rs, __pyx_v_alfa, __pyx_v_beta, __pyx_v_rcut, __pyx_v_mcut, __pyx_v_toll);
   }
   __pyx_L4:;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":88
- *     else: psi=psi_einasto(d0, rs, n, mcut, toll)
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":77
+ *     else: psi=psi_truncated_alfabeta(d0, rs, alfa, beta, rcut, mcut, toll)
  * 
  *     result=integrand_core(m, R, Z, e, psi)             # <<<<<<<<<<<<<<
  *     #num=xi(m,R,Z,e)*(xi(m,R,Z,e)-e*e)*sqrt(xi(m,R,Z,e)-e*e)*m*psi
@@ -3359,20 +3276,20 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_int
  */
   __pyx_v_result = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12general_halo_integrand_core(__pyx_v_m, __pyx_v_R, __pyx_v_Z, __pyx_v_e, __pyx_v_psi);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":92
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":81
  *     #den=((xi(m,R,Z,e)-e*e)*(xi(m,R,Z,e)-e*e)*R*R)+(xi(m,R,Z,e)*xi(m,R,Z,e)*Z*Z)
  * 
  *     return result             # <<<<<<<<<<<<<<
  * 
- * cdef double  _potential_einasto(double R, double Z, double mcut, double d0, double rs, double n, double e, double toll):
+ * cdef double  _potential_truncated_alfabeta(double R, double Z, double mcut, double d0, double rs, double alfa, double beta, double rcut, double e, double toll):
  */
   __pyx_r = __pyx_v_result;
   goto __pyx_L0;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":66
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":53
  *     return result
  * 
- * cdef double integrand_einasto(int nn, double *data) nogil:             # <<<<<<<<<<<<<<
+ * cdef double integrand_truncated_alfabeta(int nn, double *data) nogil:             # <<<<<<<<<<<<<<
  * 
  * 
  */
@@ -3382,15 +3299,15 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_int
   return __pyx_r;
 }
 
-/* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":94
+/* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":83
  *     return result
  * 
- * cdef double  _potential_einasto(double R, double Z, double mcut, double d0, double rs, double n, double e, double toll):             # <<<<<<<<<<<<<<
+ * cdef double  _potential_truncated_alfabeta(double R, double Z, double mcut, double d0, double rs, double alfa, double beta, double rcut, double e, double toll):             # <<<<<<<<<<<<<<
  * 
  * 
  */
 
-static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__potential_einasto(double __pyx_v_R, double __pyx_v_Z, double __pyx_v_mcut, double __pyx_v_d0, double __pyx_v_rs, double __pyx_v_n, double __pyx_v_e, double __pyx_v_toll) {
+static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo__potential_truncated_alfabeta(double __pyx_v_R, double __pyx_v_Z, double __pyx_v_mcut, double __pyx_v_d0, double __pyx_v_rs, double __pyx_v_alfa, double __pyx_v_beta, double __pyx_v_rcut, double __pyx_v_e, double __pyx_v_toll) {
   double __pyx_v_G;
   CYTHON_UNUSED double __pyx_v_cost;
   double __pyx_v_m0;
@@ -3414,10 +3331,12 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__po
   PyObject *__pyx_t_11 = NULL;
   PyObject *__pyx_t_12 = NULL;
   PyObject *__pyx_t_13 = NULL;
-  double __pyx_t_14;
-  __Pyx_RefNannySetupContext("_potential_einasto", 0);
+  PyObject *__pyx_t_14 = NULL;
+  PyObject *__pyx_t_15 = NULL;
+  double __pyx_t_16;
+  __Pyx_RefNannySetupContext("_potential_truncated_alfabeta", 0);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":98
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":87
  * 
  *     cdef:
  *         double G=4.498658966346282e-12 #G constant in  kpc^3/(msol Myr^2 )             # <<<<<<<<<<<<<<
@@ -3426,16 +3345,16 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__po
  */
   __pyx_v_G = 4.498658966346282e-12;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":99
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":88
  *     cdef:
  *         double G=4.498658966346282e-12 #G constant in  kpc^3/(msol Myr^2 )
  *         double cost=2*PI*G             # <<<<<<<<<<<<<<
  *         double m0
  *         double psi
  */
-  __pyx_v_cost = ((2.0 * __pyx_v_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_PI) * __pyx_v_G);
+  __pyx_v_cost = ((2.0 * __pyx_v_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_PI) * __pyx_v_G);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":105
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":94
  *         double result
  * 
  *     m0=m_calc(R,Z,e)             # <<<<<<<<<<<<<<
@@ -3444,34 +3363,34 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__po
  */
   __pyx_v_m0 = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12general_halo_m_calc(__pyx_v_R, __pyx_v_Z, __pyx_v_e);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":108
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":97
  * 
  *     #Integ
- *     import galpynamics.src.pot_halo.pot_c_ext.einasto_halo as mod             # <<<<<<<<<<<<<<
- *     fintegrand=LowLevelCallable.from_cython(mod,'integrand_einasto')
+ *     import galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo as mod             # <<<<<<<<<<<<<<
+ *     fintegrand=LowLevelCallable.from_cython(mod,'integrand_truncated_alfabeta')
  * 
  */
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 108, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 97, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_);
   __Pyx_GIVEREF(__pyx_n_s_);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_galpynamics_src_pot_halo_pot_c_e, __pyx_t_1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 108, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_galpynamics_src_pot_halo_pot_c_e, __pyx_t_1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 97, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_mod = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":109
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":98
  *     #Integ
- *     import galpynamics.src.pot_halo.pot_c_ext.einasto_halo as mod
- *     fintegrand=LowLevelCallable.from_cython(mod,'integrand_einasto')             # <<<<<<<<<<<<<<
+ *     import galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo as mod
+ *     fintegrand=LowLevelCallable.from_cython(mod,'integrand_truncated_alfabeta')             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_LowLevelCallable); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 109, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_LowLevelCallable); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 98, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_from_cython); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 109, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_from_cython); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 98, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_1 = NULL;
@@ -3488,22 +3407,22 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__po
   }
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_3)) {
-    PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_v_mod, __pyx_n_u_integrand_einasto};
-    __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 109, __pyx_L1_error)
+    PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_v_mod, __pyx_n_u_integrand_truncated_alfabeta};
+    __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 98, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_GOTREF(__pyx_t_2);
   } else
   #endif
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
-    PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_v_mod, __pyx_n_u_integrand_einasto};
-    __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 109, __pyx_L1_error)
+    PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_v_mod, __pyx_n_u_integrand_truncated_alfabeta};
+    __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 98, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_GOTREF(__pyx_t_2);
   } else
   #endif
   {
-    __pyx_t_5 = PyTuple_New(2+__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 109, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(2+__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 98, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     if (__pyx_t_1) {
       __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_1); __pyx_t_1 = NULL;
@@ -3511,10 +3430,10 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__po
     __Pyx_INCREF(__pyx_v_mod);
     __Pyx_GIVEREF(__pyx_v_mod);
     PyTuple_SET_ITEM(__pyx_t_5, 0+__pyx_t_4, __pyx_v_mod);
-    __Pyx_INCREF(__pyx_n_u_integrand_einasto);
-    __Pyx_GIVEREF(__pyx_n_u_integrand_einasto);
-    PyTuple_SET_ITEM(__pyx_t_5, 1+__pyx_t_4, __pyx_n_u_integrand_einasto);
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 109, __pyx_L1_error)
+    __Pyx_INCREF(__pyx_n_u_integrand_truncated_alfabeta);
+    __Pyx_GIVEREF(__pyx_n_u_integrand_truncated_alfabeta);
+    PyTuple_SET_ITEM(__pyx_t_5, 1+__pyx_t_4, __pyx_n_u_integrand_truncated_alfabeta);
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 98, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
@@ -3522,18 +3441,18 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__po
   __pyx_v_fintegrand = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":112
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":101
  * 
  * 
- *     intpot=quad(fintegrand,0.,m0,args=(R,Z,mcut,d0,rs,n,e,toll),epsabs=toll,epsrel=toll)[0]             # <<<<<<<<<<<<<<
+ *     intpot=quad(fintegrand,0.,m0,args=(R,Z,mcut,d0,rs,alfa,beta,rcut,e,toll),epsabs=toll,epsrel=toll)[0]             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_quad); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 112, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_quad); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_m0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 112, __pyx_L1_error)
+  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_m0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = PyTuple_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 112, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_INCREF(__pyx_v_fintegrand);
   __Pyx_GIVEREF(__pyx_v_fintegrand);
@@ -3544,42 +3463,50 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__po
   __Pyx_GIVEREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_5, 2, __pyx_t_3);
   __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 112, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_R); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 112, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_R); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_Z); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 112, __pyx_L1_error)
+  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_Z); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_7 = PyFloat_FromDouble(__pyx_v_mcut); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 112, __pyx_L1_error)
+  __pyx_t_7 = PyFloat_FromDouble(__pyx_v_mcut); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_8 = PyFloat_FromDouble(__pyx_v_d0); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 112, __pyx_L1_error)
+  __pyx_t_8 = PyFloat_FromDouble(__pyx_v_d0); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_9 = PyFloat_FromDouble(__pyx_v_rs); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 112, __pyx_L1_error)
+  __pyx_t_9 = PyFloat_FromDouble(__pyx_v_rs); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
-  __pyx_t_10 = PyFloat_FromDouble(__pyx_v_n); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 112, __pyx_L1_error)
+  __pyx_t_10 = PyFloat_FromDouble(__pyx_v_alfa); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_10);
-  __pyx_t_11 = PyFloat_FromDouble(__pyx_v_e); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 112, __pyx_L1_error)
+  __pyx_t_11 = PyFloat_FromDouble(__pyx_v_beta); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  __pyx_t_12 = PyFloat_FromDouble(__pyx_v_toll); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 112, __pyx_L1_error)
+  __pyx_t_12 = PyFloat_FromDouble(__pyx_v_rcut); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
-  __pyx_t_13 = PyTuple_New(8); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 112, __pyx_L1_error)
+  __pyx_t_13 = PyFloat_FromDouble(__pyx_v_e); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_13);
+  __pyx_t_14 = PyFloat_FromDouble(__pyx_v_toll); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 101, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_14);
+  __pyx_t_15 = PyTuple_New(10); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 101, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_15);
   __Pyx_GIVEREF(__pyx_t_1);
-  PyTuple_SET_ITEM(__pyx_t_13, 0, __pyx_t_1);
+  PyTuple_SET_ITEM(__pyx_t_15, 0, __pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_6);
-  PyTuple_SET_ITEM(__pyx_t_13, 1, __pyx_t_6);
+  PyTuple_SET_ITEM(__pyx_t_15, 1, __pyx_t_6);
   __Pyx_GIVEREF(__pyx_t_7);
-  PyTuple_SET_ITEM(__pyx_t_13, 2, __pyx_t_7);
+  PyTuple_SET_ITEM(__pyx_t_15, 2, __pyx_t_7);
   __Pyx_GIVEREF(__pyx_t_8);
-  PyTuple_SET_ITEM(__pyx_t_13, 3, __pyx_t_8);
+  PyTuple_SET_ITEM(__pyx_t_15, 3, __pyx_t_8);
   __Pyx_GIVEREF(__pyx_t_9);
-  PyTuple_SET_ITEM(__pyx_t_13, 4, __pyx_t_9);
+  PyTuple_SET_ITEM(__pyx_t_15, 4, __pyx_t_9);
   __Pyx_GIVEREF(__pyx_t_10);
-  PyTuple_SET_ITEM(__pyx_t_13, 5, __pyx_t_10);
+  PyTuple_SET_ITEM(__pyx_t_15, 5, __pyx_t_10);
   __Pyx_GIVEREF(__pyx_t_11);
-  PyTuple_SET_ITEM(__pyx_t_13, 6, __pyx_t_11);
+  PyTuple_SET_ITEM(__pyx_t_15, 6, __pyx_t_11);
   __Pyx_GIVEREF(__pyx_t_12);
-  PyTuple_SET_ITEM(__pyx_t_13, 7, __pyx_t_12);
+  PyTuple_SET_ITEM(__pyx_t_15, 7, __pyx_t_12);
+  __Pyx_GIVEREF(__pyx_t_13);
+  PyTuple_SET_ITEM(__pyx_t_15, 8, __pyx_t_13);
+  __Pyx_GIVEREF(__pyx_t_14);
+  PyTuple_SET_ITEM(__pyx_t_15, 9, __pyx_t_14);
   __pyx_t_1 = 0;
   __pyx_t_6 = 0;
   __pyx_t_7 = 0;
@@ -3588,39 +3515,41 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__po
   __pyx_t_10 = 0;
   __pyx_t_11 = 0;
   __pyx_t_12 = 0;
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_args, __pyx_t_13) < 0) __PYX_ERR(0, 112, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-  __pyx_t_13 = PyFloat_FromDouble(__pyx_v_toll); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 112, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_13);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_epsabs, __pyx_t_13) < 0) __PYX_ERR(0, 112, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-  __pyx_t_13 = PyFloat_FromDouble(__pyx_v_toll); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 112, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_13);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_epsrel, __pyx_t_13) < 0) __PYX_ERR(0, 112, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-  __pyx_t_13 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, __pyx_t_3); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 112, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_13);
+  __pyx_t_13 = 0;
+  __pyx_t_14 = 0;
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_args, __pyx_t_15) < 0) __PYX_ERR(0, 101, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
+  __pyx_t_15 = PyFloat_FromDouble(__pyx_v_toll); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 101, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_15);
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_epsabs, __pyx_t_15) < 0) __PYX_ERR(0, 101, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
+  __pyx_t_15 = PyFloat_FromDouble(__pyx_v_toll); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 101, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_15);
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_epsrel, __pyx_t_15) < 0) __PYX_ERR(0, 101, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
+  __pyx_t_15 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, __pyx_t_3); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 101, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_15);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_13, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 112, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_15, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-  __pyx_t_14 = __pyx_PyFloat_AsDouble(__pyx_t_3); if (unlikely((__pyx_t_14 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 112, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
+  __pyx_t_16 = __pyx_PyFloat_AsDouble(__pyx_t_3); if (unlikely((__pyx_t_16 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 101, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_v_intpot = __pyx_t_14;
+  __pyx_v_intpot = __pyx_t_16;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":115
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":104
  * 
  * 
- *     psi=psi_einasto(d0,rs,n,mcut,toll)             # <<<<<<<<<<<<<<
+ *     psi=psi_truncated_alfabeta(d0,rs,alfa,beta,rcut,mcut,toll)             # <<<<<<<<<<<<<<
  * 
  *     result=potential_core(e, intpot, psi)
  */
-  __pyx_v_psi = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_psi_einasto(__pyx_v_d0, __pyx_v_rs, __pyx_v_n, __pyx_v_mcut, __pyx_v_toll);
+  __pyx_v_psi = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_psi_truncated_alfabeta(__pyx_v_d0, __pyx_v_rs, __pyx_v_alfa, __pyx_v_beta, __pyx_v_rcut, __pyx_v_mcut, __pyx_v_toll);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":117
- *     psi=psi_einasto(d0,rs,n,mcut,toll)
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":106
+ *     psi=psi_truncated_alfabeta(d0,rs,alfa,beta,rcut,mcut,toll)
  * 
  *     result=potential_core(e, intpot, psi)             # <<<<<<<<<<<<<<
  * 
@@ -3628,7 +3557,7 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__po
  */
   __pyx_v_result = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12general_halo_potential_core(__pyx_v_e, __pyx_v_intpot, __pyx_v_psi);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":119
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":108
  *     result=potential_core(e, intpot, psi)
  * 
  *     return result             # <<<<<<<<<<<<<<
@@ -3638,10 +3567,10 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__po
   __pyx_r = __pyx_v_result;
   goto __pyx_L0;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":94
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":83
  *     return result
  * 
- * cdef double  _potential_einasto(double R, double Z, double mcut, double d0, double rs, double n, double e, double toll):             # <<<<<<<<<<<<<<
+ * cdef double  _potential_truncated_alfabeta(double R, double Z, double mcut, double d0, double rs, double alfa, double beta, double rcut, double e, double toll):             # <<<<<<<<<<<<<<
  * 
  * 
  */
@@ -3660,7 +3589,9 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__po
   __Pyx_XDECREF(__pyx_t_11);
   __Pyx_XDECREF(__pyx_t_12);
   __Pyx_XDECREF(__pyx_t_13);
-  __Pyx_WriteUnraisable("galpynamics.src.pot_halo.pot_c_ext.einasto_halo._potential_einasto", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
+  __Pyx_XDECREF(__pyx_t_14);
+  __Pyx_XDECREF(__pyx_t_15);
+  __Pyx_WriteUnraisable("galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo._potential_truncated_alfabeta", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_mod);
@@ -3669,15 +3600,15 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__po
   return __pyx_r;
 }
 
-/* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":123
+/* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":112
  * 
  * 
- * cdef double[:,:]  _potential_einasto_array(double[:] R, double[:] Z, int nlen, double mcut, double d0, double rs, double n, double e, double toll):             # <<<<<<<<<<<<<<
+ * cdef double[:,:]  _potential_truncated_alfabeta_array(double[:] R, double[:] Z, int nlen, double mcut, double d0, double rs, double alfa, double beta, double rcut, double e, double toll):             # <<<<<<<<<<<<<<
  * 
  * 
  */
 
-static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__potential_einasto_array(__Pyx_memviewslice __pyx_v_R, __Pyx_memviewslice __pyx_v_Z, int __pyx_v_nlen, double __pyx_v_mcut, double __pyx_v_d0, double __pyx_v_rs, double __pyx_v_n, double __pyx_v_e, double __pyx_v_toll) {
+static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo__potential_truncated_alfabeta_array(__Pyx_memviewslice __pyx_v_R, __Pyx_memviewslice __pyx_v_Z, int __pyx_v_nlen, double __pyx_v_mcut, double __pyx_v_d0, double __pyx_v_rs, double __pyx_v_alfa, double __pyx_v_beta, double __pyx_v_rcut, double __pyx_v_e, double __pyx_v_toll) {
   double __pyx_v_G;
   CYTHON_UNUSED double __pyx_v_cost;
   double __pyx_v_m0;
@@ -3715,12 +3646,14 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
   PyObject *__pyx_t_24 = NULL;
   PyObject *__pyx_t_25 = NULL;
   PyObject *__pyx_t_26 = NULL;
-  double __pyx_t_27;
-  Py_ssize_t __pyx_t_28;
-  Py_ssize_t __pyx_t_29;
-  __Pyx_RefNannySetupContext("_potential_einasto_array", 0);
+  PyObject *__pyx_t_27 = NULL;
+  PyObject *__pyx_t_28 = NULL;
+  double __pyx_t_29;
+  Py_ssize_t __pyx_t_30;
+  Py_ssize_t __pyx_t_31;
+  __Pyx_RefNannySetupContext("_potential_truncated_alfabeta_array", 0);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":127
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":116
  * 
  *     cdef:
  *         double G=4.498658966346282e-12 #G constant in  kpc^3/(msol Myr^2 )             # <<<<<<<<<<<<<<
@@ -3729,30 +3662,30 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
  */
   __pyx_v_G = 4.498658966346282e-12;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":128
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":117
  *     cdef:
  *         double G=4.498658966346282e-12 #G constant in  kpc^3/(msol Myr^2 )
  *         double cost=2*PI*G             # <<<<<<<<<<<<<<
  *         double m0
  *         double psi
  */
-  __pyx_v_cost = ((2.0 * __pyx_v_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_PI) * __pyx_v_G);
+  __pyx_v_cost = ((2.0 * __pyx_v_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_PI) * __pyx_v_G);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":131
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":120
  *         double m0
  *         double psi
  *         double[:,:] ret=np.empty((nlen,3), dtype=np.dtype("d"))             # <<<<<<<<<<<<<<
  *         double intpot
  *         int i
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 131, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 120, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 131, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 120, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_nlen); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 131, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_nlen); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 120, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 131, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 120, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
@@ -3760,56 +3693,56 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
   __Pyx_GIVEREF(__pyx_int_3);
   PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_int_3);
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 131, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 120, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_3);
   __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 131, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 120, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 131, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 120, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 131, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 120, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 131, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 120, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_5 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_5.memview)) __PYX_ERR(0, 131, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_5.memview)) __PYX_ERR(0, 120, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_ret = __pyx_t_5;
   __pyx_t_5.memview = NULL;
   __pyx_t_5.data = NULL;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":138
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":127
  * 
  *     #Integ
- *     import galpynamics.src.pot_halo.pot_c_ext.einasto_halo as mod             # <<<<<<<<<<<<<<
- *     fintegrand=LowLevelCallable.from_cython(mod,'integrand_einasto')
+ *     import galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo as mod             # <<<<<<<<<<<<<<
+ *     fintegrand=LowLevelCallable.from_cython(mod,'integrand_truncated_alfabeta')
  * 
  */
-  __pyx_t_4 = PyList_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 138, __pyx_L1_error)
+  __pyx_t_4 = PyList_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 127, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_INCREF(__pyx_n_s_);
   __Pyx_GIVEREF(__pyx_n_s_);
   PyList_SET_ITEM(__pyx_t_4, 0, __pyx_n_s_);
-  __pyx_t_3 = __Pyx_Import(__pyx_n_s_galpynamics_src_pot_halo_pot_c_e, __pyx_t_4, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 138, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_Import(__pyx_n_s_galpynamics_src_pot_halo_pot_c_e, __pyx_t_4, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 127, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_mod = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":139
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":128
  *     #Integ
- *     import galpynamics.src.pot_halo.pot_c_ext.einasto_halo as mod
- *     fintegrand=LowLevelCallable.from_cython(mod,'integrand_einasto')             # <<<<<<<<<<<<<<
+ *     import galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo as mod
+ *     fintegrand=LowLevelCallable.from_cython(mod,'integrand_truncated_alfabeta')             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_LowLevelCallable); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 139, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_LowLevelCallable); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 128, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_from_cython); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 139, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_from_cython); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 128, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_4 = NULL;
@@ -3826,22 +3759,22 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
   }
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_1)) {
-    PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_mod, __pyx_n_u_integrand_einasto};
-    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 139, __pyx_L1_error)
+    PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_mod, __pyx_n_u_integrand_truncated_alfabeta};
+    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 128, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
   #endif
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_1)) {
-    PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_mod, __pyx_n_u_integrand_einasto};
-    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 139, __pyx_L1_error)
+    PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_mod, __pyx_n_u_integrand_truncated_alfabeta};
+    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 128, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
   #endif
   {
-    __pyx_t_2 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 139, __pyx_L1_error)
+    __pyx_t_2 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 128, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     if (__pyx_t_4) {
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_4); __pyx_t_4 = NULL;
@@ -3849,10 +3782,10 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
     __Pyx_INCREF(__pyx_v_mod);
     __Pyx_GIVEREF(__pyx_v_mod);
     PyTuple_SET_ITEM(__pyx_t_2, 0+__pyx_t_6, __pyx_v_mod);
-    __Pyx_INCREF(__pyx_n_u_integrand_einasto);
-    __Pyx_GIVEREF(__pyx_n_u_integrand_einasto);
-    PyTuple_SET_ITEM(__pyx_t_2, 1+__pyx_t_6, __pyx_n_u_integrand_einasto);
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 139, __pyx_L1_error)
+    __Pyx_INCREF(__pyx_n_u_integrand_truncated_alfabeta);
+    __Pyx_GIVEREF(__pyx_n_u_integrand_truncated_alfabeta);
+    PyTuple_SET_ITEM(__pyx_t_2, 1+__pyx_t_6, __pyx_n_u_integrand_truncated_alfabeta);
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 128, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
@@ -3860,7 +3793,7 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
   __pyx_v_fintegrand = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":142
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":131
  * 
  * 
  *     for  i in range(nlen):             # <<<<<<<<<<<<<<
@@ -3872,7 +3805,7 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
   for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
     __pyx_v_i = __pyx_t_8;
 
-    /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":145
+    /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":134
  * 
  * 
  *         ret[i,0]=R[i]             # <<<<<<<<<<<<<<
@@ -3884,7 +3817,7 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
     __pyx_t_11 = 0;
     *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_ret.data + __pyx_t_10 * __pyx_v_ret.strides[0]) ) + __pyx_t_11 * __pyx_v_ret.strides[1]) )) = (*((double *) ( /* dim=0 */ (__pyx_v_R.data + __pyx_t_9 * __pyx_v_R.strides[0]) )));
 
-    /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":146
+    /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":135
  * 
  *         ret[i,0]=R[i]
  *         ret[i,1]=Z[i]             # <<<<<<<<<<<<<<
@@ -3896,29 +3829,29 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
     __pyx_t_14 = 1;
     *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_ret.data + __pyx_t_13 * __pyx_v_ret.strides[0]) ) + __pyx_t_14 * __pyx_v_ret.strides[1]) )) = (*((double *) ( /* dim=0 */ (__pyx_v_Z.data + __pyx_t_12 * __pyx_v_Z.strides[0]) )));
 
-    /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":148
+    /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":137
  *         ret[i,1]=Z[i]
  * 
  *         m0=m_calc(R[i],Z[i],e)             # <<<<<<<<<<<<<<
  * 
- *         intpot=quad(fintegrand,0.,m0,args=(R[i],Z[i],mcut,d0,rs,n,e,toll),epsabs=toll,epsrel=toll)[0]
+ *         intpot=quad(fintegrand,0.,m0,args=(R[i],Z[i],mcut,d0,rs,alfa,beta,rcut,e,toll),epsabs=toll,epsrel=toll)[0]
  */
     __pyx_t_15 = __pyx_v_i;
     __pyx_t_16 = __pyx_v_i;
     __pyx_v_m0 = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12general_halo_m_calc((*((double *) ( /* dim=0 */ (__pyx_v_R.data + __pyx_t_15 * __pyx_v_R.strides[0]) ))), (*((double *) ( /* dim=0 */ (__pyx_v_Z.data + __pyx_t_16 * __pyx_v_Z.strides[0]) ))), __pyx_v_e);
 
-    /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":150
+    /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":139
  *         m0=m_calc(R[i],Z[i],e)
  * 
- *         intpot=quad(fintegrand,0.,m0,args=(R[i],Z[i],mcut,d0,rs,n,e,toll),epsabs=toll,epsrel=toll)[0]             # <<<<<<<<<<<<<<
+ *         intpot=quad(fintegrand,0.,m0,args=(R[i],Z[i],mcut,d0,rs,alfa,beta,rcut,e,toll),epsabs=toll,epsrel=toll)[0]             # <<<<<<<<<<<<<<
  * 
- *         psi=psi_einasto(d0,rs,n, mcut, toll)
+ *         psi=psi_truncated_alfabeta(d0,rs,alfa,beta,rcut,mcut,toll)
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_quad); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 150, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_quad); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 139, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_1 = PyFloat_FromDouble(__pyx_v_m0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 150, __pyx_L1_error)
+    __pyx_t_1 = PyFloat_FromDouble(__pyx_v_m0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 139, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = PyTuple_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 150, __pyx_L1_error)
+    __pyx_t_2 = PyTuple_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 139, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_INCREF(__pyx_v_fintegrand);
     __Pyx_GIVEREF(__pyx_v_fintegrand);
@@ -3929,44 +3862,52 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_2, 2, __pyx_t_1);
     __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 150, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 139, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_17 = __pyx_v_i;
-    __pyx_t_4 = PyFloat_FromDouble((*((double *) ( /* dim=0 */ (__pyx_v_R.data + __pyx_t_17 * __pyx_v_R.strides[0]) )))); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 150, __pyx_L1_error)
+    __pyx_t_4 = PyFloat_FromDouble((*((double *) ( /* dim=0 */ (__pyx_v_R.data + __pyx_t_17 * __pyx_v_R.strides[0]) )))); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 139, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
     __pyx_t_18 = __pyx_v_i;
-    __pyx_t_19 = PyFloat_FromDouble((*((double *) ( /* dim=0 */ (__pyx_v_Z.data + __pyx_t_18 * __pyx_v_Z.strides[0]) )))); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 150, __pyx_L1_error)
+    __pyx_t_19 = PyFloat_FromDouble((*((double *) ( /* dim=0 */ (__pyx_v_Z.data + __pyx_t_18 * __pyx_v_Z.strides[0]) )))); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 139, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_19);
-    __pyx_t_20 = PyFloat_FromDouble(__pyx_v_mcut); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 150, __pyx_L1_error)
+    __pyx_t_20 = PyFloat_FromDouble(__pyx_v_mcut); if (unlikely(!__pyx_t_20)) __PYX_ERR(0, 139, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_20);
-    __pyx_t_21 = PyFloat_FromDouble(__pyx_v_d0); if (unlikely(!__pyx_t_21)) __PYX_ERR(0, 150, __pyx_L1_error)
+    __pyx_t_21 = PyFloat_FromDouble(__pyx_v_d0); if (unlikely(!__pyx_t_21)) __PYX_ERR(0, 139, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_21);
-    __pyx_t_22 = PyFloat_FromDouble(__pyx_v_rs); if (unlikely(!__pyx_t_22)) __PYX_ERR(0, 150, __pyx_L1_error)
+    __pyx_t_22 = PyFloat_FromDouble(__pyx_v_rs); if (unlikely(!__pyx_t_22)) __PYX_ERR(0, 139, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_22);
-    __pyx_t_23 = PyFloat_FromDouble(__pyx_v_n); if (unlikely(!__pyx_t_23)) __PYX_ERR(0, 150, __pyx_L1_error)
+    __pyx_t_23 = PyFloat_FromDouble(__pyx_v_alfa); if (unlikely(!__pyx_t_23)) __PYX_ERR(0, 139, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_23);
-    __pyx_t_24 = PyFloat_FromDouble(__pyx_v_e); if (unlikely(!__pyx_t_24)) __PYX_ERR(0, 150, __pyx_L1_error)
+    __pyx_t_24 = PyFloat_FromDouble(__pyx_v_beta); if (unlikely(!__pyx_t_24)) __PYX_ERR(0, 139, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_24);
-    __pyx_t_25 = PyFloat_FromDouble(__pyx_v_toll); if (unlikely(!__pyx_t_25)) __PYX_ERR(0, 150, __pyx_L1_error)
+    __pyx_t_25 = PyFloat_FromDouble(__pyx_v_rcut); if (unlikely(!__pyx_t_25)) __PYX_ERR(0, 139, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_25);
-    __pyx_t_26 = PyTuple_New(8); if (unlikely(!__pyx_t_26)) __PYX_ERR(0, 150, __pyx_L1_error)
+    __pyx_t_26 = PyFloat_FromDouble(__pyx_v_e); if (unlikely(!__pyx_t_26)) __PYX_ERR(0, 139, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_26);
+    __pyx_t_27 = PyFloat_FromDouble(__pyx_v_toll); if (unlikely(!__pyx_t_27)) __PYX_ERR(0, 139, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_27);
+    __pyx_t_28 = PyTuple_New(10); if (unlikely(!__pyx_t_28)) __PYX_ERR(0, 139, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_28);
     __Pyx_GIVEREF(__pyx_t_4);
-    PyTuple_SET_ITEM(__pyx_t_26, 0, __pyx_t_4);
+    PyTuple_SET_ITEM(__pyx_t_28, 0, __pyx_t_4);
     __Pyx_GIVEREF(__pyx_t_19);
-    PyTuple_SET_ITEM(__pyx_t_26, 1, __pyx_t_19);
+    PyTuple_SET_ITEM(__pyx_t_28, 1, __pyx_t_19);
     __Pyx_GIVEREF(__pyx_t_20);
-    PyTuple_SET_ITEM(__pyx_t_26, 2, __pyx_t_20);
+    PyTuple_SET_ITEM(__pyx_t_28, 2, __pyx_t_20);
     __Pyx_GIVEREF(__pyx_t_21);
-    PyTuple_SET_ITEM(__pyx_t_26, 3, __pyx_t_21);
+    PyTuple_SET_ITEM(__pyx_t_28, 3, __pyx_t_21);
     __Pyx_GIVEREF(__pyx_t_22);
-    PyTuple_SET_ITEM(__pyx_t_26, 4, __pyx_t_22);
+    PyTuple_SET_ITEM(__pyx_t_28, 4, __pyx_t_22);
     __Pyx_GIVEREF(__pyx_t_23);
-    PyTuple_SET_ITEM(__pyx_t_26, 5, __pyx_t_23);
+    PyTuple_SET_ITEM(__pyx_t_28, 5, __pyx_t_23);
     __Pyx_GIVEREF(__pyx_t_24);
-    PyTuple_SET_ITEM(__pyx_t_26, 6, __pyx_t_24);
+    PyTuple_SET_ITEM(__pyx_t_28, 6, __pyx_t_24);
     __Pyx_GIVEREF(__pyx_t_25);
-    PyTuple_SET_ITEM(__pyx_t_26, 7, __pyx_t_25);
+    PyTuple_SET_ITEM(__pyx_t_28, 7, __pyx_t_25);
+    __Pyx_GIVEREF(__pyx_t_26);
+    PyTuple_SET_ITEM(__pyx_t_28, 8, __pyx_t_26);
+    __Pyx_GIVEREF(__pyx_t_27);
+    PyTuple_SET_ITEM(__pyx_t_28, 9, __pyx_t_27);
     __pyx_t_4 = 0;
     __pyx_t_19 = 0;
     __pyx_t_20 = 0;
@@ -3975,50 +3916,52 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
     __pyx_t_23 = 0;
     __pyx_t_24 = 0;
     __pyx_t_25 = 0;
-    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_args, __pyx_t_26) < 0) __PYX_ERR(0, 150, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_26); __pyx_t_26 = 0;
-    __pyx_t_26 = PyFloat_FromDouble(__pyx_v_toll); if (unlikely(!__pyx_t_26)) __PYX_ERR(0, 150, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_26);
-    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_epsabs, __pyx_t_26) < 0) __PYX_ERR(0, 150, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_26); __pyx_t_26 = 0;
-    __pyx_t_26 = PyFloat_FromDouble(__pyx_v_toll); if (unlikely(!__pyx_t_26)) __PYX_ERR(0, 150, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_26);
-    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_epsrel, __pyx_t_26) < 0) __PYX_ERR(0, 150, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_26); __pyx_t_26 = 0;
-    __pyx_t_26 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_26)) __PYX_ERR(0, 150, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_26);
+    __pyx_t_26 = 0;
+    __pyx_t_27 = 0;
+    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_args, __pyx_t_28) < 0) __PYX_ERR(0, 139, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_28); __pyx_t_28 = 0;
+    __pyx_t_28 = PyFloat_FromDouble(__pyx_v_toll); if (unlikely(!__pyx_t_28)) __PYX_ERR(0, 139, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_28);
+    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_epsabs, __pyx_t_28) < 0) __PYX_ERR(0, 139, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_28); __pyx_t_28 = 0;
+    __pyx_t_28 = PyFloat_FromDouble(__pyx_v_toll); if (unlikely(!__pyx_t_28)) __PYX_ERR(0, 139, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_28);
+    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_epsrel, __pyx_t_28) < 0) __PYX_ERR(0, 139, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_28); __pyx_t_28 = 0;
+    __pyx_t_28 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_28)) __PYX_ERR(0, 139, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_28);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_26, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 150, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_28, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 139, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_26); __pyx_t_26 = 0;
-    __pyx_t_27 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_27 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 150, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_28); __pyx_t_28 = 0;
+    __pyx_t_29 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_29 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 139, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_v_intpot = __pyx_t_27;
+    __pyx_v_intpot = __pyx_t_29;
 
-    /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":152
- *         intpot=quad(fintegrand,0.,m0,args=(R[i],Z[i],mcut,d0,rs,n,e,toll),epsabs=toll,epsrel=toll)[0]
+    /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":141
+ *         intpot=quad(fintegrand,0.,m0,args=(R[i],Z[i],mcut,d0,rs,alfa,beta,rcut,e,toll),epsabs=toll,epsrel=toll)[0]
  * 
- *         psi=psi_einasto(d0,rs,n, mcut, toll)             # <<<<<<<<<<<<<<
+ *         psi=psi_truncated_alfabeta(d0,rs,alfa,beta,rcut,mcut,toll)             # <<<<<<<<<<<<<<
  * 
  *         ret[i,2]=potential_core(e, intpot, psi)
  */
-    __pyx_v_psi = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_psi_einasto(__pyx_v_d0, __pyx_v_rs, __pyx_v_n, __pyx_v_mcut, __pyx_v_toll);
+    __pyx_v_psi = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_psi_truncated_alfabeta(__pyx_v_d0, __pyx_v_rs, __pyx_v_alfa, __pyx_v_beta, __pyx_v_rcut, __pyx_v_mcut, __pyx_v_toll);
 
-    /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":154
- *         psi=psi_einasto(d0,rs,n, mcut, toll)
+    /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":143
+ *         psi=psi_truncated_alfabeta(d0,rs,alfa,beta,rcut,mcut,toll)
  * 
  *         ret[i,2]=potential_core(e, intpot, psi)             # <<<<<<<<<<<<<<
  * 
  * 
  */
-    __pyx_t_28 = __pyx_v_i;
-    __pyx_t_29 = 2;
-    *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_ret.data + __pyx_t_28 * __pyx_v_ret.strides[0]) ) + __pyx_t_29 * __pyx_v_ret.strides[1]) )) = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12general_halo_potential_core(__pyx_v_e, __pyx_v_intpot, __pyx_v_psi);
+    __pyx_t_30 = __pyx_v_i;
+    __pyx_t_31 = 2;
+    *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_ret.data + __pyx_t_30 * __pyx_v_ret.strides[0]) ) + __pyx_t_31 * __pyx_v_ret.strides[1]) )) = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12general_halo_potential_core(__pyx_v_e, __pyx_v_intpot, __pyx_v_psi);
   }
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":157
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":146
  * 
  * 
  *     return ret             # <<<<<<<<<<<<<<
@@ -4029,10 +3972,10 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
   __pyx_r = __pyx_v_ret;
   goto __pyx_L0;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":123
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":112
  * 
  * 
- * cdef double[:,:]  _potential_einasto_array(double[:] R, double[:] Z, int nlen, double mcut, double d0, double rs, double n, double e, double toll):             # <<<<<<<<<<<<<<
+ * cdef double[:,:]  _potential_truncated_alfabeta_array(double[:] R, double[:] Z, int nlen, double mcut, double d0, double rs, double alfa, double beta, double rcut, double e, double toll):             # <<<<<<<<<<<<<<
  * 
  * 
  */
@@ -4052,9 +3995,11 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
   __Pyx_XDECREF(__pyx_t_24);
   __Pyx_XDECREF(__pyx_t_25);
   __Pyx_XDECREF(__pyx_t_26);
+  __Pyx_XDECREF(__pyx_t_27);
+  __Pyx_XDECREF(__pyx_t_28);
   __pyx_r.data = NULL;
   __pyx_r.memview = NULL;
-  __Pyx_AddTraceback("galpynamics.src.pot_halo.pot_c_ext.einasto_halo._potential_einasto_array", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo._potential_truncated_alfabeta_array", __pyx_clineno, __pyx_lineno, __pyx_filename);
   goto __pyx_L2;
   __pyx_L0:;
   if (unlikely(!__pyx_r.memview)) {
@@ -4068,15 +4013,15 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
   return __pyx_r;
 }
 
-/* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":161
+/* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":150
  * 
  * 
- * cdef double[:,:]  _potential_einasto_grid(double[:] R, double[:] Z, int nlenR, int nlenZ, double mcut, double d0, double rs, double n,  double e, double toll):             # <<<<<<<<<<<<<<
+ * cdef double[:,:]  _potential_truncated_alfabeta_grid(double[:] R, double[:] Z, int nlenR, int nlenZ, double mcut, double d0, double rs, double alfa, double beta, double rcut,  double e, double toll):             # <<<<<<<<<<<<<<
  * 
  * 
  */
 
-static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__potential_einasto_grid(__Pyx_memviewslice __pyx_v_R, __Pyx_memviewslice __pyx_v_Z, int __pyx_v_nlenR, int __pyx_v_nlenZ, double __pyx_v_mcut, double __pyx_v_d0, double __pyx_v_rs, double __pyx_v_n, double __pyx_v_e, double __pyx_v_toll) {
+static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo__potential_truncated_alfabeta_grid(__Pyx_memviewslice __pyx_v_R, __Pyx_memviewslice __pyx_v_Z, int __pyx_v_nlenR, int __pyx_v_nlenZ, double __pyx_v_mcut, double __pyx_v_d0, double __pyx_v_rs, double __pyx_v_alfa, double __pyx_v_beta, double __pyx_v_rcut, double __pyx_v_e, double __pyx_v_toll) {
   double __pyx_v_G;
   CYTHON_UNUSED double __pyx_v_cost;
   double __pyx_v_m0;
@@ -4119,12 +4064,14 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
   PyObject *__pyx_t_27 = NULL;
   PyObject *__pyx_t_28 = NULL;
   PyObject *__pyx_t_29 = NULL;
-  double __pyx_t_30;
-  Py_ssize_t __pyx_t_31;
-  Py_ssize_t __pyx_t_32;
-  __Pyx_RefNannySetupContext("_potential_einasto_grid", 0);
+  PyObject *__pyx_t_30 = NULL;
+  PyObject *__pyx_t_31 = NULL;
+  double __pyx_t_32;
+  Py_ssize_t __pyx_t_33;
+  Py_ssize_t __pyx_t_34;
+  __Pyx_RefNannySetupContext("_potential_truncated_alfabeta_grid", 0);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":165
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":154
  * 
  *     cdef:
  *         double G=4.498658966346282e-12 #G constant in  kpc^3/(msol Myr^2 )             # <<<<<<<<<<<<<<
@@ -4133,30 +4080,30 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
  */
   __pyx_v_G = 4.498658966346282e-12;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":166
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":155
  *     cdef:
  *         double G=4.498658966346282e-12 #G constant in  kpc^3/(msol Myr^2 )
  *         double cost=2*PI*G             # <<<<<<<<<<<<<<
  *         double m0
  *         double psi
  */
-  __pyx_v_cost = ((2.0 * __pyx_v_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_PI) * __pyx_v_G);
+  __pyx_v_cost = ((2.0 * __pyx_v_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_PI) * __pyx_v_G);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":169
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":158
  *         double m0
  *         double psi
  *         double[:,:] ret=np.empty((nlenR*nlenZ,3), dtype=np.dtype("d"))             # <<<<<<<<<<<<<<
  *         double intpot
  *         int i, j, c
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 169, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 158, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 169, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 158, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int((__pyx_v_nlenR * __pyx_v_nlenZ)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 169, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int((__pyx_v_nlenR * __pyx_v_nlenZ)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 158, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 169, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 158, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
@@ -4164,56 +4111,56 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
   __Pyx_GIVEREF(__pyx_int_3);
   PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_int_3);
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 169, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 158, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_3);
   __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 169, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 158, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 169, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 158, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 169, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 158, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 169, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 158, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_5 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_5.memview)) __PYX_ERR(0, 169, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_5.memview)) __PYX_ERR(0, 158, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_ret = __pyx_t_5;
   __pyx_t_5.memview = NULL;
   __pyx_t_5.data = NULL;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":176
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":165
  * 
  *     #Integ
- *     import galpynamics.src.pot_halo.pot_c_ext.einasto_halo as mod             # <<<<<<<<<<<<<<
- *     fintegrand=LowLevelCallable.from_cython(mod,'integrand_einasto')
+ *     import galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo as mod             # <<<<<<<<<<<<<<
+ *     fintegrand=LowLevelCallable.from_cython(mod,'integrand_truncated_alfabeta')
  * 
  */
-  __pyx_t_4 = PyList_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 176, __pyx_L1_error)
+  __pyx_t_4 = PyList_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 165, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_INCREF(__pyx_n_s_);
   __Pyx_GIVEREF(__pyx_n_s_);
   PyList_SET_ITEM(__pyx_t_4, 0, __pyx_n_s_);
-  __pyx_t_3 = __Pyx_Import(__pyx_n_s_galpynamics_src_pot_halo_pot_c_e, __pyx_t_4, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 176, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_Import(__pyx_n_s_galpynamics_src_pot_halo_pot_c_e, __pyx_t_4, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 165, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_mod = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":177
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":166
  *     #Integ
- *     import galpynamics.src.pot_halo.pot_c_ext.einasto_halo as mod
- *     fintegrand=LowLevelCallable.from_cython(mod,'integrand_einasto')             # <<<<<<<<<<<<<<
+ *     import galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo as mod
+ *     fintegrand=LowLevelCallable.from_cython(mod,'integrand_truncated_alfabeta')             # <<<<<<<<<<<<<<
  * 
  *     c=0
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_LowLevelCallable); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 177, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_LowLevelCallable); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 166, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_from_cython); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 177, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_from_cython); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 166, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_4 = NULL;
@@ -4230,22 +4177,22 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
   }
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_1)) {
-    PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_mod, __pyx_n_u_integrand_einasto};
-    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 177, __pyx_L1_error)
+    PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_mod, __pyx_n_u_integrand_truncated_alfabeta};
+    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 166, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
   #endif
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_1)) {
-    PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_mod, __pyx_n_u_integrand_einasto};
-    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 177, __pyx_L1_error)
+    PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_mod, __pyx_n_u_integrand_truncated_alfabeta};
+    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 166, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
   #endif
   {
-    __pyx_t_2 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 177, __pyx_L1_error)
+    __pyx_t_2 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 166, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     if (__pyx_t_4) {
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_4); __pyx_t_4 = NULL;
@@ -4253,10 +4200,10 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
     __Pyx_INCREF(__pyx_v_mod);
     __Pyx_GIVEREF(__pyx_v_mod);
     PyTuple_SET_ITEM(__pyx_t_2, 0+__pyx_t_6, __pyx_v_mod);
-    __Pyx_INCREF(__pyx_n_u_integrand_einasto);
-    __Pyx_GIVEREF(__pyx_n_u_integrand_einasto);
-    PyTuple_SET_ITEM(__pyx_t_2, 1+__pyx_t_6, __pyx_n_u_integrand_einasto);
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 177, __pyx_L1_error)
+    __Pyx_INCREF(__pyx_n_u_integrand_truncated_alfabeta);
+    __Pyx_GIVEREF(__pyx_n_u_integrand_truncated_alfabeta);
+    PyTuple_SET_ITEM(__pyx_t_2, 1+__pyx_t_6, __pyx_n_u_integrand_truncated_alfabeta);
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 166, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
@@ -4264,8 +4211,8 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
   __pyx_v_fintegrand = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":179
- *     fintegrand=LowLevelCallable.from_cython(mod,'integrand_einasto')
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":168
+ *     fintegrand=LowLevelCallable.from_cython(mod,'integrand_truncated_alfabeta')
  * 
  *     c=0             # <<<<<<<<<<<<<<
  *     for  i in range(nlenR):
@@ -4273,7 +4220,7 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
  */
   __pyx_v_c = 0;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":180
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":169
  * 
  *     c=0
  *     for  i in range(nlenR):             # <<<<<<<<<<<<<<
@@ -4285,7 +4232,7 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
   for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
     __pyx_v_i = __pyx_t_8;
 
-    /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":181
+    /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":170
  *     c=0
  *     for  i in range(nlenR):
  *         for j in range(nlenZ):             # <<<<<<<<<<<<<<
@@ -4297,7 +4244,7 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
     for (__pyx_t_11 = 0; __pyx_t_11 < __pyx_t_10; __pyx_t_11+=1) {
       __pyx_v_j = __pyx_t_11;
 
-      /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":183
+      /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":172
  *         for j in range(nlenZ):
  * 
  *             ret[c,0]=R[i]             # <<<<<<<<<<<<<<
@@ -4309,7 +4256,7 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
       __pyx_t_14 = 0;
       *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_ret.data + __pyx_t_13 * __pyx_v_ret.strides[0]) ) + __pyx_t_14 * __pyx_v_ret.strides[1]) )) = (*((double *) ( /* dim=0 */ (__pyx_v_R.data + __pyx_t_12 * __pyx_v_R.strides[0]) )));
 
-      /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":184
+      /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":173
  * 
  *             ret[c,0]=R[i]
  *             ret[c,1]=Z[j]             # <<<<<<<<<<<<<<
@@ -4321,29 +4268,29 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
       __pyx_t_17 = 1;
       *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_ret.data + __pyx_t_16 * __pyx_v_ret.strides[0]) ) + __pyx_t_17 * __pyx_v_ret.strides[1]) )) = (*((double *) ( /* dim=0 */ (__pyx_v_Z.data + __pyx_t_15 * __pyx_v_Z.strides[0]) )));
 
-      /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":186
+      /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":175
  *             ret[c,1]=Z[j]
  * 
  *             m0=m_calc(R[i],Z[j],e)             # <<<<<<<<<<<<<<
  * 
- *             intpot=quad(fintegrand,0.,m0,args=(R[i],Z[j],mcut,d0,rs,n,e,toll),epsabs=toll,epsrel=toll)[0]
+ *             intpot=quad(fintegrand,0.,m0,args=(R[i],Z[j],mcut,d0,rs,alfa,beta,rcut,e,toll),epsabs=toll,epsrel=toll)[0]
  */
       __pyx_t_18 = __pyx_v_i;
       __pyx_t_19 = __pyx_v_j;
       __pyx_v_m0 = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12general_halo_m_calc((*((double *) ( /* dim=0 */ (__pyx_v_R.data + __pyx_t_18 * __pyx_v_R.strides[0]) ))), (*((double *) ( /* dim=0 */ (__pyx_v_Z.data + __pyx_t_19 * __pyx_v_Z.strides[0]) ))), __pyx_v_e);
 
-      /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":188
+      /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":177
  *             m0=m_calc(R[i],Z[j],e)
  * 
- *             intpot=quad(fintegrand,0.,m0,args=(R[i],Z[j],mcut,d0,rs,n,e,toll),epsabs=toll,epsrel=toll)[0]             # <<<<<<<<<<<<<<
+ *             intpot=quad(fintegrand,0.,m0,args=(R[i],Z[j],mcut,d0,rs,alfa,beta,rcut,e,toll),epsabs=toll,epsrel=toll)[0]             # <<<<<<<<<<<<<<
  * 
- *             psi=psi_einasto(d0,rs,n,mcut,toll)
+ *             psi=psi_truncated_alfabeta(d0,rs,alfa,beta,rcut,mcut,toll)
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_quad); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 188, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_quad); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 177, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_1 = PyFloat_FromDouble(__pyx_v_m0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 188, __pyx_L1_error)
+      __pyx_t_1 = PyFloat_FromDouble(__pyx_v_m0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 177, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_2 = PyTuple_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 188, __pyx_L1_error)
+      __pyx_t_2 = PyTuple_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 177, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_2);
       __Pyx_INCREF(__pyx_v_fintegrand);
       __Pyx_GIVEREF(__pyx_v_fintegrand);
@@ -4354,44 +4301,52 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
       __Pyx_GIVEREF(__pyx_t_1);
       PyTuple_SET_ITEM(__pyx_t_2, 2, __pyx_t_1);
       __pyx_t_1 = 0;
-      __pyx_t_1 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 188, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 177, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
       __pyx_t_20 = __pyx_v_i;
-      __pyx_t_4 = PyFloat_FromDouble((*((double *) ( /* dim=0 */ (__pyx_v_R.data + __pyx_t_20 * __pyx_v_R.strides[0]) )))); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 188, __pyx_L1_error)
+      __pyx_t_4 = PyFloat_FromDouble((*((double *) ( /* dim=0 */ (__pyx_v_R.data + __pyx_t_20 * __pyx_v_R.strides[0]) )))); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 177, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __pyx_t_21 = __pyx_v_j;
-      __pyx_t_22 = PyFloat_FromDouble((*((double *) ( /* dim=0 */ (__pyx_v_Z.data + __pyx_t_21 * __pyx_v_Z.strides[0]) )))); if (unlikely(!__pyx_t_22)) __PYX_ERR(0, 188, __pyx_L1_error)
+      __pyx_t_22 = PyFloat_FromDouble((*((double *) ( /* dim=0 */ (__pyx_v_Z.data + __pyx_t_21 * __pyx_v_Z.strides[0]) )))); if (unlikely(!__pyx_t_22)) __PYX_ERR(0, 177, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_22);
-      __pyx_t_23 = PyFloat_FromDouble(__pyx_v_mcut); if (unlikely(!__pyx_t_23)) __PYX_ERR(0, 188, __pyx_L1_error)
+      __pyx_t_23 = PyFloat_FromDouble(__pyx_v_mcut); if (unlikely(!__pyx_t_23)) __PYX_ERR(0, 177, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_23);
-      __pyx_t_24 = PyFloat_FromDouble(__pyx_v_d0); if (unlikely(!__pyx_t_24)) __PYX_ERR(0, 188, __pyx_L1_error)
+      __pyx_t_24 = PyFloat_FromDouble(__pyx_v_d0); if (unlikely(!__pyx_t_24)) __PYX_ERR(0, 177, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_24);
-      __pyx_t_25 = PyFloat_FromDouble(__pyx_v_rs); if (unlikely(!__pyx_t_25)) __PYX_ERR(0, 188, __pyx_L1_error)
+      __pyx_t_25 = PyFloat_FromDouble(__pyx_v_rs); if (unlikely(!__pyx_t_25)) __PYX_ERR(0, 177, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_25);
-      __pyx_t_26 = PyFloat_FromDouble(__pyx_v_n); if (unlikely(!__pyx_t_26)) __PYX_ERR(0, 188, __pyx_L1_error)
+      __pyx_t_26 = PyFloat_FromDouble(__pyx_v_alfa); if (unlikely(!__pyx_t_26)) __PYX_ERR(0, 177, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_26);
-      __pyx_t_27 = PyFloat_FromDouble(__pyx_v_e); if (unlikely(!__pyx_t_27)) __PYX_ERR(0, 188, __pyx_L1_error)
+      __pyx_t_27 = PyFloat_FromDouble(__pyx_v_beta); if (unlikely(!__pyx_t_27)) __PYX_ERR(0, 177, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_27);
-      __pyx_t_28 = PyFloat_FromDouble(__pyx_v_toll); if (unlikely(!__pyx_t_28)) __PYX_ERR(0, 188, __pyx_L1_error)
+      __pyx_t_28 = PyFloat_FromDouble(__pyx_v_rcut); if (unlikely(!__pyx_t_28)) __PYX_ERR(0, 177, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_28);
-      __pyx_t_29 = PyTuple_New(8); if (unlikely(!__pyx_t_29)) __PYX_ERR(0, 188, __pyx_L1_error)
+      __pyx_t_29 = PyFloat_FromDouble(__pyx_v_e); if (unlikely(!__pyx_t_29)) __PYX_ERR(0, 177, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_29);
+      __pyx_t_30 = PyFloat_FromDouble(__pyx_v_toll); if (unlikely(!__pyx_t_30)) __PYX_ERR(0, 177, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_30);
+      __pyx_t_31 = PyTuple_New(10); if (unlikely(!__pyx_t_31)) __PYX_ERR(0, 177, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_31);
       __Pyx_GIVEREF(__pyx_t_4);
-      PyTuple_SET_ITEM(__pyx_t_29, 0, __pyx_t_4);
+      PyTuple_SET_ITEM(__pyx_t_31, 0, __pyx_t_4);
       __Pyx_GIVEREF(__pyx_t_22);
-      PyTuple_SET_ITEM(__pyx_t_29, 1, __pyx_t_22);
+      PyTuple_SET_ITEM(__pyx_t_31, 1, __pyx_t_22);
       __Pyx_GIVEREF(__pyx_t_23);
-      PyTuple_SET_ITEM(__pyx_t_29, 2, __pyx_t_23);
+      PyTuple_SET_ITEM(__pyx_t_31, 2, __pyx_t_23);
       __Pyx_GIVEREF(__pyx_t_24);
-      PyTuple_SET_ITEM(__pyx_t_29, 3, __pyx_t_24);
+      PyTuple_SET_ITEM(__pyx_t_31, 3, __pyx_t_24);
       __Pyx_GIVEREF(__pyx_t_25);
-      PyTuple_SET_ITEM(__pyx_t_29, 4, __pyx_t_25);
+      PyTuple_SET_ITEM(__pyx_t_31, 4, __pyx_t_25);
       __Pyx_GIVEREF(__pyx_t_26);
-      PyTuple_SET_ITEM(__pyx_t_29, 5, __pyx_t_26);
+      PyTuple_SET_ITEM(__pyx_t_31, 5, __pyx_t_26);
       __Pyx_GIVEREF(__pyx_t_27);
-      PyTuple_SET_ITEM(__pyx_t_29, 6, __pyx_t_27);
+      PyTuple_SET_ITEM(__pyx_t_31, 6, __pyx_t_27);
       __Pyx_GIVEREF(__pyx_t_28);
-      PyTuple_SET_ITEM(__pyx_t_29, 7, __pyx_t_28);
+      PyTuple_SET_ITEM(__pyx_t_31, 7, __pyx_t_28);
+      __Pyx_GIVEREF(__pyx_t_29);
+      PyTuple_SET_ITEM(__pyx_t_31, 8, __pyx_t_29);
+      __Pyx_GIVEREF(__pyx_t_30);
+      PyTuple_SET_ITEM(__pyx_t_31, 9, __pyx_t_30);
       __pyx_t_4 = 0;
       __pyx_t_22 = 0;
       __pyx_t_23 = 0;
@@ -4400,49 +4355,51 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
       __pyx_t_26 = 0;
       __pyx_t_27 = 0;
       __pyx_t_28 = 0;
-      if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_args, __pyx_t_29) < 0) __PYX_ERR(0, 188, __pyx_L1_error)
-      __Pyx_DECREF(__pyx_t_29); __pyx_t_29 = 0;
-      __pyx_t_29 = PyFloat_FromDouble(__pyx_v_toll); if (unlikely(!__pyx_t_29)) __PYX_ERR(0, 188, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_29);
-      if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_epsabs, __pyx_t_29) < 0) __PYX_ERR(0, 188, __pyx_L1_error)
-      __Pyx_DECREF(__pyx_t_29); __pyx_t_29 = 0;
-      __pyx_t_29 = PyFloat_FromDouble(__pyx_v_toll); if (unlikely(!__pyx_t_29)) __PYX_ERR(0, 188, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_29);
-      if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_epsrel, __pyx_t_29) < 0) __PYX_ERR(0, 188, __pyx_L1_error)
-      __Pyx_DECREF(__pyx_t_29); __pyx_t_29 = 0;
-      __pyx_t_29 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_29)) __PYX_ERR(0, 188, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_29);
+      __pyx_t_29 = 0;
+      __pyx_t_30 = 0;
+      if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_args, __pyx_t_31) < 0) __PYX_ERR(0, 177, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_31); __pyx_t_31 = 0;
+      __pyx_t_31 = PyFloat_FromDouble(__pyx_v_toll); if (unlikely(!__pyx_t_31)) __PYX_ERR(0, 177, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_31);
+      if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_epsabs, __pyx_t_31) < 0) __PYX_ERR(0, 177, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_31); __pyx_t_31 = 0;
+      __pyx_t_31 = PyFloat_FromDouble(__pyx_v_toll); if (unlikely(!__pyx_t_31)) __PYX_ERR(0, 177, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_31);
+      if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_epsrel, __pyx_t_31) < 0) __PYX_ERR(0, 177, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_31); __pyx_t_31 = 0;
+      __pyx_t_31 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_31)) __PYX_ERR(0, 177, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_31);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_29, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 188, __pyx_L1_error)
+      __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_31, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 177, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_1);
-      __Pyx_DECREF(__pyx_t_29); __pyx_t_29 = 0;
-      __pyx_t_30 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_30 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 188, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_31); __pyx_t_31 = 0;
+      __pyx_t_32 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_32 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 177, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-      __pyx_v_intpot = __pyx_t_30;
+      __pyx_v_intpot = __pyx_t_32;
 
-      /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":190
- *             intpot=quad(fintegrand,0.,m0,args=(R[i],Z[j],mcut,d0,rs,n,e,toll),epsabs=toll,epsrel=toll)[0]
+      /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":179
+ *             intpot=quad(fintegrand,0.,m0,args=(R[i],Z[j],mcut,d0,rs,alfa,beta,rcut,e,toll),epsabs=toll,epsrel=toll)[0]
  * 
- *             psi=psi_einasto(d0,rs,n,mcut,toll)             # <<<<<<<<<<<<<<
+ *             psi=psi_truncated_alfabeta(d0,rs,alfa,beta,rcut,mcut,toll)             # <<<<<<<<<<<<<<
  * 
  *             ret[c,2]=potential_core(e, intpot, psi)
  */
-      __pyx_v_psi = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_psi_einasto(__pyx_v_d0, __pyx_v_rs, __pyx_v_n, __pyx_v_mcut, __pyx_v_toll);
+      __pyx_v_psi = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_psi_truncated_alfabeta(__pyx_v_d0, __pyx_v_rs, __pyx_v_alfa, __pyx_v_beta, __pyx_v_rcut, __pyx_v_mcut, __pyx_v_toll);
 
-      /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":192
- *             psi=psi_einasto(d0,rs,n,mcut,toll)
+      /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":181
+ *             psi=psi_truncated_alfabeta(d0,rs,alfa,beta,rcut,mcut,toll)
  * 
  *             ret[c,2]=potential_core(e, intpot, psi)             # <<<<<<<<<<<<<<
  *             #if (e<=0.0001):
  *             #    ret[c,2] = -cost*(psi-intpot)
  */
-      __pyx_t_31 = __pyx_v_c;
-      __pyx_t_32 = 2;
-      *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_ret.data + __pyx_t_31 * __pyx_v_ret.strides[0]) ) + __pyx_t_32 * __pyx_v_ret.strides[1]) )) = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12general_halo_potential_core(__pyx_v_e, __pyx_v_intpot, __pyx_v_psi);
+      __pyx_t_33 = __pyx_v_c;
+      __pyx_t_34 = 2;
+      *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_ret.data + __pyx_t_33 * __pyx_v_ret.strides[0]) ) + __pyx_t_34 * __pyx_v_ret.strides[1]) )) = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12general_halo_potential_core(__pyx_v_e, __pyx_v_intpot, __pyx_v_psi);
 
-      /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":198
+      /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":187
  *             #    ret[c,2] = -cost*(sqrt(1-e*e)/e)*(psi*asin(e)-e*intpot)
  * 
  *             c+=1             # <<<<<<<<<<<<<<
@@ -4453,7 +4410,7 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
     }
   }
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":200
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":189
  *             c+=1
  * 
  *     return ret             # <<<<<<<<<<<<<<
@@ -4464,10 +4421,10 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
   __pyx_r = __pyx_v_ret;
   goto __pyx_L0;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":161
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":150
  * 
  * 
- * cdef double[:,:]  _potential_einasto_grid(double[:] R, double[:] Z, int nlenR, int nlenZ, double mcut, double d0, double rs, double n,  double e, double toll):             # <<<<<<<<<<<<<<
+ * cdef double[:,:]  _potential_truncated_alfabeta_grid(double[:] R, double[:] Z, int nlenR, int nlenZ, double mcut, double d0, double rs, double alfa, double beta, double rcut,  double e, double toll):             # <<<<<<<<<<<<<<
  * 
  * 
  */
@@ -4487,9 +4444,11 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
   __Pyx_XDECREF(__pyx_t_27);
   __Pyx_XDECREF(__pyx_t_28);
   __Pyx_XDECREF(__pyx_t_29);
+  __Pyx_XDECREF(__pyx_t_30);
+  __Pyx_XDECREF(__pyx_t_31);
   __pyx_r.data = NULL;
   __pyx_r.memview = NULL;
-  __Pyx_AddTraceback("galpynamics.src.pot_halo.pot_c_ext.einasto_halo._potential_einasto_grid", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo._potential_truncated_alfabeta_grid", __pyx_clineno, __pyx_lineno, __pyx_filename);
   goto __pyx_L2;
   __pyx_L0:;
   if (unlikely(!__pyx_r.memview)) {
@@ -4503,16 +4462,16 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
   return __pyx_r;
 }
 
-/* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":203
+/* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":192
  * 
  * 
- * cpdef potential_einasto(R, Z, d0, rs, n, e, mcut, toll=1e-4, grid=False):             # <<<<<<<<<<<<<<
+ * cpdef potential_truncated_alfabeta(R, Z, d0, rs, alfa, beta, rcut, e, mcut, toll=1e-4, grid=False):             # <<<<<<<<<<<<<<
  * 
  *     if isinstance(R, float) or isinstance(R, int):
  */
 
-static PyObject *__pyx_pw_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_1potential_einasto(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_potential_einasto(PyObject *__pyx_v_R, PyObject *__pyx_v_Z, PyObject *__pyx_v_d0, PyObject *__pyx_v_rs, PyObject *__pyx_v_n, PyObject *__pyx_v_e, PyObject *__pyx_v_mcut, CYTHON_UNUSED int __pyx_skip_dispatch, struct __pyx_opt_args_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_potential_einasto *__pyx_optional_args) {
+static PyObject *__pyx_pw_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_1potential_truncated_alfabeta(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_potential_truncated_alfabeta(PyObject *__pyx_v_R, PyObject *__pyx_v_Z, PyObject *__pyx_v_d0, PyObject *__pyx_v_rs, PyObject *__pyx_v_alfa, PyObject *__pyx_v_beta, PyObject *__pyx_v_rcut, PyObject *__pyx_v_e, PyObject *__pyx_v_mcut, CYTHON_UNUSED int __pyx_skip_dispatch, struct __pyx_opt_args_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_potential_truncated_alfabeta *__pyx_optional_args) {
   PyObject *__pyx_v_toll = ((PyObject *)__pyx_float_1eneg_4);
   PyObject *__pyx_v_grid = ((PyObject *)Py_False);
   CYTHON_UNUSED Py_ssize_t __pyx_v_nlen;
@@ -4532,13 +4491,15 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_
   double __pyx_t_12;
   double __pyx_t_13;
   double __pyx_t_14;
-  PyObject *__pyx_t_15 = NULL;
-  __Pyx_memviewslice __pyx_t_16 = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __Pyx_memviewslice __pyx_t_17 = { 0, 0, { 0 }, { 0 }, { 0 } };
-  Py_ssize_t __pyx_t_18;
-  Py_ssize_t __pyx_t_19;
-  __Pyx_memviewslice __pyx_t_20 = { 0, 0, { 0 }, { 0 }, { 0 } };
-  __Pyx_RefNannySetupContext("potential_einasto", 0);
+  double __pyx_t_15;
+  double __pyx_t_16;
+  PyObject *__pyx_t_17 = NULL;
+  __Pyx_memviewslice __pyx_t_18 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __Pyx_memviewslice __pyx_t_19 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  Py_ssize_t __pyx_t_20;
+  Py_ssize_t __pyx_t_21;
+  __Pyx_memviewslice __pyx_t_22 = { 0, 0, { 0 }, { 0 }, { 0 } };
+  __Pyx_RefNannySetupContext("potential_truncated_alfabeta", 0);
   if (__pyx_optional_args) {
     if (__pyx_optional_args->__pyx_n > 0) {
       __pyx_v_toll = __pyx_optional_args->toll;
@@ -4550,12 +4511,12 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_
   __Pyx_INCREF(__pyx_v_R);
   __Pyx_INCREF(__pyx_v_Z);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":205
- * cpdef potential_einasto(R, Z, d0, rs, n, e, mcut, toll=1e-4, grid=False):
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":194
+ * cpdef potential_truncated_alfabeta(R, Z, d0, rs, alfa, beta, rcut, e, mcut, toll=1e-4, grid=False):
  * 
  *     if isinstance(R, float) or isinstance(R, int):             # <<<<<<<<<<<<<<
  *         if isinstance(Z, float) or isinstance(Z, int):
- *             return np.array(_potential_einasto(R=R,Z=Z,mcut=mcut,d0=d0, rs=rs, n=n, e=e,toll=toll))
+ *             return np.array(_potential_truncated_alfabeta(R=R,Z=Z,mcut=mcut,d0=d0, rs=rs, alfa=alfa, beta=beta, rcut=rcut, e=e,toll=toll))
  */
   __pyx_t_2 = PyFloat_Check(__pyx_v_R); 
   __pyx_t_3 = (__pyx_t_2 != 0);
@@ -4570,11 +4531,11 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":206
+    /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":195
  * 
  *     if isinstance(R, float) or isinstance(R, int):
  *         if isinstance(Z, float) or isinstance(Z, int):             # <<<<<<<<<<<<<<
- *             return np.array(_potential_einasto(R=R,Z=Z,mcut=mcut,d0=d0, rs=rs, n=n, e=e,toll=toll))
+ *             return np.array(_potential_truncated_alfabeta(R=R,Z=Z,mcut=mcut,d0=d0, rs=rs, alfa=alfa, beta=beta, rcut=rcut, e=e,toll=toll))
  *         else:
  */
     __pyx_t_2 = PyFloat_Check(__pyx_v_Z); 
@@ -4590,83 +4551,85 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_
     __pyx_L7_bool_binop_done:;
     if (likely(__pyx_t_1)) {
 
-      /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":207
+      /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":196
  *     if isinstance(R, float) or isinstance(R, int):
  *         if isinstance(Z, float) or isinstance(Z, int):
- *             return np.array(_potential_einasto(R=R,Z=Z,mcut=mcut,d0=d0, rs=rs, n=n, e=e,toll=toll))             # <<<<<<<<<<<<<<
+ *             return np.array(_potential_truncated_alfabeta(R=R,Z=Z,mcut=mcut,d0=d0, rs=rs, alfa=alfa, beta=beta, rcut=rcut, e=e,toll=toll))             # <<<<<<<<<<<<<<
  *         else:
  *             raise ValueError('R and Z have different dimension')
  */
       __Pyx_XDECREF(__pyx_r);
-      __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 207, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 196, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_array); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 207, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_array); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 196, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_v_R); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 207, __pyx_L1_error)
-      __pyx_t_8 = __pyx_PyFloat_AsDouble(__pyx_v_Z); if (unlikely((__pyx_t_8 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 207, __pyx_L1_error)
-      __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_mcut); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 207, __pyx_L1_error)
-      __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_v_d0); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 207, __pyx_L1_error)
-      __pyx_t_11 = __pyx_PyFloat_AsDouble(__pyx_v_rs); if (unlikely((__pyx_t_11 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 207, __pyx_L1_error)
-      __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_v_n); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 207, __pyx_L1_error)
-      __pyx_t_13 = __pyx_PyFloat_AsDouble(__pyx_v_e); if (unlikely((__pyx_t_13 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 207, __pyx_L1_error)
-      __pyx_t_14 = __pyx_PyFloat_AsDouble(__pyx_v_toll); if (unlikely((__pyx_t_14 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 207, __pyx_L1_error)
-      __pyx_t_5 = PyFloat_FromDouble(__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__potential_einasto(__pyx_t_7, __pyx_t_8, __pyx_t_9, __pyx_t_10, __pyx_t_11, __pyx_t_12, __pyx_t_13, __pyx_t_14)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 207, __pyx_L1_error)
+      __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_v_R); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 196, __pyx_L1_error)
+      __pyx_t_8 = __pyx_PyFloat_AsDouble(__pyx_v_Z); if (unlikely((__pyx_t_8 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 196, __pyx_L1_error)
+      __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_mcut); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 196, __pyx_L1_error)
+      __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_v_d0); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 196, __pyx_L1_error)
+      __pyx_t_11 = __pyx_PyFloat_AsDouble(__pyx_v_rs); if (unlikely((__pyx_t_11 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 196, __pyx_L1_error)
+      __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_v_alfa); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 196, __pyx_L1_error)
+      __pyx_t_13 = __pyx_PyFloat_AsDouble(__pyx_v_beta); if (unlikely((__pyx_t_13 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 196, __pyx_L1_error)
+      __pyx_t_14 = __pyx_PyFloat_AsDouble(__pyx_v_rcut); if (unlikely((__pyx_t_14 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 196, __pyx_L1_error)
+      __pyx_t_15 = __pyx_PyFloat_AsDouble(__pyx_v_e); if (unlikely((__pyx_t_15 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 196, __pyx_L1_error)
+      __pyx_t_16 = __pyx_PyFloat_AsDouble(__pyx_v_toll); if (unlikely((__pyx_t_16 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 196, __pyx_L1_error)
+      __pyx_t_5 = PyFloat_FromDouble(__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo__potential_truncated_alfabeta(__pyx_t_7, __pyx_t_8, __pyx_t_9, __pyx_t_10, __pyx_t_11, __pyx_t_12, __pyx_t_13, __pyx_t_14, __pyx_t_15, __pyx_t_16)); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 196, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_15 = NULL;
+      __pyx_t_17 = NULL;
       if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_6))) {
-        __pyx_t_15 = PyMethod_GET_SELF(__pyx_t_6);
-        if (likely(__pyx_t_15)) {
+        __pyx_t_17 = PyMethod_GET_SELF(__pyx_t_6);
+        if (likely(__pyx_t_17)) {
           PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_6);
-          __Pyx_INCREF(__pyx_t_15);
+          __Pyx_INCREF(__pyx_t_17);
           __Pyx_INCREF(function);
           __Pyx_DECREF_SET(__pyx_t_6, function);
         }
       }
-      __pyx_t_4 = (__pyx_t_15) ? __Pyx_PyObject_Call2Args(__pyx_t_6, __pyx_t_15, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_5);
-      __Pyx_XDECREF(__pyx_t_15); __pyx_t_15 = 0;
+      __pyx_t_4 = (__pyx_t_17) ? __Pyx_PyObject_Call2Args(__pyx_t_6, __pyx_t_17, __pyx_t_5) : __Pyx_PyObject_CallOneArg(__pyx_t_6, __pyx_t_5);
+      __Pyx_XDECREF(__pyx_t_17); __pyx_t_17 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 207, __pyx_L1_error)
+      if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 196, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __pyx_r = __pyx_t_4;
       __pyx_t_4 = 0;
       goto __pyx_L0;
 
-      /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":206
+      /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":195
  * 
  *     if isinstance(R, float) or isinstance(R, int):
  *         if isinstance(Z, float) or isinstance(Z, int):             # <<<<<<<<<<<<<<
- *             return np.array(_potential_einasto(R=R,Z=Z,mcut=mcut,d0=d0, rs=rs, n=n, e=e,toll=toll))
+ *             return np.array(_potential_truncated_alfabeta(R=R,Z=Z,mcut=mcut,d0=d0, rs=rs, alfa=alfa, beta=beta, rcut=rcut, e=e,toll=toll))
  *         else:
  */
     }
 
-    /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":209
- *             return np.array(_potential_einasto(R=R,Z=Z,mcut=mcut,d0=d0, rs=rs, n=n, e=e,toll=toll))
+    /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":198
+ *             return np.array(_potential_truncated_alfabeta(R=R,Z=Z,mcut=mcut,d0=d0, rs=rs, alfa=alfa, beta=beta, rcut=rcut, e=e,toll=toll))
  *         else:
  *             raise ValueError('R and Z have different dimension')             # <<<<<<<<<<<<<<
  *     else:
  *         if grid:
  */
     /*else*/ {
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 209, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 198, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_Raise(__pyx_t_4, 0, 0, 0);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __PYX_ERR(0, 209, __pyx_L1_error)
+      __PYX_ERR(0, 198, __pyx_L1_error)
     }
 
-    /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":205
- * cpdef potential_einasto(R, Z, d0, rs, n, e, mcut, toll=1e-4, grid=False):
+    /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":194
+ * cpdef potential_truncated_alfabeta(R, Z, d0, rs, alfa, beta, rcut, e, mcut, toll=1e-4, grid=False):
  * 
  *     if isinstance(R, float) or isinstance(R, int):             # <<<<<<<<<<<<<<
  *         if isinstance(Z, float) or isinstance(Z, int):
- *             return np.array(_potential_einasto(R=R,Z=Z,mcut=mcut,d0=d0, rs=rs, n=n, e=e,toll=toll))
+ *             return np.array(_potential_truncated_alfabeta(R=R,Z=Z,mcut=mcut,d0=d0, rs=rs, alfa=alfa, beta=beta, rcut=rcut, e=e,toll=toll))
  */
   }
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":211
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":200
  *             raise ValueError('R and Z have different dimension')
  *     else:
  *         if grid:             # <<<<<<<<<<<<<<
@@ -4674,127 +4637,129 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_
  *             Z=np.array(Z,dtype=np.dtype("d"))
  */
   /*else*/ {
-    __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_grid); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 211, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_v_grid); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 200, __pyx_L1_error)
     if (__pyx_t_1) {
 
-      /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":212
+      /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":201
  *     else:
  *         if grid:
  *             R=np.array(R,dtype=np.dtype("d"))             # <<<<<<<<<<<<<<
  *             Z=np.array(Z,dtype=np.dtype("d"))
- *             return np.array(_potential_einasto_grid( R=R, Z=Z, nlenR=len(R), nlenZ=len(Z), mcut=mcut, d0=d0, rs=rs, n=n, e=e,toll=toll))
+ *             return np.array(_potential_truncated_alfabeta_grid( R=R, Z=Z, nlenR=len(R), nlenZ=len(Z), mcut=mcut, d0=d0, rs=rs, alfa=alfa, beta=beta, rcut=rcut, e=e,toll=toll))
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 212, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 201, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_array); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 212, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_array); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 201, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 212, __pyx_L1_error)
+      __pyx_t_4 = PyTuple_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 201, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_INCREF(__pyx_v_R);
       __Pyx_GIVEREF(__pyx_v_R);
       PyTuple_SET_ITEM(__pyx_t_4, 0, __pyx_v_R);
-      __pyx_t_5 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 212, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 201, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_15 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 212, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_15);
-      if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_15) < 0) __PYX_ERR(0, 212, __pyx_L1_error)
-      __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
-      __pyx_t_15 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 212, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_15);
+      __pyx_t_17 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 201, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_17);
+      if (PyDict_SetItem(__pyx_t_5, __pyx_n_s_dtype, __pyx_t_17) < 0) __PYX_ERR(0, 201, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
+      __pyx_t_17 = __Pyx_PyObject_Call(__pyx_t_6, __pyx_t_4, __pyx_t_5); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 201, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_17);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __Pyx_DECREF_SET(__pyx_v_R, __pyx_t_15);
-      __pyx_t_15 = 0;
+      __Pyx_DECREF_SET(__pyx_v_R, __pyx_t_17);
+      __pyx_t_17 = 0;
 
-      /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":213
+      /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":202
  *         if grid:
  *             R=np.array(R,dtype=np.dtype("d"))
  *             Z=np.array(Z,dtype=np.dtype("d"))             # <<<<<<<<<<<<<<
- *             return np.array(_potential_einasto_grid( R=R, Z=Z, nlenR=len(R), nlenZ=len(Z), mcut=mcut, d0=d0, rs=rs, n=n, e=e,toll=toll))
+ *             return np.array(_potential_truncated_alfabeta_grid( R=R, Z=Z, nlenR=len(R), nlenZ=len(Z), mcut=mcut, d0=d0, rs=rs, alfa=alfa, beta=beta, rcut=rcut, e=e,toll=toll))
  *         elif len(R)==len(Z):
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_15, __pyx_n_s_np); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 213, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_15);
-      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_15, __pyx_n_s_array); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 213, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_17, __pyx_n_s_np); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 202, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_17);
+      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_17, __pyx_n_s_array); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 202, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
-      __pyx_t_15 = PyTuple_New(1); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 213, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_15);
+      __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
+      __pyx_t_17 = PyTuple_New(1); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 202, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_17);
       __Pyx_INCREF(__pyx_v_Z);
       __Pyx_GIVEREF(__pyx_v_Z);
-      PyTuple_SET_ITEM(__pyx_t_15, 0, __pyx_v_Z);
-      __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 213, __pyx_L1_error)
+      PyTuple_SET_ITEM(__pyx_t_17, 0, __pyx_v_Z);
+      __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 202, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_6 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 213, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 202, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_6) < 0) __PYX_ERR(0, 213, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_6) < 0) __PYX_ERR(0, 202, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_15, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 213, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_17, __pyx_t_4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 202, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
+      __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF_SET(__pyx_v_Z, __pyx_t_6);
       __pyx_t_6 = 0;
 
-      /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":214
+      /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":203
  *             R=np.array(R,dtype=np.dtype("d"))
  *             Z=np.array(Z,dtype=np.dtype("d"))
- *             return np.array(_potential_einasto_grid( R=R, Z=Z, nlenR=len(R), nlenZ=len(Z), mcut=mcut, d0=d0, rs=rs, n=n, e=e,toll=toll))             # <<<<<<<<<<<<<<
+ *             return np.array(_potential_truncated_alfabeta_grid( R=R, Z=Z, nlenR=len(R), nlenZ=len(Z), mcut=mcut, d0=d0, rs=rs, alfa=alfa, beta=beta, rcut=rcut, e=e,toll=toll))             # <<<<<<<<<<<<<<
  *         elif len(R)==len(Z):
  *             nlen=len(R)
  */
       __Pyx_XDECREF(__pyx_r);
-      __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 214, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 203, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_array); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 214, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_15);
+      __pyx_t_17 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_array); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 203, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_17);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      __pyx_t_16 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_v_R, PyBUF_WRITABLE); if (unlikely(!__pyx_t_16.memview)) __PYX_ERR(0, 214, __pyx_L1_error)
-      __pyx_t_17 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_v_Z, PyBUF_WRITABLE); if (unlikely(!__pyx_t_17.memview)) __PYX_ERR(0, 214, __pyx_L1_error)
-      __pyx_t_18 = PyObject_Length(__pyx_v_R); if (unlikely(__pyx_t_18 == ((Py_ssize_t)-1))) __PYX_ERR(0, 214, __pyx_L1_error)
-      __pyx_t_19 = PyObject_Length(__pyx_v_Z); if (unlikely(__pyx_t_19 == ((Py_ssize_t)-1))) __PYX_ERR(0, 214, __pyx_L1_error)
-      __pyx_t_14 = __pyx_PyFloat_AsDouble(__pyx_v_mcut); if (unlikely((__pyx_t_14 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 214, __pyx_L1_error)
-      __pyx_t_13 = __pyx_PyFloat_AsDouble(__pyx_v_d0); if (unlikely((__pyx_t_13 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 214, __pyx_L1_error)
-      __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_v_rs); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 214, __pyx_L1_error)
-      __pyx_t_11 = __pyx_PyFloat_AsDouble(__pyx_v_n); if (unlikely((__pyx_t_11 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 214, __pyx_L1_error)
-      __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_v_e); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 214, __pyx_L1_error)
-      __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_toll); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 214, __pyx_L1_error)
-      __pyx_t_20 = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__potential_einasto_grid(__pyx_t_16, __pyx_t_17, __pyx_t_18, __pyx_t_19, __pyx_t_14, __pyx_t_13, __pyx_t_12, __pyx_t_11, __pyx_t_10, __pyx_t_9); if (unlikely(!__pyx_t_20.memview)) __PYX_ERR(0, 214, __pyx_L1_error)
-      __PYX_XDEC_MEMVIEW(&__pyx_t_16, 1);
-      __pyx_t_16.memview = NULL;
-      __pyx_t_16.data = NULL;
-      __PYX_XDEC_MEMVIEW(&__pyx_t_17, 1);
-      __pyx_t_17.memview = NULL;
-      __pyx_t_17.data = NULL;
-      __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_t_20, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 214, __pyx_L1_error)
+      __pyx_t_18 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_v_R, PyBUF_WRITABLE); if (unlikely(!__pyx_t_18.memview)) __PYX_ERR(0, 203, __pyx_L1_error)
+      __pyx_t_19 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_v_Z, PyBUF_WRITABLE); if (unlikely(!__pyx_t_19.memview)) __PYX_ERR(0, 203, __pyx_L1_error)
+      __pyx_t_20 = PyObject_Length(__pyx_v_R); if (unlikely(__pyx_t_20 == ((Py_ssize_t)-1))) __PYX_ERR(0, 203, __pyx_L1_error)
+      __pyx_t_21 = PyObject_Length(__pyx_v_Z); if (unlikely(__pyx_t_21 == ((Py_ssize_t)-1))) __PYX_ERR(0, 203, __pyx_L1_error)
+      __pyx_t_16 = __pyx_PyFloat_AsDouble(__pyx_v_mcut); if (unlikely((__pyx_t_16 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 203, __pyx_L1_error)
+      __pyx_t_15 = __pyx_PyFloat_AsDouble(__pyx_v_d0); if (unlikely((__pyx_t_15 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 203, __pyx_L1_error)
+      __pyx_t_14 = __pyx_PyFloat_AsDouble(__pyx_v_rs); if (unlikely((__pyx_t_14 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 203, __pyx_L1_error)
+      __pyx_t_13 = __pyx_PyFloat_AsDouble(__pyx_v_alfa); if (unlikely((__pyx_t_13 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 203, __pyx_L1_error)
+      __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_v_beta); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 203, __pyx_L1_error)
+      __pyx_t_11 = __pyx_PyFloat_AsDouble(__pyx_v_rcut); if (unlikely((__pyx_t_11 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 203, __pyx_L1_error)
+      __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_v_e); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 203, __pyx_L1_error)
+      __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_toll); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 203, __pyx_L1_error)
+      __pyx_t_22 = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo__potential_truncated_alfabeta_grid(__pyx_t_18, __pyx_t_19, __pyx_t_20, __pyx_t_21, __pyx_t_16, __pyx_t_15, __pyx_t_14, __pyx_t_13, __pyx_t_12, __pyx_t_11, __pyx_t_10, __pyx_t_9); if (unlikely(!__pyx_t_22.memview)) __PYX_ERR(0, 203, __pyx_L1_error)
+      __PYX_XDEC_MEMVIEW(&__pyx_t_18, 1);
+      __pyx_t_18.memview = NULL;
+      __pyx_t_18.data = NULL;
+      __PYX_XDEC_MEMVIEW(&__pyx_t_19, 1);
+      __pyx_t_19.memview = NULL;
+      __pyx_t_19.data = NULL;
+      __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_t_22, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 203, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __PYX_XDEC_MEMVIEW(&__pyx_t_20, 1);
-      __pyx_t_20.memview = NULL;
-      __pyx_t_20.data = NULL;
+      __PYX_XDEC_MEMVIEW(&__pyx_t_22, 1);
+      __pyx_t_22.memview = NULL;
+      __pyx_t_22.data = NULL;
       __pyx_t_5 = NULL;
-      if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_15))) {
-        __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_15);
+      if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_17))) {
+        __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_17);
         if (likely(__pyx_t_5)) {
-          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_15);
+          PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_17);
           __Pyx_INCREF(__pyx_t_5);
           __Pyx_INCREF(function);
-          __Pyx_DECREF_SET(__pyx_t_15, function);
+          __Pyx_DECREF_SET(__pyx_t_17, function);
         }
       }
-      __pyx_t_6 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_15, __pyx_t_5, __pyx_t_4) : __Pyx_PyObject_CallOneArg(__pyx_t_15, __pyx_t_4);
+      __pyx_t_6 = (__pyx_t_5) ? __Pyx_PyObject_Call2Args(__pyx_t_17, __pyx_t_5, __pyx_t_4) : __Pyx_PyObject_CallOneArg(__pyx_t_17, __pyx_t_4);
       __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-      if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 214, __pyx_L1_error)
+      if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 203, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
+      __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
       __pyx_r = __pyx_t_6;
       __pyx_t_6 = 0;
       goto __pyx_L0;
 
-      /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":211
+      /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":200
  *             raise ValueError('R and Z have different dimension')
  *     else:
  *         if grid:             # <<<<<<<<<<<<<<
@@ -4803,124 +4768,126 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_
  */
     }
 
-    /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":215
+    /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":204
  *             Z=np.array(Z,dtype=np.dtype("d"))
- *             return np.array(_potential_einasto_grid( R=R, Z=Z, nlenR=len(R), nlenZ=len(Z), mcut=mcut, d0=d0, rs=rs, n=n, e=e,toll=toll))
+ *             return np.array(_potential_truncated_alfabeta_grid( R=R, Z=Z, nlenR=len(R), nlenZ=len(Z), mcut=mcut, d0=d0, rs=rs, alfa=alfa, beta=beta, rcut=rcut, e=e,toll=toll))
  *         elif len(R)==len(Z):             # <<<<<<<<<<<<<<
  *             nlen=len(R)
  *             R=np.array(R,dtype=np.dtype("d"))
  */
-    __pyx_t_19 = PyObject_Length(__pyx_v_R); if (unlikely(__pyx_t_19 == ((Py_ssize_t)-1))) __PYX_ERR(0, 215, __pyx_L1_error)
-    __pyx_t_18 = PyObject_Length(__pyx_v_Z); if (unlikely(__pyx_t_18 == ((Py_ssize_t)-1))) __PYX_ERR(0, 215, __pyx_L1_error)
-    __pyx_t_1 = ((__pyx_t_19 == __pyx_t_18) != 0);
+    __pyx_t_21 = PyObject_Length(__pyx_v_R); if (unlikely(__pyx_t_21 == ((Py_ssize_t)-1))) __PYX_ERR(0, 204, __pyx_L1_error)
+    __pyx_t_20 = PyObject_Length(__pyx_v_Z); if (unlikely(__pyx_t_20 == ((Py_ssize_t)-1))) __PYX_ERR(0, 204, __pyx_L1_error)
+    __pyx_t_1 = ((__pyx_t_21 == __pyx_t_20) != 0);
     if (likely(__pyx_t_1)) {
 
-      /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":216
- *             return np.array(_potential_einasto_grid( R=R, Z=Z, nlenR=len(R), nlenZ=len(Z), mcut=mcut, d0=d0, rs=rs, n=n, e=e,toll=toll))
+      /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":205
+ *             return np.array(_potential_truncated_alfabeta_grid( R=R, Z=Z, nlenR=len(R), nlenZ=len(Z), mcut=mcut, d0=d0, rs=rs, alfa=alfa, beta=beta, rcut=rcut, e=e,toll=toll))
  *         elif len(R)==len(Z):
  *             nlen=len(R)             # <<<<<<<<<<<<<<
  *             R=np.array(R,dtype=np.dtype("d"))
  *             Z=np.array(Z,dtype=np.dtype("d"))
  */
-      __pyx_t_18 = PyObject_Length(__pyx_v_R); if (unlikely(__pyx_t_18 == ((Py_ssize_t)-1))) __PYX_ERR(0, 216, __pyx_L1_error)
-      __pyx_v_nlen = __pyx_t_18;
+      __pyx_t_20 = PyObject_Length(__pyx_v_R); if (unlikely(__pyx_t_20 == ((Py_ssize_t)-1))) __PYX_ERR(0, 205, __pyx_L1_error)
+      __pyx_v_nlen = __pyx_t_20;
 
-      /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":217
+      /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":206
  *         elif len(R)==len(Z):
  *             nlen=len(R)
  *             R=np.array(R,dtype=np.dtype("d"))             # <<<<<<<<<<<<<<
  *             Z=np.array(Z,dtype=np.dtype("d"))
- *             return np.array(_potential_einasto_array( R=R, Z=Z, nlen=len(R), mcut=mcut, d0=d0, rs=rs, n=n, e=e,toll=toll))
+ *             return np.array(_potential_truncated_alfabeta_array( R=R, Z=Z, nlen=len(R), mcut=mcut, d0=d0, rs=rs, alfa=alfa, beta=beta, rcut=rcut, e=e,toll=toll))
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 217, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 206, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_array); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 217, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_15);
+      __pyx_t_17 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_array); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 206, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_17);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 217, __pyx_L1_error)
+      __pyx_t_6 = PyTuple_New(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 206, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
       __Pyx_INCREF(__pyx_v_R);
       __Pyx_GIVEREF(__pyx_v_R);
       PyTuple_SET_ITEM(__pyx_t_6, 0, __pyx_v_R);
-      __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 217, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 206, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_5 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 217, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 206, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 217, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_4, __pyx_n_s_dtype, __pyx_t_5) < 0) __PYX_ERR(0, 206, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_15, __pyx_t_6, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 217, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_Call(__pyx_t_17, __pyx_t_6, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 206, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
+      __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF_SET(__pyx_v_R, __pyx_t_5);
       __pyx_t_5 = 0;
 
-      /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":218
+      /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":207
  *             nlen=len(R)
  *             R=np.array(R,dtype=np.dtype("d"))
  *             Z=np.array(Z,dtype=np.dtype("d"))             # <<<<<<<<<<<<<<
- *             return np.array(_potential_einasto_array( R=R, Z=Z, nlen=len(R), mcut=mcut, d0=d0, rs=rs, n=n, e=e,toll=toll))
+ *             return np.array(_potential_truncated_alfabeta_array( R=R, Z=Z, nlen=len(R), mcut=mcut, d0=d0, rs=rs, alfa=alfa, beta=beta, rcut=rcut, e=e,toll=toll))
  *         else:
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 218, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 207, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_array); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 218, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_array); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 207, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 218, __pyx_L1_error)
+      __pyx_t_5 = PyTuple_New(1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 207, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_INCREF(__pyx_v_Z);
       __Pyx_GIVEREF(__pyx_v_Z);
       PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_v_Z);
-      __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 218, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 207, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_15 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 218, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_15);
-      if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_15) < 0) __PYX_ERR(0, 218, __pyx_L1_error)
-      __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
-      __pyx_t_15 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, __pyx_t_6); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 218, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_15);
+      __pyx_t_17 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 207, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_17);
+      if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_dtype, __pyx_t_17) < 0) __PYX_ERR(0, 207, __pyx_L1_error)
+      __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
+      __pyx_t_17 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_5, __pyx_t_6); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 207, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_17);
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __Pyx_DECREF_SET(__pyx_v_Z, __pyx_t_15);
-      __pyx_t_15 = 0;
+      __Pyx_DECREF_SET(__pyx_v_Z, __pyx_t_17);
+      __pyx_t_17 = 0;
 
-      /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":219
+      /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":208
  *             R=np.array(R,dtype=np.dtype("d"))
  *             Z=np.array(Z,dtype=np.dtype("d"))
- *             return np.array(_potential_einasto_array( R=R, Z=Z, nlen=len(R), mcut=mcut, d0=d0, rs=rs, n=n, e=e,toll=toll))             # <<<<<<<<<<<<<<
+ *             return np.array(_potential_truncated_alfabeta_array( R=R, Z=Z, nlen=len(R), mcut=mcut, d0=d0, rs=rs, alfa=alfa, beta=beta, rcut=rcut, e=e,toll=toll))             # <<<<<<<<<<<<<<
  *         else:
  *             raise ValueError('R and Z have different dimension')
  */
       __Pyx_XDECREF(__pyx_r);
-      __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 219, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_n_s_np); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 208, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_array); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 219, __pyx_L1_error)
+      __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_t_6, __pyx_n_s_array); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 208, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_5);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      __pyx_t_17 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_v_R, PyBUF_WRITABLE); if (unlikely(!__pyx_t_17.memview)) __PYX_ERR(0, 219, __pyx_L1_error)
-      __pyx_t_16 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_v_Z, PyBUF_WRITABLE); if (unlikely(!__pyx_t_16.memview)) __PYX_ERR(0, 219, __pyx_L1_error)
-      __pyx_t_18 = PyObject_Length(__pyx_v_R); if (unlikely(__pyx_t_18 == ((Py_ssize_t)-1))) __PYX_ERR(0, 219, __pyx_L1_error)
-      __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_mcut); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 219, __pyx_L1_error)
-      __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_v_d0); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 219, __pyx_L1_error)
-      __pyx_t_11 = __pyx_PyFloat_AsDouble(__pyx_v_rs); if (unlikely((__pyx_t_11 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 219, __pyx_L1_error)
-      __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_v_n); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 219, __pyx_L1_error)
-      __pyx_t_13 = __pyx_PyFloat_AsDouble(__pyx_v_e); if (unlikely((__pyx_t_13 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 219, __pyx_L1_error)
-      __pyx_t_14 = __pyx_PyFloat_AsDouble(__pyx_v_toll); if (unlikely((__pyx_t_14 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 219, __pyx_L1_error)
-      __pyx_t_20 = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__potential_einasto_array(__pyx_t_17, __pyx_t_16, __pyx_t_18, __pyx_t_9, __pyx_t_10, __pyx_t_11, __pyx_t_12, __pyx_t_13, __pyx_t_14); if (unlikely(!__pyx_t_20.memview)) __PYX_ERR(0, 219, __pyx_L1_error)
-      __PYX_XDEC_MEMVIEW(&__pyx_t_17, 1);
-      __pyx_t_17.memview = NULL;
-      __pyx_t_17.data = NULL;
-      __PYX_XDEC_MEMVIEW(&__pyx_t_16, 1);
-      __pyx_t_16.memview = NULL;
-      __pyx_t_16.data = NULL;
-      __pyx_t_6 = __pyx_memoryview_fromslice(__pyx_t_20, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 219, __pyx_L1_error)
+      __pyx_t_19 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_v_R, PyBUF_WRITABLE); if (unlikely(!__pyx_t_19.memview)) __PYX_ERR(0, 208, __pyx_L1_error)
+      __pyx_t_18 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_v_Z, PyBUF_WRITABLE); if (unlikely(!__pyx_t_18.memview)) __PYX_ERR(0, 208, __pyx_L1_error)
+      __pyx_t_20 = PyObject_Length(__pyx_v_R); if (unlikely(__pyx_t_20 == ((Py_ssize_t)-1))) __PYX_ERR(0, 208, __pyx_L1_error)
+      __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_mcut); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 208, __pyx_L1_error)
+      __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_v_d0); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 208, __pyx_L1_error)
+      __pyx_t_11 = __pyx_PyFloat_AsDouble(__pyx_v_rs); if (unlikely((__pyx_t_11 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 208, __pyx_L1_error)
+      __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_v_alfa); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 208, __pyx_L1_error)
+      __pyx_t_13 = __pyx_PyFloat_AsDouble(__pyx_v_beta); if (unlikely((__pyx_t_13 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 208, __pyx_L1_error)
+      __pyx_t_14 = __pyx_PyFloat_AsDouble(__pyx_v_rcut); if (unlikely((__pyx_t_14 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 208, __pyx_L1_error)
+      __pyx_t_15 = __pyx_PyFloat_AsDouble(__pyx_v_e); if (unlikely((__pyx_t_15 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 208, __pyx_L1_error)
+      __pyx_t_16 = __pyx_PyFloat_AsDouble(__pyx_v_toll); if (unlikely((__pyx_t_16 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 208, __pyx_L1_error)
+      __pyx_t_22 = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo__potential_truncated_alfabeta_array(__pyx_t_19, __pyx_t_18, __pyx_t_20, __pyx_t_9, __pyx_t_10, __pyx_t_11, __pyx_t_12, __pyx_t_13, __pyx_t_14, __pyx_t_15, __pyx_t_16); if (unlikely(!__pyx_t_22.memview)) __PYX_ERR(0, 208, __pyx_L1_error)
+      __PYX_XDEC_MEMVIEW(&__pyx_t_19, 1);
+      __pyx_t_19.memview = NULL;
+      __pyx_t_19.data = NULL;
+      __PYX_XDEC_MEMVIEW(&__pyx_t_18, 1);
+      __pyx_t_18.memview = NULL;
+      __pyx_t_18.data = NULL;
+      __pyx_t_6 = __pyx_memoryview_fromslice(__pyx_t_22, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 208, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      __PYX_XDEC_MEMVIEW(&__pyx_t_20, 1);
-      __pyx_t_20.memview = NULL;
-      __pyx_t_20.data = NULL;
+      __PYX_XDEC_MEMVIEW(&__pyx_t_22, 1);
+      __pyx_t_22.memview = NULL;
+      __pyx_t_22.data = NULL;
       __pyx_t_4 = NULL;
       if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_5))) {
         __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_5);
@@ -4931,45 +4898,45 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_
           __Pyx_DECREF_SET(__pyx_t_5, function);
         }
       }
-      __pyx_t_15 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_4, __pyx_t_6) : __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_6);
+      __pyx_t_17 = (__pyx_t_4) ? __Pyx_PyObject_Call2Args(__pyx_t_5, __pyx_t_4, __pyx_t_6) : __Pyx_PyObject_CallOneArg(__pyx_t_5, __pyx_t_6);
       __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-      if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 219, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_15);
+      if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 208, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_17);
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      __pyx_r = __pyx_t_15;
-      __pyx_t_15 = 0;
+      __pyx_r = __pyx_t_17;
+      __pyx_t_17 = 0;
       goto __pyx_L0;
 
-      /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":215
+      /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":204
  *             Z=np.array(Z,dtype=np.dtype("d"))
- *             return np.array(_potential_einasto_grid( R=R, Z=Z, nlenR=len(R), nlenZ=len(Z), mcut=mcut, d0=d0, rs=rs, n=n, e=e,toll=toll))
+ *             return np.array(_potential_truncated_alfabeta_grid( R=R, Z=Z, nlenR=len(R), nlenZ=len(Z), mcut=mcut, d0=d0, rs=rs, alfa=alfa, beta=beta, rcut=rcut, e=e,toll=toll))
  *         elif len(R)==len(Z):             # <<<<<<<<<<<<<<
  *             nlen=len(R)
  *             R=np.array(R,dtype=np.dtype("d"))
  */
     }
 
-    /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":221
- *             return np.array(_potential_einasto_array( R=R, Z=Z, nlen=len(R), mcut=mcut, d0=d0, rs=rs, n=n, e=e,toll=toll))
+    /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":210
+ *             return np.array(_potential_truncated_alfabeta_array( R=R, Z=Z, nlen=len(R), mcut=mcut, d0=d0, rs=rs, alfa=alfa, beta=beta, rcut=rcut, e=e,toll=toll))
  *         else:
  *             raise ValueError('R and Z have different dimension')             # <<<<<<<<<<<<<<
  * 
  * #####################################################################
  */
     /*else*/ {
-      __pyx_t_15 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 221, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_15);
-      __Pyx_Raise(__pyx_t_15, 0, 0, 0);
-      __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
-      __PYX_ERR(0, 221, __pyx_L1_error)
+      __pyx_t_17 = __Pyx_PyObject_Call(__pyx_builtin_ValueError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 210, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_17);
+      __Pyx_Raise(__pyx_t_17, 0, 0, 0);
+      __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
+      __PYX_ERR(0, 210, __pyx_L1_error)
     }
   }
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":203
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":192
  * 
  * 
- * cpdef potential_einasto(R, Z, d0, rs, n, e, mcut, toll=1e-4, grid=False):             # <<<<<<<<<<<<<<
+ * cpdef potential_truncated_alfabeta(R, Z, d0, rs, alfa, beta, rcut, e, mcut, toll=1e-4, grid=False):             # <<<<<<<<<<<<<<
  * 
  *     if isinstance(R, float) or isinstance(R, int):
  */
@@ -4979,11 +4946,11 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
   __Pyx_XDECREF(__pyx_t_6);
-  __Pyx_XDECREF(__pyx_t_15);
-  __PYX_XDEC_MEMVIEW(&__pyx_t_16, 1);
-  __PYX_XDEC_MEMVIEW(&__pyx_t_17, 1);
-  __PYX_XDEC_MEMVIEW(&__pyx_t_20, 1);
-  __Pyx_AddTraceback("galpynamics.src.pot_halo.pot_c_ext.einasto_halo.potential_einasto", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_XDECREF(__pyx_t_17);
+  __PYX_XDEC_MEMVIEW(&__pyx_t_18, 1);
+  __PYX_XDEC_MEMVIEW(&__pyx_t_19, 1);
+  __PYX_XDEC_MEMVIEW(&__pyx_t_22, 1);
+  __Pyx_AddTraceback("galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo.potential_truncated_alfabeta", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_R);
@@ -4994,29 +4961,35 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_1potential_einasto(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_pw_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_1potential_einasto(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_1potential_truncated_alfabeta(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_pw_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_1potential_truncated_alfabeta(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_R = 0;
   PyObject *__pyx_v_Z = 0;
   PyObject *__pyx_v_d0 = 0;
   PyObject *__pyx_v_rs = 0;
-  PyObject *__pyx_v_n = 0;
+  PyObject *__pyx_v_alfa = 0;
+  PyObject *__pyx_v_beta = 0;
+  PyObject *__pyx_v_rcut = 0;
   PyObject *__pyx_v_e = 0;
   PyObject *__pyx_v_mcut = 0;
   PyObject *__pyx_v_toll = 0;
   PyObject *__pyx_v_grid = 0;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("potential_einasto (wrapper)", 0);
+  __Pyx_RefNannySetupContext("potential_truncated_alfabeta (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_R,&__pyx_n_s_Z,&__pyx_n_s_d0,&__pyx_n_s_rs,&__pyx_n_s_n,&__pyx_n_s_e,&__pyx_n_s_mcut,&__pyx_n_s_toll,&__pyx_n_s_grid,0};
-    PyObject* values[9] = {0,0,0,0,0,0,0,0,0};
-    values[7] = ((PyObject *)__pyx_float_1eneg_4);
-    values[8] = ((PyObject *)Py_False);
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_R,&__pyx_n_s_Z,&__pyx_n_s_d0,&__pyx_n_s_rs,&__pyx_n_s_alfa,&__pyx_n_s_beta,&__pyx_n_s_rcut,&__pyx_n_s_e,&__pyx_n_s_mcut,&__pyx_n_s_toll,&__pyx_n_s_grid,0};
+    PyObject* values[11] = {0,0,0,0,0,0,0,0,0,0,0};
+    values[9] = ((PyObject *)__pyx_float_1eneg_4);
+    values[10] = ((PyObject *)Py_False);
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
       const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
       switch (pos_args) {
+        case 11: values[10] = PyTuple_GET_ITEM(__pyx_args, 10);
+        CYTHON_FALLTHROUGH;
+        case 10: values[9] = PyTuple_GET_ITEM(__pyx_args, 9);
+        CYTHON_FALLTHROUGH;
         case  9: values[8] = PyTuple_GET_ITEM(__pyx_args, 8);
         CYTHON_FALLTHROUGH;
         case  8: values[7] = PyTuple_GET_ITEM(__pyx_args, 7);
@@ -5047,61 +5020,75 @@ static PyObject *__pyx_pw_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_Z)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("potential_einasto", 0, 7, 9, 1); __PYX_ERR(0, 203, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("potential_truncated_alfabeta", 0, 9, 11, 1); __PYX_ERR(0, 192, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_d0)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("potential_einasto", 0, 7, 9, 2); __PYX_ERR(0, 203, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("potential_truncated_alfabeta", 0, 9, 11, 2); __PYX_ERR(0, 192, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_rs)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("potential_einasto", 0, 7, 9, 3); __PYX_ERR(0, 203, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("potential_truncated_alfabeta", 0, 9, 11, 3); __PYX_ERR(0, 192, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
-        if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_n)) != 0)) kw_args--;
+        if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_alfa)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("potential_einasto", 0, 7, 9, 4); __PYX_ERR(0, 203, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("potential_truncated_alfabeta", 0, 9, 11, 4); __PYX_ERR(0, 192, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
-        if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_e)) != 0)) kw_args--;
+        if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_beta)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("potential_einasto", 0, 7, 9, 5); __PYX_ERR(0, 203, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("potential_truncated_alfabeta", 0, 9, 11, 5); __PYX_ERR(0, 192, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
-        if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_mcut)) != 0)) kw_args--;
+        if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_rcut)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("potential_einasto", 0, 7, 9, 6); __PYX_ERR(0, 203, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("potential_truncated_alfabeta", 0, 9, 11, 6); __PYX_ERR(0, 192, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  7:
-        if (kw_args > 0) {
-          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_toll);
-          if (value) { values[7] = value; kw_args--; }
+        if (likely((values[7] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_e)) != 0)) kw_args--;
+        else {
+          __Pyx_RaiseArgtupleInvalid("potential_truncated_alfabeta", 0, 9, 11, 7); __PYX_ERR(0, 192, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  8:
+        if (likely((values[8] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_mcut)) != 0)) kw_args--;
+        else {
+          __Pyx_RaiseArgtupleInvalid("potential_truncated_alfabeta", 0, 9, 11, 8); __PYX_ERR(0, 192, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  9:
+        if (kw_args > 0) {
+          PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_toll);
+          if (value) { values[9] = value; kw_args--; }
+        }
+        CYTHON_FALLTHROUGH;
+        case 10:
         if (kw_args > 0) {
           PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_grid);
-          if (value) { values[8] = value; kw_args--; }
+          if (value) { values[10] = value; kw_args--; }
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "potential_einasto") < 0)) __PYX_ERR(0, 203, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "potential_truncated_alfabeta") < 0)) __PYX_ERR(0, 192, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
+        case 11: values[10] = PyTuple_GET_ITEM(__pyx_args, 10);
+        CYTHON_FALLTHROUGH;
+        case 10: values[9] = PyTuple_GET_ITEM(__pyx_args, 9);
+        CYTHON_FALLTHROUGH;
         case  9: values[8] = PyTuple_GET_ITEM(__pyx_args, 8);
-        CYTHON_FALLTHROUGH;
-        case  8: values[7] = PyTuple_GET_ITEM(__pyx_args, 7);
-        CYTHON_FALLTHROUGH;
-        case  7: values[6] = PyTuple_GET_ITEM(__pyx_args, 6);
+        values[7] = PyTuple_GET_ITEM(__pyx_args, 7);
+        values[6] = PyTuple_GET_ITEM(__pyx_args, 6);
         values[5] = PyTuple_GET_ITEM(__pyx_args, 5);
         values[4] = PyTuple_GET_ITEM(__pyx_args, 4);
         values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
@@ -5116,38 +5103,40 @@ static PyObject *__pyx_pw_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo
     __pyx_v_Z = values[1];
     __pyx_v_d0 = values[2];
     __pyx_v_rs = values[3];
-    __pyx_v_n = values[4];
-    __pyx_v_e = values[5];
-    __pyx_v_mcut = values[6];
-    __pyx_v_toll = values[7];
-    __pyx_v_grid = values[8];
+    __pyx_v_alfa = values[4];
+    __pyx_v_beta = values[5];
+    __pyx_v_rcut = values[6];
+    __pyx_v_e = values[7];
+    __pyx_v_mcut = values[8];
+    __pyx_v_toll = values[9];
+    __pyx_v_grid = values[10];
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("potential_einasto", 0, 7, 9, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 203, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("potential_truncated_alfabeta", 0, 9, 11, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 192, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("galpynamics.src.pot_halo.pot_c_ext.einasto_halo.potential_einasto", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo.potential_truncated_alfabeta", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_potential_einasto(__pyx_self, __pyx_v_R, __pyx_v_Z, __pyx_v_d0, __pyx_v_rs, __pyx_v_n, __pyx_v_e, __pyx_v_mcut, __pyx_v_toll, __pyx_v_grid);
+  __pyx_r = __pyx_pf_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_potential_truncated_alfabeta(__pyx_self, __pyx_v_R, __pyx_v_Z, __pyx_v_d0, __pyx_v_rs, __pyx_v_alfa, __pyx_v_beta, __pyx_v_rcut, __pyx_v_e, __pyx_v_mcut, __pyx_v_toll, __pyx_v_grid);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_potential_einasto(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_R, PyObject *__pyx_v_Z, PyObject *__pyx_v_d0, PyObject *__pyx_v_rs, PyObject *__pyx_v_n, PyObject *__pyx_v_e, PyObject *__pyx_v_mcut, PyObject *__pyx_v_toll, PyObject *__pyx_v_grid) {
+static PyObject *__pyx_pf_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_potential_truncated_alfabeta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_R, PyObject *__pyx_v_Z, PyObject *__pyx_v_d0, PyObject *__pyx_v_rs, PyObject *__pyx_v_alfa, PyObject *__pyx_v_beta, PyObject *__pyx_v_rcut, PyObject *__pyx_v_e, PyObject *__pyx_v_mcut, PyObject *__pyx_v_toll, PyObject *__pyx_v_grid) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
-  struct __pyx_opt_args_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_potential_einasto __pyx_t_2;
-  __Pyx_RefNannySetupContext("potential_einasto", 0);
+  struct __pyx_opt_args_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_potential_truncated_alfabeta __pyx_t_2;
+  __Pyx_RefNannySetupContext("potential_truncated_alfabeta", 0);
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_2.__pyx_n = 2;
   __pyx_t_2.toll = __pyx_v_toll;
   __pyx_t_2.grid = __pyx_v_grid;
-  __pyx_t_1 = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_potential_einasto(__pyx_v_R, __pyx_v_Z, __pyx_v_d0, __pyx_v_rs, __pyx_v_n, __pyx_v_e, __pyx_v_mcut, 0, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 203, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_potential_truncated_alfabeta(__pyx_v_R, __pyx_v_Z, __pyx_v_d0, __pyx_v_rs, __pyx_v_alfa, __pyx_v_beta, __pyx_v_rcut, __pyx_v_e, __pyx_v_mcut, 0, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 192, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -5156,7 +5145,7 @@ static PyObject *__pyx_pf_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("galpynamics.src.pot_halo.pot_c_ext.einasto_halo.potential_einasto", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo.potential_truncated_alfabeta", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -5164,28 +5153,28 @@ static PyObject *__pyx_pf_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo
   return __pyx_r;
 }
 
-/* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":225
+/* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":214
  * #####################################################################
  * #Vcirc
- * cdef double vcirc_integrand_einasto(int n, double *data) nogil:             # <<<<<<<<<<<<<<
+ * cdef double vcirc_integrand_truncated_alfabeta(int n, double *data) nogil:             # <<<<<<<<<<<<<<
  *     """
  *     Integrand function for vcirc  on the plane (Eq. 2.132 in BT2)
  */
 
-static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_vcirc_integrand_einasto(CYTHON_UNUSED int __pyx_v_n, double *__pyx_v_data) {
+static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_vcirc_integrand_truncated_alfabeta(CYTHON_UNUSED int __pyx_v_n, double *__pyx_v_data) {
   double __pyx_v_m;
   double __pyx_v_R;
   double __pyx_v_rs;
-  double __pyx_v_nn;
+  double __pyx_v_alfa;
+  double __pyx_v_beta;
+  double __pyx_v_rcut;
   double __pyx_v_e;
   double __pyx_v_x;
-  double __pyx_v_dn;
-  double __pyx_v_ee;
   double __pyx_v_dens;
   double __pyx_v_core;
   double __pyx_r;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":232
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":221
  * 
  *     cdef:
  *         double m      = data[0]             # <<<<<<<<<<<<<<
@@ -5194,89 +5183,89 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_vci
  */
   __pyx_v_m = (__pyx_v_data[0]);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":233
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":222
  *     cdef:
  *         double m      = data[0]
  *         double R      = data[1]             # <<<<<<<<<<<<<<
  *         double rs     = data[2]
- *         double nn      = data[3]
+ *         double alfa   = data[3]
  */
   __pyx_v_R = (__pyx_v_data[1]);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":234
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":223
  *         double m      = data[0]
  *         double R      = data[1]
  *         double rs     = data[2]             # <<<<<<<<<<<<<<
- *         double nn      = data[3]
- *         double e      = data[4]
+ *         double alfa   = data[3]
+ *         double beta   = data[4]
  */
   __pyx_v_rs = (__pyx_v_data[2]);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":235
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":224
  *         double R      = data[1]
  *         double rs     = data[2]
- *         double nn      = data[3]             # <<<<<<<<<<<<<<
- *         double e      = data[4]
- *         double x      = m/rs
+ *         double alfa   = data[3]             # <<<<<<<<<<<<<<
+ *         double beta   = data[4]
+ *         double rcut   = data[5]
  */
-  __pyx_v_nn = (__pyx_v_data[3]);
+  __pyx_v_alfa = (__pyx_v_data[3]);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":236
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":225
  *         double rs     = data[2]
- *         double nn      = data[3]
- *         double e      = data[4]             # <<<<<<<<<<<<<<
- *         double x      = m/rs
- *         double dn     = dn_func(nn)
+ *         double alfa   = data[3]
+ *         double beta   = data[4]             # <<<<<<<<<<<<<<
+ *         double rcut   = data[5]
+ *         double e      = data[6]
  */
-  __pyx_v_e = (__pyx_v_data[4]);
+  __pyx_v_beta = (__pyx_v_data[4]);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":237
- *         double nn      = data[3]
- *         double e      = data[4]
- *         double x      = m/rs             # <<<<<<<<<<<<<<
- *         double dn     = dn_func(nn)
- *         double ee     = dn*pow(x,1/nn)
- */
-  __pyx_v_x = (__pyx_v_m / __pyx_v_rs);
-
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":238
- *         double e      = data[4]
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":226
+ *         double alfa   = data[3]
+ *         double beta   = data[4]
+ *         double rcut   = data[5]             # <<<<<<<<<<<<<<
+ *         double e      = data[6]
  *         double x      = m/rs
- *         double dn     = dn_func(nn)             # <<<<<<<<<<<<<<
- *         double ee     = dn*pow(x,1/nn)
+ */
+  __pyx_v_rcut = (__pyx_v_data[5]);
+
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":227
+ *         double beta   = data[4]
+ *         double rcut   = data[5]
+ *         double e      = data[6]             # <<<<<<<<<<<<<<
+ *         double x      = m/rs
  *         double dens
  */
-  __pyx_v_dn = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_dn_func(__pyx_v_nn);
+  __pyx_v_e = (__pyx_v_data[6]);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":239
- *         double x      = m/rs
- *         double dn     = dn_func(nn)
- *         double ee     = dn*pow(x,1/nn)             # <<<<<<<<<<<<<<
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":228
+ *         double rcut   = data[5]
+ *         double e      = data[6]
+ *         double x      = m/rs             # <<<<<<<<<<<<<<
  *         double dens
  *         double core
  */
-  __pyx_v_ee = (__pyx_v_dn * pow(__pyx_v_x, (1.0 / __pyx_v_nn)));
+  __pyx_v_x = (__pyx_v_m / __pyx_v_rs);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":244
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":233
  * 
  * 
  *     core = vcirc_core(m, R, e)             # <<<<<<<<<<<<<<
- *     dens = exp(-ee)
+ *     dens = pow(x,-alfa) * pow(1+x,alfa-beta) * exp(- (m/rcut)**2 )
  * 
  */
   __pyx_v_core = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12general_halo_vcirc_core(__pyx_v_m, __pyx_v_R, __pyx_v_e);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":245
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":234
  * 
  *     core = vcirc_core(m, R, e)
- *     dens = exp(-ee)             # <<<<<<<<<<<<<<
+ *     dens = pow(x,-alfa) * pow(1+x,alfa-beta) * exp(- (m/rcut)**2 )             # <<<<<<<<<<<<<<
  * 
  *     return core*dens
  */
-  __pyx_v_dens = exp((-__pyx_v_ee));
+  __pyx_v_dens = ((pow(__pyx_v_x, (-__pyx_v_alfa)) * pow((1.0 + __pyx_v_x), (__pyx_v_alfa - __pyx_v_beta))) * exp((-pow((__pyx_v_m / __pyx_v_rcut), 2.0))));
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":247
- *     dens = exp(-ee)
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":236
+ *     dens = pow(x,-alfa) * pow(1+x,alfa-beta) * exp(- (m/rcut)**2 )
  * 
  *     return core*dens             # <<<<<<<<<<<<<<
  * 
@@ -5285,10 +5274,10 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_vci
   __pyx_r = (__pyx_v_core * __pyx_v_dens);
   goto __pyx_L0;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":225
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":214
  * #####################################################################
  * #Vcirc
- * cdef double vcirc_integrand_einasto(int n, double *data) nogil:             # <<<<<<<<<<<<<<
+ * cdef double vcirc_integrand_truncated_alfabeta(int n, double *data) nogil:             # <<<<<<<<<<<<<<
  *     """
  *     Integrand function for vcirc  on the plane (Eq. 2.132 in BT2)
  */
@@ -5298,15 +5287,15 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_vci
   return __pyx_r;
 }
 
-/* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":251
+/* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":240
  * 
  * 
- * cdef double _vcirc_einasto(double R, double d0, double rs, double n, double e, double toll):             # <<<<<<<<<<<<<<
+ * cdef double _vcirc_truncated_alfabeta(double R, double d0, double rs, double alfa, double beta, double rcut, double e, double toll):             # <<<<<<<<<<<<<<
  *     """
  *     Calculate Vcirc on a single point on the plane
  */
 
-static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__vcirc_einasto(double __pyx_v_R, double __pyx_v_d0, double __pyx_v_rs, double __pyx_v_n, double __pyx_v_e, double __pyx_v_toll) {
+static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo__vcirc_truncated_alfabeta(double __pyx_v_R, double __pyx_v_d0, double __pyx_v_rs, double __pyx_v_alfa, double __pyx_v_beta, double __pyx_v_rcut, double __pyx_v_e, double __pyx_v_toll) {
   double __pyx_v_G;
   double __pyx_v_cost;
   double __pyx_v_norm;
@@ -5325,10 +5314,12 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__vc
   PyObject *__pyx_t_7 = NULL;
   PyObject *__pyx_t_8 = NULL;
   PyObject *__pyx_t_9 = NULL;
-  double __pyx_t_10;
-  __Pyx_RefNannySetupContext("_vcirc_einasto", 0);
+  PyObject *__pyx_t_10 = NULL;
+  PyObject *__pyx_t_11 = NULL;
+  double __pyx_t_12;
+  __Pyx_RefNannySetupContext("_vcirc_truncated_alfabeta", 0);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":263
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":254
  * 
  *     cdef:
  *         double G=4.302113488372941e-06 #G constant in  kpc km2/(msol s^2)             # <<<<<<<<<<<<<<
@@ -5337,16 +5328,16 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__vc
  */
   __pyx_v_G = 4.302113488372941e-06;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":264
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":255
  *     cdef:
  *         double G=4.302113488372941e-06 #G constant in  kpc km2/(msol s^2)
  *         double cost=4*PI*G             # <<<<<<<<<<<<<<
  *         double norm=cost*sqrt(1-e*e)*d0
  *         double intvcirc
  */
-  __pyx_v_cost = ((4.0 * __pyx_v_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_PI) * __pyx_v_G);
+  __pyx_v_cost = ((4.0 * __pyx_v_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_PI) * __pyx_v_G);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":265
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":256
  *         double G=4.302113488372941e-06 #G constant in  kpc km2/(msol s^2)
  *         double cost=4*PI*G
  *         double norm=cost*sqrt(1-e*e)*d0             # <<<<<<<<<<<<<<
@@ -5355,34 +5346,34 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__vc
  */
   __pyx_v_norm = ((__pyx_v_cost * sqrt((1.0 - (__pyx_v_e * __pyx_v_e)))) * __pyx_v_d0);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":270
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":261
  * 
  *     #Integ
- *     import galpynamics.src.pot_halo.pot_c_ext.einasto_halo as mod             # <<<<<<<<<<<<<<
- *     fintegrand=LowLevelCallable.from_cython(mod,'vcirc_integrand_einasto')
+ *     import galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo as mod             # <<<<<<<<<<<<<<
+ *     fintegrand=LowLevelCallable.from_cython(mod,'vcirc_integrand_truncated_alfabeta')
  * 
  */
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 270, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 261, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(__pyx_n_s_);
   __Pyx_GIVEREF(__pyx_n_s_);
   PyList_SET_ITEM(__pyx_t_1, 0, __pyx_n_s_);
-  __pyx_t_2 = __Pyx_Import(__pyx_n_s_galpynamics_src_pot_halo_pot_c_e, __pyx_t_1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 270, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_Import(__pyx_n_s_galpynamics_src_pot_halo_pot_c_e, __pyx_t_1, 0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 261, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_mod = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":271
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":262
  *     #Integ
- *     import galpynamics.src.pot_halo.pot_c_ext.einasto_halo as mod
- *     fintegrand=LowLevelCallable.from_cython(mod,'vcirc_integrand_einasto')             # <<<<<<<<<<<<<<
+ *     import galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo as mod
+ *     fintegrand=LowLevelCallable.from_cython(mod,'vcirc_integrand_truncated_alfabeta')             # <<<<<<<<<<<<<<
  * 
- *     intvcirc=quad(fintegrand,0.,R,args=(R,rs,n,e),epsabs=toll,epsrel=toll)[0]
+ *     intvcirc=quad(fintegrand,0.,R,args=(R,rs,alfa,beta,rcut,e),epsabs=toll,epsrel=toll)[0]
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_LowLevelCallable); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 271, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_LowLevelCallable); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 262, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_from_cython); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 271, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_from_cython); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 262, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_t_1 = NULL;
@@ -5399,22 +5390,22 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__vc
   }
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_3)) {
-    PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_v_mod, __pyx_n_u_vcirc_integrand_einasto};
-    __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 271, __pyx_L1_error)
+    PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_v_mod, __pyx_n_u_vcirc_integrand_truncated_alfabe};
+    __pyx_t_2 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 262, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_GOTREF(__pyx_t_2);
   } else
   #endif
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
-    PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_v_mod, __pyx_n_u_vcirc_integrand_einasto};
-    __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 271, __pyx_L1_error)
+    PyObject *__pyx_temp[3] = {__pyx_t_1, __pyx_v_mod, __pyx_n_u_vcirc_integrand_truncated_alfabe};
+    __pyx_t_2 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_4, 2+__pyx_t_4); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 262, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_GOTREF(__pyx_t_2);
   } else
   #endif
   {
-    __pyx_t_5 = PyTuple_New(2+__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 271, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_New(2+__pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 262, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_5);
     if (__pyx_t_1) {
       __Pyx_GIVEREF(__pyx_t_1); PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_t_1); __pyx_t_1 = NULL;
@@ -5422,10 +5413,10 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__vc
     __Pyx_INCREF(__pyx_v_mod);
     __Pyx_GIVEREF(__pyx_v_mod);
     PyTuple_SET_ITEM(__pyx_t_5, 0+__pyx_t_4, __pyx_v_mod);
-    __Pyx_INCREF(__pyx_n_u_vcirc_integrand_einasto);
-    __Pyx_GIVEREF(__pyx_n_u_vcirc_integrand_einasto);
-    PyTuple_SET_ITEM(__pyx_t_5, 1+__pyx_t_4, __pyx_n_u_vcirc_integrand_einasto);
-    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 271, __pyx_L1_error)
+    __Pyx_INCREF(__pyx_n_u_vcirc_integrand_truncated_alfabe);
+    __Pyx_GIVEREF(__pyx_n_u_vcirc_integrand_truncated_alfabe);
+    PyTuple_SET_ITEM(__pyx_t_5, 1+__pyx_t_4, __pyx_n_u_vcirc_integrand_truncated_alfabe);
+    __pyx_t_2 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_5, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 262, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   }
@@ -5433,18 +5424,18 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__vc
   __pyx_v_fintegrand = __pyx_t_2;
   __pyx_t_2 = 0;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":273
- *     fintegrand=LowLevelCallable.from_cython(mod,'vcirc_integrand_einasto')
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":264
+ *     fintegrand=LowLevelCallable.from_cython(mod,'vcirc_integrand_truncated_alfabeta')
  * 
- *     intvcirc=quad(fintegrand,0.,R,args=(R,rs,n,e),epsabs=toll,epsrel=toll)[0]             # <<<<<<<<<<<<<<
+ *     intvcirc=quad(fintegrand,0.,R,args=(R,rs,alfa,beta,rcut,e),epsabs=toll,epsrel=toll)[0]             # <<<<<<<<<<<<<<
  * 
  *     result=sqrt(norm*intvcirc)
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_quad); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 273, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_quad); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 264, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_R); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 273, __pyx_L1_error)
+  __pyx_t_3 = PyFloat_FromDouble(__pyx_v_R); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 264, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = PyTuple_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 273, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_New(3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 264, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_5);
   __Pyx_INCREF(__pyx_v_fintegrand);
   __Pyx_GIVEREF(__pyx_v_fintegrand);
@@ -5455,54 +5446,64 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__vc
   __Pyx_GIVEREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_5, 2, __pyx_t_3);
   __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 273, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 264, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_R); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 273, __pyx_L1_error)
+  __pyx_t_1 = PyFloat_FromDouble(__pyx_v_R); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 264, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_rs); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 273, __pyx_L1_error)
+  __pyx_t_6 = PyFloat_FromDouble(__pyx_v_rs); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 264, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
-  __pyx_t_7 = PyFloat_FromDouble(__pyx_v_n); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 273, __pyx_L1_error)
+  __pyx_t_7 = PyFloat_FromDouble(__pyx_v_alfa); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 264, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_8 = PyFloat_FromDouble(__pyx_v_e); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 273, __pyx_L1_error)
+  __pyx_t_8 = PyFloat_FromDouble(__pyx_v_beta); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 264, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_9 = PyTuple_New(4); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 273, __pyx_L1_error)
+  __pyx_t_9 = PyFloat_FromDouble(__pyx_v_rcut); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 264, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_9);
+  __pyx_t_10 = PyFloat_FromDouble(__pyx_v_e); if (unlikely(!__pyx_t_10)) __PYX_ERR(0, 264, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_10);
+  __pyx_t_11 = PyTuple_New(6); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 264, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_11);
   __Pyx_GIVEREF(__pyx_t_1);
-  PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_1);
+  PyTuple_SET_ITEM(__pyx_t_11, 0, __pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_6);
-  PyTuple_SET_ITEM(__pyx_t_9, 1, __pyx_t_6);
+  PyTuple_SET_ITEM(__pyx_t_11, 1, __pyx_t_6);
   __Pyx_GIVEREF(__pyx_t_7);
-  PyTuple_SET_ITEM(__pyx_t_9, 2, __pyx_t_7);
+  PyTuple_SET_ITEM(__pyx_t_11, 2, __pyx_t_7);
   __Pyx_GIVEREF(__pyx_t_8);
-  PyTuple_SET_ITEM(__pyx_t_9, 3, __pyx_t_8);
+  PyTuple_SET_ITEM(__pyx_t_11, 3, __pyx_t_8);
+  __Pyx_GIVEREF(__pyx_t_9);
+  PyTuple_SET_ITEM(__pyx_t_11, 4, __pyx_t_9);
+  __Pyx_GIVEREF(__pyx_t_10);
+  PyTuple_SET_ITEM(__pyx_t_11, 5, __pyx_t_10);
   __pyx_t_1 = 0;
   __pyx_t_6 = 0;
   __pyx_t_7 = 0;
   __pyx_t_8 = 0;
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_args, __pyx_t_9) < 0) __PYX_ERR(0, 273, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-  __pyx_t_9 = PyFloat_FromDouble(__pyx_v_toll); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 273, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_9);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_epsabs, __pyx_t_9) < 0) __PYX_ERR(0, 273, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-  __pyx_t_9 = PyFloat_FromDouble(__pyx_v_toll); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 273, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_9);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_epsrel, __pyx_t_9) < 0) __PYX_ERR(0, 273, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-  __pyx_t_9 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, __pyx_t_3); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 273, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_9);
+  __pyx_t_9 = 0;
+  __pyx_t_10 = 0;
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_args, __pyx_t_11) < 0) __PYX_ERR(0, 264, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+  __pyx_t_11 = PyFloat_FromDouble(__pyx_v_toll); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 264, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_11);
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_epsabs, __pyx_t_11) < 0) __PYX_ERR(0, 264, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+  __pyx_t_11 = PyFloat_FromDouble(__pyx_v_toll); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 264, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_11);
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_epsrel, __pyx_t_11) < 0) __PYX_ERR(0, 264, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+  __pyx_t_11 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_5, __pyx_t_3); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 264, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_11);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_9, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 273, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_GetItemInt(__pyx_t_11, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 264, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-  __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_t_3); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 273, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
+  __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_t_3); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 264, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_v_intvcirc = __pyx_t_10;
+  __pyx_v_intvcirc = __pyx_t_12;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":275
- *     intvcirc=quad(fintegrand,0.,R,args=(R,rs,n,e),epsabs=toll,epsrel=toll)[0]
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":266
+ *     intvcirc=quad(fintegrand,0.,R,args=(R,rs,alfa,beta,rcut,e),epsabs=toll,epsrel=toll)[0]
  * 
  *     result=sqrt(norm*intvcirc)             # <<<<<<<<<<<<<<
  * 
@@ -5510,7 +5511,7 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__vc
  */
   __pyx_v_result = sqrt((__pyx_v_norm * __pyx_v_intvcirc));
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":277
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":268
  *     result=sqrt(norm*intvcirc)
  * 
  *     return result             # <<<<<<<<<<<<<<
@@ -5520,10 +5521,10 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__vc
   __pyx_r = __pyx_v_result;
   goto __pyx_L0;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":251
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":240
  * 
  * 
- * cdef double _vcirc_einasto(double R, double d0, double rs, double n, double e, double toll):             # <<<<<<<<<<<<<<
+ * cdef double _vcirc_truncated_alfabeta(double R, double d0, double rs, double alfa, double beta, double rcut, double e, double toll):             # <<<<<<<<<<<<<<
  *     """
  *     Calculate Vcirc on a single point on the plane
  */
@@ -5538,7 +5539,9 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__vc
   __Pyx_XDECREF(__pyx_t_7);
   __Pyx_XDECREF(__pyx_t_8);
   __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_WriteUnraisable("galpynamics.src.pot_halo.pot_c_ext.einasto_halo._vcirc_einasto", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
+  __Pyx_XDECREF(__pyx_t_10);
+  __Pyx_XDECREF(__pyx_t_11);
+  __Pyx_WriteUnraisable("galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo._vcirc_truncated_alfabeta", __pyx_clineno, __pyx_lineno, __pyx_filename, 1, 0);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_mod);
@@ -5547,15 +5550,15 @@ static double __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__vc
   return __pyx_r;
 }
 
-/* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":280
+/* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":271
  * 
  * 
- * cdef double[:,:] _vcirc_einasto_array(double[:] R, int nlen, double d0, double rs, double n, double e, double toll):             # <<<<<<<<<<<<<<
+ * cdef double[:,:] _vcirc_truncated_alfabeta_array(double[:] R, int nlen, double d0, double rs, double alfa, double beta, double rcut, double e, double toll):             # <<<<<<<<<<<<<<
  *     """
  *     Calculate Vcirc on a single point on the plane
  */
 
-static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__vcirc_einasto_array(__Pyx_memviewslice __pyx_v_R, int __pyx_v_nlen, double __pyx_v_d0, double __pyx_v_rs, double __pyx_v_n, double __pyx_v_e, double __pyx_v_toll) {
+static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo__vcirc_truncated_alfabeta_array(__Pyx_memviewslice __pyx_v_R, int __pyx_v_nlen, double __pyx_v_d0, double __pyx_v_rs, double __pyx_v_alfa, double __pyx_v_beta, double __pyx_v_rcut, double __pyx_v_e, double __pyx_v_toll) {
   double __pyx_v_G;
   double __pyx_v_cost;
   double __pyx_v_norm;
@@ -5583,12 +5586,14 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
   PyObject *__pyx_t_15 = NULL;
   PyObject *__pyx_t_16 = NULL;
   PyObject *__pyx_t_17 = NULL;
-  double __pyx_t_18;
-  Py_ssize_t __pyx_t_19;
-  Py_ssize_t __pyx_t_20;
-  __Pyx_RefNannySetupContext("_vcirc_einasto_array", 0);
+  PyObject *__pyx_t_18 = NULL;
+  PyObject *__pyx_t_19 = NULL;
+  double __pyx_t_20;
+  Py_ssize_t __pyx_t_21;
+  Py_ssize_t __pyx_t_22;
+  __Pyx_RefNannySetupContext("_vcirc_truncated_alfabeta_array", 0);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":292
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":285
  * 
  *     cdef:
  *         double G=4.302113488372941e-06 #G constant in  kpc km2/(msol s^2)             # <<<<<<<<<<<<<<
@@ -5597,16 +5602,16 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
  */
   __pyx_v_G = 4.302113488372941e-06;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":293
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":286
  *     cdef:
  *         double G=4.302113488372941e-06 #G constant in  kpc km2/(msol s^2)
  *         double cost=4*PI*G             # <<<<<<<<<<<<<<
  *         double norm=cost*sqrt(1-e*e)*d0
  *         double intvcirc
  */
-  __pyx_v_cost = ((4.0 * __pyx_v_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_PI) * __pyx_v_G);
+  __pyx_v_cost = ((4.0 * __pyx_v_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_PI) * __pyx_v_G);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":294
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":287
  *         double G=4.302113488372941e-06 #G constant in  kpc km2/(msol s^2)
  *         double cost=4*PI*G
  *         double norm=cost*sqrt(1-e*e)*d0             # <<<<<<<<<<<<<<
@@ -5615,21 +5620,21 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
  */
   __pyx_v_norm = ((__pyx_v_cost * sqrt((1.0 - (__pyx_v_e * __pyx_v_e)))) * __pyx_v_d0);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":297
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":290
  *         double intvcirc
  *         int i
  *         double[:,:] ret=np.empty((nlen,2), dtype=np.dtype("d"))             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 297, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 290, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 297, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_empty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 290, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_nlen); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 297, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyInt_From_int(__pyx_v_nlen); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 290, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 297, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 290, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
@@ -5637,56 +5642,56 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
   __Pyx_GIVEREF(__pyx_int_2);
   PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_int_2);
   __pyx_t_1 = 0;
-  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 297, __pyx_L1_error)
+  __pyx_t_1 = PyTuple_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 290, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_GIVEREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_t_3);
   __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 297, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 290, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 297, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(((PyObject *)__pyx_ptype_5numpy_dtype), __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 290, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 297, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_3, __pyx_n_s_dtype, __pyx_t_4) < 0) __PYX_ERR(0, 290, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 297, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_1, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 290, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_5 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_5.memview)) __PYX_ERR(0, 297, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_5.memview)) __PYX_ERR(0, 290, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_ret = __pyx_t_5;
   __pyx_t_5.memview = NULL;
   __pyx_t_5.data = NULL;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":303
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":296
  * 
  *     #Integ
- *     import galpynamics.src.pot_halo.pot_c_ext.einasto_halo as mod             # <<<<<<<<<<<<<<
- *     fintegrand=LowLevelCallable.from_cython(mod,'vcirc_integrand_einasto')
+ *     import galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo as mod             # <<<<<<<<<<<<<<
+ *     fintegrand=LowLevelCallable.from_cython(mod,'vcirc_integrand_truncated_alfabeta')
  * 
  */
-  __pyx_t_4 = PyList_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 303, __pyx_L1_error)
+  __pyx_t_4 = PyList_New(1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 296, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_INCREF(__pyx_n_s_);
   __Pyx_GIVEREF(__pyx_n_s_);
   PyList_SET_ITEM(__pyx_t_4, 0, __pyx_n_s_);
-  __pyx_t_3 = __Pyx_Import(__pyx_n_s_galpynamics_src_pot_halo_pot_c_e, __pyx_t_4, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 303, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_Import(__pyx_n_s_galpynamics_src_pot_halo_pot_c_e, __pyx_t_4, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 296, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_mod = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":304
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":297
  *     #Integ
- *     import galpynamics.src.pot_halo.pot_c_ext.einasto_halo as mod
- *     fintegrand=LowLevelCallable.from_cython(mod,'vcirc_integrand_einasto')             # <<<<<<<<<<<<<<
+ *     import galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo as mod
+ *     fintegrand=LowLevelCallable.from_cython(mod,'vcirc_integrand_truncated_alfabeta')             # <<<<<<<<<<<<<<
  * 
  *     for  i in range(nlen):
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_LowLevelCallable); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 304, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_LowLevelCallable); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 297, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_from_cython); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 304, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_from_cython); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 297, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_4 = NULL;
@@ -5703,22 +5708,22 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
   }
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_1)) {
-    PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_mod, __pyx_n_u_vcirc_integrand_einasto};
-    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 304, __pyx_L1_error)
+    PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_mod, __pyx_n_u_vcirc_integrand_truncated_alfabe};
+    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 297, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
   #endif
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_1)) {
-    PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_mod, __pyx_n_u_vcirc_integrand_einasto};
-    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 304, __pyx_L1_error)
+    PyObject *__pyx_temp[3] = {__pyx_t_4, __pyx_v_mod, __pyx_n_u_vcirc_integrand_truncated_alfabe};
+    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_1, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 297, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
   #endif
   {
-    __pyx_t_2 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 304, __pyx_L1_error)
+    __pyx_t_2 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 297, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     if (__pyx_t_4) {
       __Pyx_GIVEREF(__pyx_t_4); PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_4); __pyx_t_4 = NULL;
@@ -5726,10 +5731,10 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
     __Pyx_INCREF(__pyx_v_mod);
     __Pyx_GIVEREF(__pyx_v_mod);
     PyTuple_SET_ITEM(__pyx_t_2, 0+__pyx_t_6, __pyx_v_mod);
-    __Pyx_INCREF(__pyx_n_u_vcirc_integrand_einasto);
-    __Pyx_GIVEREF(__pyx_n_u_vcirc_integrand_einasto);
-    PyTuple_SET_ITEM(__pyx_t_2, 1+__pyx_t_6, __pyx_n_u_vcirc_integrand_einasto);
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 304, __pyx_L1_error)
+    __Pyx_INCREF(__pyx_n_u_vcirc_integrand_truncated_alfabe);
+    __Pyx_GIVEREF(__pyx_n_u_vcirc_integrand_truncated_alfabe);
+    PyTuple_SET_ITEM(__pyx_t_2, 1+__pyx_t_6, __pyx_n_u_vcirc_integrand_truncated_alfabe);
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_2, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 297, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   }
@@ -5737,8 +5742,8 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
   __pyx_v_fintegrand = __pyx_t_3;
   __pyx_t_3 = 0;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":306
- *     fintegrand=LowLevelCallable.from_cython(mod,'vcirc_integrand_einasto')
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":299
+ *     fintegrand=LowLevelCallable.from_cython(mod,'vcirc_integrand_truncated_alfabeta')
  * 
  *     for  i in range(nlen):             # <<<<<<<<<<<<<<
  * 
@@ -5749,11 +5754,11 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
   for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
     __pyx_v_i = __pyx_t_8;
 
-    /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":308
+    /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":301
  *     for  i in range(nlen):
  * 
  *         ret[i,0]=R[i]             # <<<<<<<<<<<<<<
- *         intvcirc=quad(fintegrand,0.,R[i],args=(R[i],rs,n,e),epsabs=toll,epsrel=toll)[0]
+ *         intvcirc=quad(fintegrand,0.,R[i],args=(R[i],rs,alfa,beta,rcut,e),epsabs=toll,epsrel=toll)[0]
  *         ret[i,1]=sqrt(norm*intvcirc)
  */
     __pyx_t_9 = __pyx_v_i;
@@ -5761,19 +5766,19 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
     __pyx_t_11 = 0;
     *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_ret.data + __pyx_t_10 * __pyx_v_ret.strides[0]) ) + __pyx_t_11 * __pyx_v_ret.strides[1]) )) = (*((double *) ( /* dim=0 */ (__pyx_v_R.data + __pyx_t_9 * __pyx_v_R.strides[0]) )));
 
-    /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":309
+    /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":302
  * 
  *         ret[i,0]=R[i]
- *         intvcirc=quad(fintegrand,0.,R[i],args=(R[i],rs,n,e),epsabs=toll,epsrel=toll)[0]             # <<<<<<<<<<<<<<
+ *         intvcirc=quad(fintegrand,0.,R[i],args=(R[i],rs,alfa,beta,rcut,e),epsabs=toll,epsrel=toll)[0]             # <<<<<<<<<<<<<<
  *         ret[i,1]=sqrt(norm*intvcirc)
  * 
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_quad); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 309, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_quad); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 302, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_t_12 = __pyx_v_i;
-    __pyx_t_1 = PyFloat_FromDouble((*((double *) ( /* dim=0 */ (__pyx_v_R.data + __pyx_t_12 * __pyx_v_R.strides[0]) )))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 309, __pyx_L1_error)
+    __pyx_t_1 = PyFloat_FromDouble((*((double *) ( /* dim=0 */ (__pyx_v_R.data + __pyx_t_12 * __pyx_v_R.strides[0]) )))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 302, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_2 = PyTuple_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 309, __pyx_L1_error)
+    __pyx_t_2 = PyTuple_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 302, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
     __Pyx_INCREF(__pyx_v_fintegrand);
     __Pyx_GIVEREF(__pyx_v_fintegrand);
@@ -5784,66 +5789,76 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_2, 2, __pyx_t_1);
     __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 309, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 302, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_t_13 = __pyx_v_i;
-    __pyx_t_4 = PyFloat_FromDouble((*((double *) ( /* dim=0 */ (__pyx_v_R.data + __pyx_t_13 * __pyx_v_R.strides[0]) )))); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 309, __pyx_L1_error)
+    __pyx_t_4 = PyFloat_FromDouble((*((double *) ( /* dim=0 */ (__pyx_v_R.data + __pyx_t_13 * __pyx_v_R.strides[0]) )))); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 302, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_14 = PyFloat_FromDouble(__pyx_v_rs); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 309, __pyx_L1_error)
+    __pyx_t_14 = PyFloat_FromDouble(__pyx_v_rs); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 302, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_14);
-    __pyx_t_15 = PyFloat_FromDouble(__pyx_v_n); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 309, __pyx_L1_error)
+    __pyx_t_15 = PyFloat_FromDouble(__pyx_v_alfa); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 302, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_15);
-    __pyx_t_16 = PyFloat_FromDouble(__pyx_v_e); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 309, __pyx_L1_error)
+    __pyx_t_16 = PyFloat_FromDouble(__pyx_v_beta); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 302, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_16);
-    __pyx_t_17 = PyTuple_New(4); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 309, __pyx_L1_error)
+    __pyx_t_17 = PyFloat_FromDouble(__pyx_v_rcut); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 302, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_17);
+    __pyx_t_18 = PyFloat_FromDouble(__pyx_v_e); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 302, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_18);
+    __pyx_t_19 = PyTuple_New(6); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 302, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_19);
     __Pyx_GIVEREF(__pyx_t_4);
-    PyTuple_SET_ITEM(__pyx_t_17, 0, __pyx_t_4);
+    PyTuple_SET_ITEM(__pyx_t_19, 0, __pyx_t_4);
     __Pyx_GIVEREF(__pyx_t_14);
-    PyTuple_SET_ITEM(__pyx_t_17, 1, __pyx_t_14);
+    PyTuple_SET_ITEM(__pyx_t_19, 1, __pyx_t_14);
     __Pyx_GIVEREF(__pyx_t_15);
-    PyTuple_SET_ITEM(__pyx_t_17, 2, __pyx_t_15);
+    PyTuple_SET_ITEM(__pyx_t_19, 2, __pyx_t_15);
     __Pyx_GIVEREF(__pyx_t_16);
-    PyTuple_SET_ITEM(__pyx_t_17, 3, __pyx_t_16);
+    PyTuple_SET_ITEM(__pyx_t_19, 3, __pyx_t_16);
+    __Pyx_GIVEREF(__pyx_t_17);
+    PyTuple_SET_ITEM(__pyx_t_19, 4, __pyx_t_17);
+    __Pyx_GIVEREF(__pyx_t_18);
+    PyTuple_SET_ITEM(__pyx_t_19, 5, __pyx_t_18);
     __pyx_t_4 = 0;
     __pyx_t_14 = 0;
     __pyx_t_15 = 0;
     __pyx_t_16 = 0;
-    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_args, __pyx_t_17) < 0) __PYX_ERR(0, 309, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
-    __pyx_t_17 = PyFloat_FromDouble(__pyx_v_toll); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 309, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_17);
-    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_epsabs, __pyx_t_17) < 0) __PYX_ERR(0, 309, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
-    __pyx_t_17 = PyFloat_FromDouble(__pyx_v_toll); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 309, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_17);
-    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_epsrel, __pyx_t_17) < 0) __PYX_ERR(0, 309, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
-    __pyx_t_17 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 309, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_17);
+    __pyx_t_17 = 0;
+    __pyx_t_18 = 0;
+    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_args, __pyx_t_19) < 0) __PYX_ERR(0, 302, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
+    __pyx_t_19 = PyFloat_FromDouble(__pyx_v_toll); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 302, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_19);
+    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_epsabs, __pyx_t_19) < 0) __PYX_ERR(0, 302, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
+    __pyx_t_19 = PyFloat_FromDouble(__pyx_v_toll); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 302, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_19);
+    if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_epsrel, __pyx_t_19) < 0) __PYX_ERR(0, 302, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
+    __pyx_t_19 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_2, __pyx_t_1); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 302, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_19);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_17, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 309, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_GetItemInt(__pyx_t_19, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 302, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
-    __pyx_t_18 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_18 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 309, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
+    __pyx_t_20 = __pyx_PyFloat_AsDouble(__pyx_t_1); if (unlikely((__pyx_t_20 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 302, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __pyx_v_intvcirc = __pyx_t_18;
+    __pyx_v_intvcirc = __pyx_t_20;
 
-    /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":310
+    /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":303
  *         ret[i,0]=R[i]
- *         intvcirc=quad(fintegrand,0.,R[i],args=(R[i],rs,n,e),epsabs=toll,epsrel=toll)[0]
+ *         intvcirc=quad(fintegrand,0.,R[i],args=(R[i],rs,alfa,beta,rcut,e),epsabs=toll,epsrel=toll)[0]
  *         ret[i,1]=sqrt(norm*intvcirc)             # <<<<<<<<<<<<<<
  * 
  *     return ret
  */
-    __pyx_t_19 = __pyx_v_i;
-    __pyx_t_20 = 1;
-    *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_ret.data + __pyx_t_19 * __pyx_v_ret.strides[0]) ) + __pyx_t_20 * __pyx_v_ret.strides[1]) )) = sqrt((__pyx_v_norm * __pyx_v_intvcirc));
+    __pyx_t_21 = __pyx_v_i;
+    __pyx_t_22 = 1;
+    *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_ret.data + __pyx_t_21 * __pyx_v_ret.strides[0]) ) + __pyx_t_22 * __pyx_v_ret.strides[1]) )) = sqrt((__pyx_v_norm * __pyx_v_intvcirc));
   }
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":312
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":305
  *         ret[i,1]=sqrt(norm*intvcirc)
  * 
  *     return ret             # <<<<<<<<<<<<<<
@@ -5854,10 +5869,10 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
   __pyx_r = __pyx_v_ret;
   goto __pyx_L0;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":280
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":271
  * 
  * 
- * cdef double[:,:] _vcirc_einasto_array(double[:] R, int nlen, double d0, double rs, double n, double e, double toll):             # <<<<<<<<<<<<<<
+ * cdef double[:,:] _vcirc_truncated_alfabeta_array(double[:] R, int nlen, double d0, double rs, double alfa, double beta, double rcut, double e, double toll):             # <<<<<<<<<<<<<<
  *     """
  *     Calculate Vcirc on a single point on the plane
  */
@@ -5873,9 +5888,11 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
   __Pyx_XDECREF(__pyx_t_15);
   __Pyx_XDECREF(__pyx_t_16);
   __Pyx_XDECREF(__pyx_t_17);
+  __Pyx_XDECREF(__pyx_t_18);
+  __Pyx_XDECREF(__pyx_t_19);
   __pyx_r.data = NULL;
   __pyx_r.memview = NULL;
-  __Pyx_AddTraceback("galpynamics.src.pot_halo.pot_c_ext.einasto_halo._vcirc_einasto_array", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo._vcirc_truncated_alfabeta_array", __pyx_clineno, __pyx_lineno, __pyx_filename);
   goto __pyx_L2;
   __pyx_L0:;
   if (unlikely(!__pyx_r.memview)) {
@@ -5889,16 +5906,16 @@ static __Pyx_memviewslice __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12eina
   return __pyx_r;
 }
 
-/* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":315
+/* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":308
  * 
  * 
- * cpdef vcirc_einasto(R, d0, rs, n, e, toll=1e-4):             # <<<<<<<<<<<<<<
- *     """Calculate the Vcirc on the plane of an isothermal halo.
+ * cpdef vcirc_truncated_alfabeta(R, d0, rs, alfa, beta, rcut, e, toll=1e-4):             # <<<<<<<<<<<<<<
+ *     """Calculate the Vcirc on the plane of a truncated alfabeta halo halo.
  * 
  */
 
-static PyObject *__pyx_pw_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_3vcirc_einasto(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyObject *__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_vcirc_einasto(PyObject *__pyx_v_R, PyObject *__pyx_v_d0, PyObject *__pyx_v_rs, PyObject *__pyx_v_n, PyObject *__pyx_v_e, CYTHON_UNUSED int __pyx_skip_dispatch, struct __pyx_opt_args_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_vcirc_einasto *__pyx_optional_args) {
+static PyObject *__pyx_pw_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_3vcirc_truncated_alfabeta(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyObject *__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_vcirc_truncated_alfabeta(PyObject *__pyx_v_R, PyObject *__pyx_v_d0, PyObject *__pyx_v_rs, PyObject *__pyx_v_alfa, PyObject *__pyx_v_beta, PyObject *__pyx_v_rcut, PyObject *__pyx_v_e, CYTHON_UNUSED int __pyx_skip_dispatch, struct __pyx_opt_args_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_vcirc_truncated_alfabeta *__pyx_optional_args) {
   PyObject *__pyx_v_toll = ((PyObject *)__pyx_float_1eneg_4);
   PyObject *__pyx_v_ret = NULL;
   PyObject *__pyx_r = NULL;
@@ -5913,23 +5930,25 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_
   double __pyx_t_8;
   double __pyx_t_9;
   double __pyx_t_10;
-  __Pyx_memviewslice __pyx_t_11 = { 0, 0, { 0 }, { 0 }, { 0 } };
-  Py_ssize_t __pyx_t_12;
+  double __pyx_t_11;
+  double __pyx_t_12;
   __Pyx_memviewslice __pyx_t_13 = { 0, 0, { 0 }, { 0 }, { 0 } };
-  PyObject *__pyx_t_14 = NULL;
-  PyObject *__pyx_t_15 = NULL;
+  Py_ssize_t __pyx_t_14;
+  __Pyx_memviewslice __pyx_t_15 = { 0, 0, { 0 }, { 0 }, { 0 } };
   PyObject *__pyx_t_16 = NULL;
   PyObject *__pyx_t_17 = NULL;
-  int __pyx_t_18;
+  PyObject *__pyx_t_18 = NULL;
   PyObject *__pyx_t_19 = NULL;
-  __Pyx_RefNannySetupContext("vcirc_einasto", 0);
+  int __pyx_t_20;
+  PyObject *__pyx_t_21 = NULL;
+  __Pyx_RefNannySetupContext("vcirc_truncated_alfabeta", 0);
   if (__pyx_optional_args) {
     if (__pyx_optional_args->__pyx_n > 0) {
       __pyx_v_toll = __pyx_optional_args->toll;
     }
   }
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":329
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":324
  *     """
  * 
  *     if isinstance(R, float) or isinstance(R, int):             # <<<<<<<<<<<<<<
@@ -5949,16 +5968,16 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":331
+    /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":326
  *     if isinstance(R, float) or isinstance(R, int):
  * 
  *         if R==0: ret=0             # <<<<<<<<<<<<<<
- *         else: ret= _vcirc_einasto(R, d0, rs, n,  e,  toll)
+ *         else: ret= _vcirc_truncated_alfabeta(R, d0, rs, alfa, beta, rcut,  e,  toll)
  * 
  */
-    __pyx_t_4 = __Pyx_PyInt_EqObjC(__pyx_v_R, __pyx_int_0, 0, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 331, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyInt_EqObjC(__pyx_v_R, __pyx_int_0, 0, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 326, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 331, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_IsTrue(__pyx_t_4); if (unlikely(__pyx_t_1 < 0)) __PYX_ERR(0, 326, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     if (__pyx_t_1) {
       __Pyx_INCREF(__pyx_int_0);
@@ -5966,28 +5985,30 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_
       goto __pyx_L6;
     }
 
-    /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":332
+    /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":327
  * 
  *         if R==0: ret=0
- *         else: ret= _vcirc_einasto(R, d0, rs, n,  e,  toll)             # <<<<<<<<<<<<<<
+ *         else: ret= _vcirc_truncated_alfabeta(R, d0, rs, alfa, beta, rcut,  e,  toll)             # <<<<<<<<<<<<<<
  * 
  *     else:
  */
     /*else*/ {
-      __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_v_R); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 332, __pyx_L1_error)
-      __pyx_t_6 = __pyx_PyFloat_AsDouble(__pyx_v_d0); if (unlikely((__pyx_t_6 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 332, __pyx_L1_error)
-      __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_v_rs); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 332, __pyx_L1_error)
-      __pyx_t_8 = __pyx_PyFloat_AsDouble(__pyx_v_n); if (unlikely((__pyx_t_8 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 332, __pyx_L1_error)
-      __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_e); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 332, __pyx_L1_error)
-      __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_v_toll); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 332, __pyx_L1_error)
-      __pyx_t_4 = PyFloat_FromDouble(__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__vcirc_einasto(__pyx_t_5, __pyx_t_6, __pyx_t_7, __pyx_t_8, __pyx_t_9, __pyx_t_10)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 332, __pyx_L1_error)
+      __pyx_t_5 = __pyx_PyFloat_AsDouble(__pyx_v_R); if (unlikely((__pyx_t_5 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 327, __pyx_L1_error)
+      __pyx_t_6 = __pyx_PyFloat_AsDouble(__pyx_v_d0); if (unlikely((__pyx_t_6 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 327, __pyx_L1_error)
+      __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_v_rs); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 327, __pyx_L1_error)
+      __pyx_t_8 = __pyx_PyFloat_AsDouble(__pyx_v_alfa); if (unlikely((__pyx_t_8 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 327, __pyx_L1_error)
+      __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_beta); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 327, __pyx_L1_error)
+      __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_v_rcut); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 327, __pyx_L1_error)
+      __pyx_t_11 = __pyx_PyFloat_AsDouble(__pyx_v_e); if (unlikely((__pyx_t_11 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 327, __pyx_L1_error)
+      __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_v_toll); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 327, __pyx_L1_error)
+      __pyx_t_4 = PyFloat_FromDouble(__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo__vcirc_truncated_alfabeta(__pyx_t_5, __pyx_t_6, __pyx_t_7, __pyx_t_8, __pyx_t_9, __pyx_t_10, __pyx_t_11, __pyx_t_12)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 327, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __pyx_v_ret = __pyx_t_4;
       __pyx_t_4 = 0;
     }
     __pyx_L6:;
 
-    /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":329
+    /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":324
  *     """
  * 
  *     if isinstance(R, float) or isinstance(R, int):             # <<<<<<<<<<<<<<
@@ -5997,107 +6018,109 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_
     goto __pyx_L3;
   }
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":336
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":331
  *     else:
  * 
- *         ret=_vcirc_einasto_array(R, len(R), d0, rs, n, e, toll)             # <<<<<<<<<<<<<<
+ *         ret=_vcirc_truncated_alfabeta_array(R, len(R), d0, rs, alfa, beta, rcut, e, toll)             # <<<<<<<<<<<<<<
  *         ret[:,1]=np.where(R==0, 0, ret[:,1])
  * 
  */
   /*else*/ {
-    __pyx_t_11 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_v_R, PyBUF_WRITABLE); if (unlikely(!__pyx_t_11.memview)) __PYX_ERR(0, 336, __pyx_L1_error)
-    __pyx_t_12 = PyObject_Length(__pyx_v_R); if (unlikely(__pyx_t_12 == ((Py_ssize_t)-1))) __PYX_ERR(0, 336, __pyx_L1_error)
-    __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_v_d0); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 336, __pyx_L1_error)
-    __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_rs); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 336, __pyx_L1_error)
-    __pyx_t_8 = __pyx_PyFloat_AsDouble(__pyx_v_n); if (unlikely((__pyx_t_8 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 336, __pyx_L1_error)
-    __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_v_e); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 336, __pyx_L1_error)
-    __pyx_t_6 = __pyx_PyFloat_AsDouble(__pyx_v_toll); if (unlikely((__pyx_t_6 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 336, __pyx_L1_error)
-    __pyx_t_13 = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__vcirc_einasto_array(__pyx_t_11, __pyx_t_12, __pyx_t_10, __pyx_t_9, __pyx_t_8, __pyx_t_7, __pyx_t_6); if (unlikely(!__pyx_t_13.memview)) __PYX_ERR(0, 336, __pyx_L1_error)
-    __PYX_XDEC_MEMVIEW(&__pyx_t_11, 1);
-    __pyx_t_11.memview = NULL;
-    __pyx_t_11.data = NULL;
-    __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_t_13, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 336, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
+    __pyx_t_13 = __Pyx_PyObject_to_MemoryviewSlice_ds_double(__pyx_v_R, PyBUF_WRITABLE); if (unlikely(!__pyx_t_13.memview)) __PYX_ERR(0, 331, __pyx_L1_error)
+    __pyx_t_14 = PyObject_Length(__pyx_v_R); if (unlikely(__pyx_t_14 == ((Py_ssize_t)-1))) __PYX_ERR(0, 331, __pyx_L1_error)
+    __pyx_t_12 = __pyx_PyFloat_AsDouble(__pyx_v_d0); if (unlikely((__pyx_t_12 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 331, __pyx_L1_error)
+    __pyx_t_11 = __pyx_PyFloat_AsDouble(__pyx_v_rs); if (unlikely((__pyx_t_11 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 331, __pyx_L1_error)
+    __pyx_t_10 = __pyx_PyFloat_AsDouble(__pyx_v_alfa); if (unlikely((__pyx_t_10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 331, __pyx_L1_error)
+    __pyx_t_9 = __pyx_PyFloat_AsDouble(__pyx_v_beta); if (unlikely((__pyx_t_9 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 331, __pyx_L1_error)
+    __pyx_t_8 = __pyx_PyFloat_AsDouble(__pyx_v_rcut); if (unlikely((__pyx_t_8 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 331, __pyx_L1_error)
+    __pyx_t_7 = __pyx_PyFloat_AsDouble(__pyx_v_e); if (unlikely((__pyx_t_7 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 331, __pyx_L1_error)
+    __pyx_t_6 = __pyx_PyFloat_AsDouble(__pyx_v_toll); if (unlikely((__pyx_t_6 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 331, __pyx_L1_error)
+    __pyx_t_15 = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo__vcirc_truncated_alfabeta_array(__pyx_t_13, __pyx_t_14, __pyx_t_12, __pyx_t_11, __pyx_t_10, __pyx_t_9, __pyx_t_8, __pyx_t_7, __pyx_t_6); if (unlikely(!__pyx_t_15.memview)) __PYX_ERR(0, 331, __pyx_L1_error)
     __PYX_XDEC_MEMVIEW(&__pyx_t_13, 1);
     __pyx_t_13.memview = NULL;
     __pyx_t_13.data = NULL;
+    __pyx_t_4 = __pyx_memoryview_fromslice(__pyx_t_15, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 331, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
+    __PYX_XDEC_MEMVIEW(&__pyx_t_15, 1);
+    __pyx_t_15.memview = NULL;
+    __pyx_t_15.data = NULL;
     __pyx_v_ret = __pyx_t_4;
     __pyx_t_4 = 0;
 
-    /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":337
+    /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":332
  * 
- *         ret=_vcirc_einasto_array(R, len(R), d0, rs, n, e, toll)
+ *         ret=_vcirc_truncated_alfabeta_array(R, len(R), d0, rs, alfa, beta, rcut, e, toll)
  *         ret[:,1]=np.where(R==0, 0, ret[:,1])             # <<<<<<<<<<<<<<
  * 
  *     return ret
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_14, __pyx_n_s_np); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 337, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_14);
-    __pyx_t_15 = __Pyx_PyObject_GetAttrStr(__pyx_t_14, __pyx_n_s_where); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 337, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_15);
-    __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-    __pyx_t_14 = __Pyx_PyInt_EqObjC(__pyx_v_R, __pyx_int_0, 0, 0); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 337, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_14);
-    __pyx_t_16 = __Pyx_PyObject_GetItem(__pyx_v_ret, __pyx_tuple__5); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 337, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_16, __pyx_n_s_np); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 332, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_16);
-    __pyx_t_17 = NULL;
-    __pyx_t_18 = 0;
-    if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_15))) {
-      __pyx_t_17 = PyMethod_GET_SELF(__pyx_t_15);
-      if (likely(__pyx_t_17)) {
-        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_15);
-        __Pyx_INCREF(__pyx_t_17);
+    __pyx_t_17 = __Pyx_PyObject_GetAttrStr(__pyx_t_16, __pyx_n_s_where); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 332, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_17);
+    __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
+    __pyx_t_16 = __Pyx_PyInt_EqObjC(__pyx_v_R, __pyx_int_0, 0, 0); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 332, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_16);
+    __pyx_t_18 = __Pyx_PyObject_GetItem(__pyx_v_ret, __pyx_tuple__5); if (unlikely(!__pyx_t_18)) __PYX_ERR(0, 332, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_18);
+    __pyx_t_19 = NULL;
+    __pyx_t_20 = 0;
+    if (CYTHON_UNPACK_METHODS && unlikely(PyMethod_Check(__pyx_t_17))) {
+      __pyx_t_19 = PyMethod_GET_SELF(__pyx_t_17);
+      if (likely(__pyx_t_19)) {
+        PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_17);
+        __Pyx_INCREF(__pyx_t_19);
         __Pyx_INCREF(function);
-        __Pyx_DECREF_SET(__pyx_t_15, function);
-        __pyx_t_18 = 1;
+        __Pyx_DECREF_SET(__pyx_t_17, function);
+        __pyx_t_20 = 1;
       }
     }
     #if CYTHON_FAST_PYCALL
-    if (PyFunction_Check(__pyx_t_15)) {
-      PyObject *__pyx_temp[4] = {__pyx_t_17, __pyx_t_14, __pyx_int_0, __pyx_t_16};
-      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_15, __pyx_temp+1-__pyx_t_18, 3+__pyx_t_18); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 337, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_17); __pyx_t_17 = 0;
+    if (PyFunction_Check(__pyx_t_17)) {
+      PyObject *__pyx_temp[4] = {__pyx_t_19, __pyx_t_16, __pyx_int_0, __pyx_t_18};
+      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_17, __pyx_temp+1-__pyx_t_20, 3+__pyx_t_20); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 332, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_19); __pyx_t_19 = 0;
       __Pyx_GOTREF(__pyx_t_4);
-      __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
       __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
+      __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
     } else
     #endif
     #if CYTHON_FAST_PYCCALL
-    if (__Pyx_PyFastCFunction_Check(__pyx_t_15)) {
-      PyObject *__pyx_temp[4] = {__pyx_t_17, __pyx_t_14, __pyx_int_0, __pyx_t_16};
-      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_15, __pyx_temp+1-__pyx_t_18, 3+__pyx_t_18); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 337, __pyx_L1_error)
-      __Pyx_XDECREF(__pyx_t_17); __pyx_t_17 = 0;
+    if (__Pyx_PyFastCFunction_Check(__pyx_t_17)) {
+      PyObject *__pyx_temp[4] = {__pyx_t_19, __pyx_t_16, __pyx_int_0, __pyx_t_18};
+      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_17, __pyx_temp+1-__pyx_t_20, 3+__pyx_t_20); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 332, __pyx_L1_error)
+      __Pyx_XDECREF(__pyx_t_19); __pyx_t_19 = 0;
       __Pyx_GOTREF(__pyx_t_4);
-      __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
       __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
+      __Pyx_DECREF(__pyx_t_18); __pyx_t_18 = 0;
     } else
     #endif
     {
-      __pyx_t_19 = PyTuple_New(3+__pyx_t_18); if (unlikely(!__pyx_t_19)) __PYX_ERR(0, 337, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_19);
-      if (__pyx_t_17) {
-        __Pyx_GIVEREF(__pyx_t_17); PyTuple_SET_ITEM(__pyx_t_19, 0, __pyx_t_17); __pyx_t_17 = NULL;
+      __pyx_t_21 = PyTuple_New(3+__pyx_t_20); if (unlikely(!__pyx_t_21)) __PYX_ERR(0, 332, __pyx_L1_error)
+      __Pyx_GOTREF(__pyx_t_21);
+      if (__pyx_t_19) {
+        __Pyx_GIVEREF(__pyx_t_19); PyTuple_SET_ITEM(__pyx_t_21, 0, __pyx_t_19); __pyx_t_19 = NULL;
       }
-      __Pyx_GIVEREF(__pyx_t_14);
-      PyTuple_SET_ITEM(__pyx_t_19, 0+__pyx_t_18, __pyx_t_14);
+      __Pyx_GIVEREF(__pyx_t_16);
+      PyTuple_SET_ITEM(__pyx_t_21, 0+__pyx_t_20, __pyx_t_16);
       __Pyx_INCREF(__pyx_int_0);
       __Pyx_GIVEREF(__pyx_int_0);
-      PyTuple_SET_ITEM(__pyx_t_19, 1+__pyx_t_18, __pyx_int_0);
-      __Pyx_GIVEREF(__pyx_t_16);
-      PyTuple_SET_ITEM(__pyx_t_19, 2+__pyx_t_18, __pyx_t_16);
-      __pyx_t_14 = 0;
+      PyTuple_SET_ITEM(__pyx_t_21, 1+__pyx_t_20, __pyx_int_0);
+      __Pyx_GIVEREF(__pyx_t_18);
+      PyTuple_SET_ITEM(__pyx_t_21, 2+__pyx_t_20, __pyx_t_18);
       __pyx_t_16 = 0;
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_15, __pyx_t_19, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 337, __pyx_L1_error)
+      __pyx_t_18 = 0;
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_17, __pyx_t_21, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 332, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
-      __Pyx_DECREF(__pyx_t_19); __pyx_t_19 = 0;
+      __Pyx_DECREF(__pyx_t_21); __pyx_t_21 = 0;
     }
-    __Pyx_DECREF(__pyx_t_15); __pyx_t_15 = 0;
-    if (unlikely(PyObject_SetItem(__pyx_v_ret, __pyx_tuple__5, __pyx_t_4) < 0)) __PYX_ERR(0, 337, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
+    if (unlikely(PyObject_SetItem(__pyx_v_ret, __pyx_tuple__5, __pyx_t_4) < 0)) __PYX_ERR(0, 332, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   }
   __pyx_L3:;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":339
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":334
  *         ret[:,1]=np.where(R==0, 0, ret[:,1])
  * 
  *     return ret             # <<<<<<<<<<<<<<
@@ -6107,25 +6130,25 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_
   __pyx_r = __pyx_v_ret;
   goto __pyx_L0;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":315
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":308
  * 
  * 
- * cpdef vcirc_einasto(R, d0, rs, n, e, toll=1e-4):             # <<<<<<<<<<<<<<
- *     """Calculate the Vcirc on the plane of an isothermal halo.
+ * cpdef vcirc_truncated_alfabeta(R, d0, rs, alfa, beta, rcut, e, toll=1e-4):             # <<<<<<<<<<<<<<
+ *     """Calculate the Vcirc on the plane of a truncated alfabeta halo halo.
  * 
  */
 
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_4);
-  __PYX_XDEC_MEMVIEW(&__pyx_t_11, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_t_13, 1);
-  __Pyx_XDECREF(__pyx_t_14);
-  __Pyx_XDECREF(__pyx_t_15);
+  __PYX_XDEC_MEMVIEW(&__pyx_t_15, 1);
   __Pyx_XDECREF(__pyx_t_16);
   __Pyx_XDECREF(__pyx_t_17);
+  __Pyx_XDECREF(__pyx_t_18);
   __Pyx_XDECREF(__pyx_t_19);
-  __Pyx_AddTraceback("galpynamics.src.pot_halo.pot_c_ext.einasto_halo.vcirc_einasto", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_XDECREF(__pyx_t_21);
+  __Pyx_AddTraceback("galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo.vcirc_truncated_alfabeta", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_ret);
@@ -6135,26 +6158,32 @@ static PyObject *__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_
 }
 
 /* Python wrapper */
-static PyObject *__pyx_pw_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_3vcirc_einasto(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static char __pyx_doc_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_2vcirc_einasto[] = "Calculate the Vcirc on the plane of an isothermal halo.\n\n    :param R: Cylindrical radius (memview object)\n    :param d0: Central density at (R,Z)=(0,0) [Msol/kpc^3]\n    :param rs: scale radius, radius where the mass is the half of the total (kpc)\n    :param n:\n    :param e: ellipticity\n    :param toll: Tollerance for nquad\n    :return: 2-col array:\n        0-R\n        1-Vcirc(R)\n    ";
-static PyObject *__pyx_pw_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_3vcirc_einasto(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_3vcirc_truncated_alfabeta(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static char __pyx_doc_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_2vcirc_truncated_alfabeta[] = "Calculate the Vcirc on the plane of a truncated alfabeta halo halo.\n\n    :param R: Cylindrical radius (memview object)\n    :param d0: Central density at (R,Z)=(0,0) [Msol/kpc^3]\n    :param rs: scale radius\n    :param alfa:\n    :param beta:\n    :param rcut: exponential cut scale radius\n    :param e: ellipticity\n    :param toll: Tollerance for nquad\n    :return: 2-col array:\n        0-R\n        1-Vcirc(R)\n    ";
+static PyObject *__pyx_pw_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_3vcirc_truncated_alfabeta(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_R = 0;
   PyObject *__pyx_v_d0 = 0;
   PyObject *__pyx_v_rs = 0;
-  PyObject *__pyx_v_n = 0;
+  PyObject *__pyx_v_alfa = 0;
+  PyObject *__pyx_v_beta = 0;
+  PyObject *__pyx_v_rcut = 0;
   PyObject *__pyx_v_e = 0;
   PyObject *__pyx_v_toll = 0;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("vcirc_einasto (wrapper)", 0);
+  __Pyx_RefNannySetupContext("vcirc_truncated_alfabeta (wrapper)", 0);
   {
-    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_R,&__pyx_n_s_d0,&__pyx_n_s_rs,&__pyx_n_s_n,&__pyx_n_s_e,&__pyx_n_s_toll,0};
-    PyObject* values[6] = {0,0,0,0,0,0};
-    values[5] = ((PyObject *)__pyx_float_1eneg_4);
+    static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_R,&__pyx_n_s_d0,&__pyx_n_s_rs,&__pyx_n_s_alfa,&__pyx_n_s_beta,&__pyx_n_s_rcut,&__pyx_n_s_e,&__pyx_n_s_toll,0};
+    PyObject* values[8] = {0,0,0,0,0,0,0,0};
+    values[7] = ((PyObject *)__pyx_float_1eneg_4);
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
       const Py_ssize_t pos_args = PyTuple_GET_SIZE(__pyx_args);
       switch (pos_args) {
+        case  8: values[7] = PyTuple_GET_ITEM(__pyx_args, 7);
+        CYTHON_FALLTHROUGH;
+        case  7: values[6] = PyTuple_GET_ITEM(__pyx_args, 6);
+        CYTHON_FALLTHROUGH;
         case  6: values[5] = PyTuple_GET_ITEM(__pyx_args, 5);
         CYTHON_FALLTHROUGH;
         case  5: values[4] = PyTuple_GET_ITEM(__pyx_args, 4);
@@ -6179,41 +6208,55 @@ static PyObject *__pyx_pw_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_d0)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("vcirc_einasto", 0, 5, 6, 1); __PYX_ERR(0, 315, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("vcirc_truncated_alfabeta", 0, 7, 8, 1); __PYX_ERR(0, 308, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_rs)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("vcirc_einasto", 0, 5, 6, 2); __PYX_ERR(0, 315, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("vcirc_truncated_alfabeta", 0, 7, 8, 2); __PYX_ERR(0, 308, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
-        if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_n)) != 0)) kw_args--;
+        if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_alfa)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("vcirc_einasto", 0, 5, 6, 3); __PYX_ERR(0, 315, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("vcirc_truncated_alfabeta", 0, 7, 8, 3); __PYX_ERR(0, 308, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
-        if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_e)) != 0)) kw_args--;
+        if (likely((values[4] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_beta)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("vcirc_einasto", 0, 5, 6, 4); __PYX_ERR(0, 315, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("vcirc_truncated_alfabeta", 0, 7, 8, 4); __PYX_ERR(0, 308, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
+        if (likely((values[5] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_rcut)) != 0)) kw_args--;
+        else {
+          __Pyx_RaiseArgtupleInvalid("vcirc_truncated_alfabeta", 0, 7, 8, 5); __PYX_ERR(0, 308, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  6:
+        if (likely((values[6] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_e)) != 0)) kw_args--;
+        else {
+          __Pyx_RaiseArgtupleInvalid("vcirc_truncated_alfabeta", 0, 7, 8, 6); __PYX_ERR(0, 308, __pyx_L3_error)
+        }
+        CYTHON_FALLTHROUGH;
+        case  7:
         if (kw_args > 0) {
           PyObject* value = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_toll);
-          if (value) { values[5] = value; kw_args--; }
+          if (value) { values[7] = value; kw_args--; }
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "vcirc_einasto") < 0)) __PYX_ERR(0, 315, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "vcirc_truncated_alfabeta") < 0)) __PYX_ERR(0, 308, __pyx_L3_error)
       }
     } else {
       switch (PyTuple_GET_SIZE(__pyx_args)) {
-        case  6: values[5] = PyTuple_GET_ITEM(__pyx_args, 5);
+        case  8: values[7] = PyTuple_GET_ITEM(__pyx_args, 7);
         CYTHON_FALLTHROUGH;
-        case  5: values[4] = PyTuple_GET_ITEM(__pyx_args, 4);
+        case  7: values[6] = PyTuple_GET_ITEM(__pyx_args, 6);
+        values[5] = PyTuple_GET_ITEM(__pyx_args, 5);
+        values[4] = PyTuple_GET_ITEM(__pyx_args, 4);
         values[3] = PyTuple_GET_ITEM(__pyx_args, 3);
         values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
         values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
@@ -6225,35 +6268,37 @@ static PyObject *__pyx_pw_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo
     __pyx_v_R = values[0];
     __pyx_v_d0 = values[1];
     __pyx_v_rs = values[2];
-    __pyx_v_n = values[3];
-    __pyx_v_e = values[4];
-    __pyx_v_toll = values[5];
+    __pyx_v_alfa = values[3];
+    __pyx_v_beta = values[4];
+    __pyx_v_rcut = values[5];
+    __pyx_v_e = values[6];
+    __pyx_v_toll = values[7];
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("vcirc_einasto", 0, 5, 6, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 315, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("vcirc_truncated_alfabeta", 0, 7, 8, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 308, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("galpynamics.src.pot_halo.pot_c_ext.einasto_halo.vcirc_einasto", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo.vcirc_truncated_alfabeta", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_2vcirc_einasto(__pyx_self, __pyx_v_R, __pyx_v_d0, __pyx_v_rs, __pyx_v_n, __pyx_v_e, __pyx_v_toll);
+  __pyx_r = __pyx_pf_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_2vcirc_truncated_alfabeta(__pyx_self, __pyx_v_R, __pyx_v_d0, __pyx_v_rs, __pyx_v_alfa, __pyx_v_beta, __pyx_v_rcut, __pyx_v_e, __pyx_v_toll);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_2vcirc_einasto(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_R, PyObject *__pyx_v_d0, PyObject *__pyx_v_rs, PyObject *__pyx_v_n, PyObject *__pyx_v_e, PyObject *__pyx_v_toll) {
+static PyObject *__pyx_pf_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_2vcirc_truncated_alfabeta(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_R, PyObject *__pyx_v_d0, PyObject *__pyx_v_rs, PyObject *__pyx_v_alfa, PyObject *__pyx_v_beta, PyObject *__pyx_v_rcut, PyObject *__pyx_v_e, PyObject *__pyx_v_toll) {
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
-  struct __pyx_opt_args_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_vcirc_einasto __pyx_t_2;
-  __Pyx_RefNannySetupContext("vcirc_einasto", 0);
+  struct __pyx_opt_args_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_vcirc_truncated_alfabeta __pyx_t_2;
+  __Pyx_RefNannySetupContext("vcirc_truncated_alfabeta", 0);
   __Pyx_XDECREF(__pyx_r);
   __pyx_t_2.__pyx_n = 1;
   __pyx_t_2.toll = __pyx_v_toll;
-  __pyx_t_1 = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_vcirc_einasto(__pyx_v_R, __pyx_v_d0, __pyx_v_rs, __pyx_v_n, __pyx_v_e, 0, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 315, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_vcirc_truncated_alfabeta(__pyx_v_R, __pyx_v_d0, __pyx_v_rs, __pyx_v_alfa, __pyx_v_beta, __pyx_v_rcut, __pyx_v_e, 0, &__pyx_t_2); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 308, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -6262,7 +6307,7 @@ static PyObject *__pyx_pf_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo
   /* function exit code */
   __pyx_L1_error:;
   __Pyx_XDECREF(__pyx_t_1);
-  __Pyx_AddTraceback("galpynamics.src.pot_halo.pot_c_ext.einasto_halo.vcirc_einasto", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo.vcirc_truncated_alfabeta", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XGIVEREF(__pyx_r);
@@ -21584,7 +21629,7 @@ static PyBufferProcs __pyx_tp_as_buffer_array = {
 
 static PyTypeObject __pyx_type___pyx_array = {
   PyVarObject_HEAD_INIT(0, 0)
-  "galpynamics.src.pot_halo.pot_c_ext.einasto_halo.array", /*tp_name*/
+  "galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo.array", /*tp_name*/
   sizeof(struct __pyx_array_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_array, /*tp_dealloc*/
@@ -21692,7 +21737,7 @@ static PyMethodDef __pyx_methods_Enum[] = {
 
 static PyTypeObject __pyx_type___pyx_MemviewEnum = {
   PyVarObject_HEAD_INIT(0, 0)
-  "galpynamics.src.pot_halo.pot_c_ext.einasto_halo.Enum", /*tp_name*/
+  "galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo.Enum", /*tp_name*/
   sizeof(struct __pyx_MemviewEnum_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_Enum, /*tp_dealloc*/
@@ -21942,7 +21987,7 @@ static PyBufferProcs __pyx_tp_as_buffer_memoryview = {
 
 static PyTypeObject __pyx_type___pyx_memoryview = {
   PyVarObject_HEAD_INIT(0, 0)
-  "galpynamics.src.pot_halo.pot_c_ext.einasto_halo.memoryview", /*tp_name*/
+  "galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo.memoryview", /*tp_name*/
   sizeof(struct __pyx_memoryview_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc_memoryview, /*tp_dealloc*/
@@ -22069,7 +22114,7 @@ static struct PyGetSetDef __pyx_getsets__memoryviewslice[] = {
 
 static PyTypeObject __pyx_type___pyx_memoryviewslice = {
   PyVarObject_HEAD_INIT(0, 0)
-  "galpynamics.src.pot_halo.pot_c_ext.einasto_halo._memoryviewslice", /*tp_name*/
+  "galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo._memoryviewslice", /*tp_name*/
   sizeof(struct __pyx_memoryviewslice_obj), /*tp_basicsize*/
   0, /*tp_itemsize*/
   __pyx_tp_dealloc__memoryviewslice, /*tp_dealloc*/
@@ -22134,25 +22179,25 @@ static PyTypeObject __pyx_type___pyx_memoryviewslice = {
 };
 
 static PyMethodDef __pyx_methods[] = {
-  {"potential_einasto", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_1potential_einasto, METH_VARARGS|METH_KEYWORDS, 0},
-  {"vcirc_einasto", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_3vcirc_einasto, METH_VARARGS|METH_KEYWORDS, __pyx_doc_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_2vcirc_einasto},
+  {"potential_truncated_alfabeta", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_1potential_truncated_alfabeta, METH_VARARGS|METH_KEYWORDS, 0},
+  {"vcirc_truncated_alfabeta", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_3vcirc_truncated_alfabeta, METH_VARARGS|METH_KEYWORDS, __pyx_doc_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_2vcirc_truncated_alfabeta},
   {0, 0, 0, 0}
 };
 
 #if PY_MAJOR_VERSION >= 3
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 static PyObject* __pyx_pymod_create(PyObject *spec, PyModuleDef *def); /*proto*/
-static int __pyx_pymod_exec_einasto_halo(PyObject* module); /*proto*/
+static int __pyx_pymod_exec_truncated_alfabeta_halo(PyObject* module); /*proto*/
 static PyModuleDef_Slot __pyx_moduledef_slots[] = {
   {Py_mod_create, (void*)__pyx_pymod_create},
-  {Py_mod_exec, (void*)__pyx_pymod_exec_einasto_halo},
+  {Py_mod_exec, (void*)__pyx_pymod_exec_truncated_alfabeta_halo},
   {0, NULL}
 };
 #endif
 
 static struct PyModuleDef __pyx_moduledef = {
     PyModuleDef_HEAD_INIT,
-    "einasto_halo",
+    "truncated_alfabeta_halo",
     0, /* m_doc */
   #if CYTHON_PEP489_MULTI_PHASE_INIT
     0, /* m_size */
@@ -22214,10 +22259,12 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_ValueError, __pyx_k_ValueError, sizeof(__pyx_k_ValueError), 0, 0, 1, 1},
   {&__pyx_n_s_View_MemoryView, __pyx_k_View_MemoryView, sizeof(__pyx_k_View_MemoryView), 0, 0, 1, 1},
   {&__pyx_n_s_Z, __pyx_k_Z, sizeof(__pyx_k_Z), 0, 0, 1, 1},
+  {&__pyx_n_s_alfa, __pyx_k_alfa, sizeof(__pyx_k_alfa), 0, 0, 1, 1},
   {&__pyx_n_s_allocate_buffer, __pyx_k_allocate_buffer, sizeof(__pyx_k_allocate_buffer), 0, 0, 1, 1},
   {&__pyx_n_s_args, __pyx_k_args, sizeof(__pyx_k_args), 0, 0, 1, 1},
   {&__pyx_n_s_array, __pyx_k_array, sizeof(__pyx_k_array), 0, 0, 1, 1},
   {&__pyx_n_s_base, __pyx_k_base, sizeof(__pyx_k_base), 0, 0, 1, 1},
+  {&__pyx_n_s_beta, __pyx_k_beta, sizeof(__pyx_k_beta), 0, 0, 1, 1},
   {&__pyx_n_s_c, __pyx_k_c, sizeof(__pyx_k_c), 0, 0, 1, 1},
   {&__pyx_n_u_c, __pyx_k_c, sizeof(__pyx_k_c), 0, 1, 0, 1},
   {&__pyx_n_s_class, __pyx_k_class, sizeof(__pyx_k_class), 0, 0, 1, 1},
@@ -22247,14 +22294,13 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_grid, __pyx_k_grid, sizeof(__pyx_k_grid), 0, 0, 1, 1},
   {&__pyx_n_s_id, __pyx_k_id, sizeof(__pyx_k_id), 0, 0, 1, 1},
   {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
-  {&__pyx_n_u_integrand_einasto, __pyx_k_integrand_einasto, sizeof(__pyx_k_integrand_einasto), 0, 1, 0, 1},
+  {&__pyx_n_u_integrand_truncated_alfabeta, __pyx_k_integrand_truncated_alfabeta, sizeof(__pyx_k_integrand_truncated_alfabeta), 0, 1, 0, 1},
   {&__pyx_n_s_itemsize, __pyx_k_itemsize, sizeof(__pyx_k_itemsize), 0, 0, 1, 1},
   {&__pyx_kp_s_itemsize_0_for_cython_array, __pyx_k_itemsize_0_for_cython_array, sizeof(__pyx_k_itemsize_0_for_cython_array), 0, 0, 1, 0},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
   {&__pyx_n_s_mcut, __pyx_k_mcut, sizeof(__pyx_k_mcut), 0, 0, 1, 1},
   {&__pyx_n_s_memview, __pyx_k_memview, sizeof(__pyx_k_memview), 0, 0, 1, 1},
   {&__pyx_n_s_mode, __pyx_k_mode, sizeof(__pyx_k_mode), 0, 0, 1, 1},
-  {&__pyx_n_s_n, __pyx_k_n, sizeof(__pyx_k_n), 0, 0, 1, 1},
   {&__pyx_n_s_name, __pyx_k_name, sizeof(__pyx_k_name), 0, 0, 1, 1},
   {&__pyx_n_s_name_2, __pyx_k_name_2, sizeof(__pyx_k_name_2), 0, 0, 1, 1},
   {&__pyx_kp_u_ndarray_is_not_C_contiguous, __pyx_k_ndarray_is_not_C_contiguous, sizeof(__pyx_k_ndarray_is_not_C_contiguous), 0, 1, 0, 0},
@@ -22279,6 +22325,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_pyx_vtable, __pyx_k_pyx_vtable, sizeof(__pyx_k_pyx_vtable), 0, 0, 1, 1},
   {&__pyx_n_s_quad, __pyx_k_quad, sizeof(__pyx_k_quad), 0, 0, 1, 1},
   {&__pyx_n_s_range, __pyx_k_range, sizeof(__pyx_k_range), 0, 0, 1, 1},
+  {&__pyx_n_s_rcut, __pyx_k_rcut, sizeof(__pyx_k_rcut), 0, 0, 1, 1},
   {&__pyx_n_s_reduce, __pyx_k_reduce, sizeof(__pyx_k_reduce), 0, 0, 1, 1},
   {&__pyx_n_s_reduce_cython, __pyx_k_reduce_cython, sizeof(__pyx_k_reduce_cython), 0, 0, 1, 1},
   {&__pyx_n_s_reduce_ex, __pyx_k_reduce_ex, sizeof(__pyx_k_reduce_ex), 0, 0, 1, 1},
@@ -22304,13 +22351,13 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_kp_u_unknown_dtype_code_in_numpy_pxd, __pyx_k_unknown_dtype_code_in_numpy_pxd, sizeof(__pyx_k_unknown_dtype_code_in_numpy_pxd), 0, 1, 0, 0},
   {&__pyx_n_s_unpack, __pyx_k_unpack, sizeof(__pyx_k_unpack), 0, 0, 1, 1},
   {&__pyx_n_s_update, __pyx_k_update, sizeof(__pyx_k_update), 0, 0, 1, 1},
-  {&__pyx_n_u_vcirc_integrand_einasto, __pyx_k_vcirc_integrand_einasto, sizeof(__pyx_k_vcirc_integrand_einasto), 0, 1, 0, 1},
+  {&__pyx_n_u_vcirc_integrand_truncated_alfabe, __pyx_k_vcirc_integrand_truncated_alfabe, sizeof(__pyx_k_vcirc_integrand_truncated_alfabe), 0, 1, 0, 1},
   {&__pyx_n_s_where, __pyx_k_where, sizeof(__pyx_k_where), 0, 0, 1, 1},
   {0, 0, 0, 0, 0, 0, 0}
 };
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 142, __pyx_L1_error)
-  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 209, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 131, __pyx_L1_error)
+  __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(0, 198, __pyx_L1_error)
   __pyx_builtin_RuntimeError = __Pyx_GetBuiltinName(__pyx_n_s_RuntimeError); if (!__pyx_builtin_RuntimeError) __PYX_ERR(1, 856, __pyx_L1_error)
   __pyx_builtin_ImportError = __Pyx_GetBuiltinName(__pyx_n_s_ImportError); if (!__pyx_builtin_ImportError) __PYX_ERR(1, 1038, __pyx_L1_error)
   __pyx_builtin_MemoryError = __Pyx_GetBuiltinName(__pyx_n_s_MemoryError); if (!__pyx_builtin_MemoryError) __PYX_ERR(2, 148, __pyx_L1_error)
@@ -22328,39 +22375,39 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":131
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":120
  *         double m0
  *         double psi
  *         double[:,:] ret=np.empty((nlen,3), dtype=np.dtype("d"))             # <<<<<<<<<<<<<<
  *         double intpot
  *         int i
  */
-  __pyx_tuple__2 = PyTuple_Pack(1, __pyx_n_u_d); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 131, __pyx_L1_error)
+  __pyx_tuple__2 = PyTuple_Pack(1, __pyx_n_u_d); if (unlikely(!__pyx_tuple__2)) __PYX_ERR(0, 120, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__2);
   __Pyx_GIVEREF(__pyx_tuple__2);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":209
- *             return np.array(_potential_einasto(R=R,Z=Z,mcut=mcut,d0=d0, rs=rs, n=n, e=e,toll=toll))
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":198
+ *             return np.array(_potential_truncated_alfabeta(R=R,Z=Z,mcut=mcut,d0=d0, rs=rs, alfa=alfa, beta=beta, rcut=rcut, e=e,toll=toll))
  *         else:
  *             raise ValueError('R and Z have different dimension')             # <<<<<<<<<<<<<<
  *     else:
  *         if grid:
  */
-  __pyx_tuple__3 = PyTuple_Pack(1, __pyx_kp_u_R_and_Z_have_different_dimension); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 209, __pyx_L1_error)
+  __pyx_tuple__3 = PyTuple_Pack(1, __pyx_kp_u_R_and_Z_have_different_dimension); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 198, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":337
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":332
  * 
- *         ret=_vcirc_einasto_array(R, len(R), d0, rs, n, e, toll)
+ *         ret=_vcirc_truncated_alfabeta_array(R, len(R), d0, rs, alfa, beta, rcut, e, toll)
  *         ret[:,1]=np.where(R==0, 0, ret[:,1])             # <<<<<<<<<<<<<<
  * 
  *     return ret
  */
-  __pyx_slice__4 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__4)) __PYX_ERR(0, 337, __pyx_L1_error)
+  __pyx_slice__4 = PySlice_New(Py_None, Py_None, Py_None); if (unlikely(!__pyx_slice__4)) __PYX_ERR(0, 332, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_slice__4);
   __Pyx_GIVEREF(__pyx_slice__4);
-  __pyx_tuple__5 = PyTuple_Pack(2, __pyx_slice__4, __pyx_int_1); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 337, __pyx_L1_error)
+  __pyx_tuple__5 = PyTuple_Pack(2, __pyx_slice__4, __pyx_int_1); if (unlikely(!__pyx_tuple__5)) __PYX_ERR(0, 332, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__5);
   __Pyx_GIVEREF(__pyx_tuple__5);
 
@@ -22741,14 +22788,12 @@ static int __Pyx_modinit_function_export_code(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_modinit_function_export_code", 0);
   /*--- Function export code ---*/
-  if (__Pyx_ExportFunction("dn_func", (void (*)(void))__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_dn_func, "double (double)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (__Pyx_ExportFunction("dens_einasto", (void (*)(void))__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_dens_einasto, "double (double, void *)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (__Pyx_ExportFunction("psi_einasto", (void (*)(void))__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_psi_einasto, "double (double, double, double, double, double)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (__Pyx_ExportFunction("integrand_einasto", (void (*)(void))__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_integrand_einasto, "double (int, double *)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (__Pyx_ExportFunction("_potential_einasto", (void (*)(void))__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__potential_einasto, "double (double, double, double, double, double, double, double, double)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (__Pyx_ExportFunction("_potential_einasto_array", (void (*)(void))__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__potential_einasto_array, "__Pyx_memviewslice (__Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, double, double)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (__Pyx_ExportFunction("_potential_einasto_grid", (void (*)(void))__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo__potential_einasto_grid, "__Pyx_memviewslice (__Pyx_memviewslice, __Pyx_memviewslice, int, int, double, double, double, double, double, double)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
-  if (__Pyx_ExportFunction("vcirc_integrand_einasto", (void (*)(void))__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_vcirc_integrand_einasto, "double (int, double *)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (__Pyx_ExportFunction("psi_truncated_alfabeta", (void (*)(void))__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_psi_truncated_alfabeta, "double (double, double, double, double, double, double, double)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (__Pyx_ExportFunction("integrand_truncated_alfabeta", (void (*)(void))__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_integrand_truncated_alfabeta, "double (int, double *)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (__Pyx_ExportFunction("_potential_truncated_alfabeta", (void (*)(void))__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo__potential_truncated_alfabeta, "double (double, double, double, double, double, double, double, double, double, double)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (__Pyx_ExportFunction("_potential_truncated_alfabeta_array", (void (*)(void))__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo__potential_truncated_alfabeta_array, "__Pyx_memviewslice (__Pyx_memviewslice, __Pyx_memviewslice, int, double, double, double, double, double, double, double, double)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (__Pyx_ExportFunction("_potential_truncated_alfabeta_grid", (void (*)(void))__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo__potential_truncated_alfabeta_grid, "__Pyx_memviewslice (__Pyx_memviewslice, __Pyx_memviewslice, int, int, double, double, double, double, double, double, double, double)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (__Pyx_ExportFunction("vcirc_integrand_truncated_alfabeta", (void (*)(void))__pyx_f_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_vcirc_integrand_truncated_alfabeta, "double (int, double *)") < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -22891,11 +22936,11 @@ static int __Pyx_modinit_function_import_code(void) {
 
 
 #if PY_MAJOR_VERSION < 3
-__Pyx_PyMODINIT_FUNC initeinasto_halo(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC initeinasto_halo(void)
+__Pyx_PyMODINIT_FUNC inittruncated_alfabeta_halo(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC inittruncated_alfabeta_halo(void)
 #else
-__Pyx_PyMODINIT_FUNC PyInit_einasto_halo(void) CYTHON_SMALL_CODE; /*proto*/
-__Pyx_PyMODINIT_FUNC PyInit_einasto_halo(void)
+__Pyx_PyMODINIT_FUNC PyInit_truncated_alfabeta_halo(void) CYTHON_SMALL_CODE; /*proto*/
+__Pyx_PyMODINIT_FUNC PyInit_truncated_alfabeta_halo(void)
 #if CYTHON_PEP489_MULTI_PHASE_INIT
 {
   return PyModuleDef_Init(&__pyx_moduledef);
@@ -22962,7 +23007,7 @@ bad:
 }
 
 
-static CYTHON_SMALL_CODE int __pyx_pymod_exec_einasto_halo(PyObject *__pyx_pyinit_module)
+static CYTHON_SMALL_CODE int __pyx_pymod_exec_truncated_alfabeta_halo(PyObject *__pyx_pyinit_module)
 #endif
 #endif
 {
@@ -22973,7 +23018,7 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_einasto_halo(PyObject *__pyx_pyini
   #if CYTHON_PEP489_MULTI_PHASE_INIT
   if (__pyx_m) {
     if (__pyx_m == __pyx_pyinit_module) return 0;
-    PyErr_SetString(PyExc_RuntimeError, "Module 'einasto_halo' has already been imported. Re-initialisation is not supported.");
+    PyErr_SetString(PyExc_RuntimeError, "Module 'truncated_alfabeta_halo' has already been imported. Re-initialisation is not supported.");
     return -1;
   }
   #elif PY_MAJOR_VERSION >= 3
@@ -22988,7 +23033,7 @@ if (!__Pyx_RefNanny) {
       Py_FatalError("failed to import 'refnanny' module");
 }
 #endif
-  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_einasto_halo(void)", 0);
+  __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_truncated_alfabeta_halo(void)", 0);
   if (__Pyx_check_binary_version() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #ifdef __Pxy_PyFrame_Initialize_Offsets
   __Pxy_PyFrame_Initialize_Offsets();
@@ -23027,7 +23072,7 @@ if (!__Pyx_RefNanny) {
   Py_INCREF(__pyx_m);
   #else
   #if PY_MAJOR_VERSION < 3
-  __pyx_m = Py_InitModule4("einasto_halo", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
+  __pyx_m = Py_InitModule4("truncated_alfabeta_halo", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
   #endif
@@ -23046,14 +23091,14 @@ if (!__Pyx_RefNanny) {
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
   if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
-  if (__pyx_module_is_main_galpynamics__src__pot_halo__pot_c_ext__einasto_halo) {
+  if (__pyx_module_is_main_galpynamics__src__pot_halo__pot_c_ext__truncated_alfabeta_halo) {
     if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name_2, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
     PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
-    if (!PyDict_GetItemString(modules, "galpynamics.src.pot_halo.pot_c_ext.einasto_halo")) {
-      if (unlikely(PyDict_SetItemString(modules, "galpynamics.src.pot_halo.pot_c_ext.einasto_halo", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
+    if (!PyDict_GetItemString(modules, "galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo")) {
+      if (unlikely(PyDict_SetItemString(modules, "galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo", __pyx_m) < 0)) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
@@ -23074,7 +23119,7 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":4
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":4
  * from libc.math cimport sqrt, log, asin, pow, exp
  * from .general_halo cimport m_calc, potential_core, integrand_core, vcirc_core
  * from scipy.integrate import quad             # <<<<<<<<<<<<<<
@@ -23095,7 +23140,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":5
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":5
  * from .general_halo cimport m_calc, potential_core, integrand_core, vcirc_core
  * from scipy.integrate import quad
  * from scipy._lib._ccallback import LowLevelCallable             # <<<<<<<<<<<<<<
@@ -23116,7 +23161,7 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":6
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":6
  * from scipy.integrate import quad
  * from scipy._lib._ccallback import LowLevelCallable
  * import numpy as np             # <<<<<<<<<<<<<<
@@ -23128,16 +23173,16 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) __PYX_ERR(0, 6, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":12
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":12
  * from cython_gsl cimport *
  * 
  * cdef double PI=3.14159265358979323846             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __pyx_v_11galpynamics_3src_8pot_halo_9pot_c_ext_12einasto_halo_PI = 3.14159265358979323846;
+  __pyx_v_11galpynamics_3src_8pot_halo_9pot_c_ext_23truncated_alfabeta_halo_PI = 3.14159265358979323846;
 
-  /* "galpynamics/src/pot_halo/pot_c_ext/einasto_halo.pyx":1
+  /* "galpynamics/src/pot_halo/pot_c_ext/truncated_alfabeta_halo.pyx":1
  * #cython: language_level=3, boundscheck=False, cdivision=True, wraparound=False             # <<<<<<<<<<<<<<
  * from libc.math cimport sqrt, log, asin, pow, exp
  * from .general_halo cimport m_calc, potential_core, integrand_core, vcirc_core
@@ -23308,11 +23353,11 @@ if (!__Pyx_RefNanny) {
   __Pyx_XDECREF(__pyx_t_2);
   if (__pyx_m) {
     if (__pyx_d) {
-      __Pyx_AddTraceback("init galpynamics.src.pot_halo.pot_c_ext.einasto_halo", __pyx_clineno, __pyx_lineno, __pyx_filename);
+      __Pyx_AddTraceback("init galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo", __pyx_clineno, __pyx_lineno, __pyx_filename);
     }
     Py_CLEAR(__pyx_m);
   } else if (!PyErr_Occurred()) {
-    PyErr_SetString(PyExc_ImportError, "init galpynamics.src.pot_halo.pot_c_ext.einasto_halo");
+    PyErr_SetString(PyExc_ImportError, "init galpynamics.src.pot_halo.pot_c_ext.truncated_alfabeta_halo");
   }
   __pyx_L0:;
   __Pyx_RefNannyFinishContext();

@@ -8,3 +8,4 @@ from .deVacouler_like_halo import deVacouler_like_halo
 from .plummer_halo import plummer_halo
 from .valy_halo import valy_halo
 from .exponential_halo import exponential_halo
+from .truncated_alfabeta_halo import truncated_alfabeta_halo
