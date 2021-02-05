@@ -59,6 +59,7 @@ def test_halo_component(halo_component, neval=1000):
     print('-'*50)
     sys.stdout.flush()
 
+    times=0
     try:
         t1=timer()
         Pot_serial=H.potential(R,Z,grid=False, toll=1e-4,nproc=1)
@@ -70,6 +71,7 @@ def test_halo_component(halo_component, neval=1000):
     except:
         checks=False
 
+    timem=0
     try:
         t1=timer()
         Pot_parallel=H.potential(R,Z,grid=False, toll=1e-4,nproc=2)
