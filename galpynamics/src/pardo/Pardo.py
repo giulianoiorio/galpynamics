@@ -137,8 +137,8 @@ class ParDo:
                 #start = int(dim * i)
                 #end = int(dim * (i + 1))
                 #DEBUG
-                print('DEBUG')
-                print(start,end)
+                #print('DEBUG')
+                #print(start,end)
                 #print(array1)
                 #print(array1[start:end], array2[start:end])
                 #
