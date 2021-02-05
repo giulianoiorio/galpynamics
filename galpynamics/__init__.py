@@ -1,7 +1,9 @@
 #from .src.pot_halo.pot_halo import isothermal_halo, NFW_halo, alfabeta_halo, hernquist_halo
 from .src.pot_halo.isothermal_halo import isothermal_halo
 from .src.pot_halo.NFW_halo import NFW_halo
+from .src.pot_halo.core_NFW_halo import core_NFW_halo
 from .src.pot_halo.alfabeta_halo import alfabeta_halo
+from .src.pot_halo.truncated_alfabeta_halo import truncated_alfabeta_halo
 from .src.pot_halo.hernquist_halo import hernquist_halo
 from .src.pot_halo.deVacouler_like_halo import deVacouler_like_halo
 from .src.pot_halo.plummer_halo import plummer_halo
