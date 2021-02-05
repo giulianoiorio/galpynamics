@@ -61,7 +61,8 @@ def test_halo_component(halo_component, neval=1000):
 
     times=0
     idnan_serial=0
-    try:
+    #try:
+    if True:
         t1=timer()
         Pot_serial=H.potential(R,Z,grid=False, toll=1e-4,nproc=1)
         idnan_serial=np.isnan(Pot_serial)
@@ -69,8 +70,8 @@ def test_halo_component(halo_component, neval=1000):
         t2=timer()
         checks=True
         times=t2-t1
-    except:
-        checks=False
+    #except:
+        #checks=False
 
     timem=0
     idnan_parallel=0
