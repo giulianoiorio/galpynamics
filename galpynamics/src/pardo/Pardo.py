@@ -134,13 +134,13 @@ class ParDo:
             start = 0
             end = 0
             for i in range(self.n):
-                start = int(dim * i)
-                end = int(dim * (i + 1))
-                DEBUG
+                #start = int(dim * i)
+                #end = int(dim * (i + 1))
+                #DEBUG
                 print('DEBUG')
                 print(start,end)
-                print(array1)
-                print(array1[start:end], array2[start:end])
+                #print(array1)
+                #print(array1[start:end], array2[start:end])
                 #
                 start = end
                 if i<dimr: end = start + dim +1
