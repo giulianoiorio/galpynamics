@@ -105,7 +105,7 @@ infw=['galpynamics/src/pot_halo/pot_c_ext/nfw_halo.pyx']
 infw_ext=Extension('galpynamics.src.pot_halo.pot_c_ext.nfw_halo',sources=infw)
 
 icnfw=['galpynamics/src/pot_halo/pot_c_ext/core_nfw_halo.pyx']
-icnfw_ext=Extension('galpynamics.src.pot_halo.pot_c_ext.core_nfw_halo',sources=icnfw)
+icnfw_ext=Extension('galpynamics.src.pot_halo.pot_c_ext.core_nfw_halo',sources=icnfw,libraries=cy_gsl_lib,library_dirs=[cy_gsl_lib_dic],include_dirs=[cy_gsl_inc_cy, np_inc])
 
 iab=['galpynamics/src/pot_halo/pot_c_ext/alfabeta_halo.pyx']
 iab_ext=Extension('galpynamics.src.pot_halo.pot_c_ext.alfabeta_halo',sources=iab,libraries=cy_gsl_lib,library_dirs=[cy_gsl_lib_dic],include_dirs=[cy_gsl_inc_cy])
