@@ -188,11 +188,16 @@ d0=3
 rs=5
 alfa=1.5
 beta=3.2
-rcut=10000
+rcut=10
 mcut=100
-e=0
+e=0,5
 _to_test=galpynamics.truncated_alfabeta_halo(d0=d0, rs=rs, alfa=alfa, beta=beta, rcut=rcut, mcut=mcut, e=e)
-test_halo_component(_to_test, 1000)
+#test_halo_component(_to_test, 1000)
+
+R=np.linspace(0.05,15,1000)
+Z=np.linspace(0.05,15,1000)
+L=_to_test.potential(R,Z,grid=False, toll=1e-4,nproc=1)
+print(L)
 
 
 #Plummer halo
