@@ -171,7 +171,7 @@ rs=5
 mcut=100
 e=0.5
 _to_test=galpynamics.core_NFW_halo(d0=d0, rc=rc, n=n, rs=rs, mcut=mcut, e=e)
-test_halo_component(_to_test, 50000)
+test_halo_component(_to_test, 100)
 
 #alfabeta halo
 d0=3
@@ -192,7 +192,7 @@ rcut=10
 mcut=100
 e=0.5
 _to_test=galpynamics.truncated_alfabeta_halo(d0=d0, rs=rs, alfa=alfa, beta=beta, rcut=rcut, mcut=mcut, e=e)
-test_halo_component(_to_test, 50000)
+test_halo_component(_to_test, 100)
 
 
 #Plummer halo
