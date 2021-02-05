@@ -22,7 +22,7 @@ cdef double dens_truncated_alfabeta(double m, void * params) nogil:
         double beta = (<double_ptr> params)[3]
         double rcut = (<double_ptr> params)[4]
         double x=m/rs
-    return 2.*m*d0*pow(x,-alfa)*pow(1+x,alfa-beta)*exp(-pow(m/rcut,2.))
+    return 2.*m*d0*pow(x,-alfa)*pow(1+x,alfa-beta)#*exp(-pow(m/rcut,2.))
 
 cdef double psi_truncated_alfabeta(double d0, double rs, double alfa, double beta, double rcut, double m,  double toll) nogil:
 
