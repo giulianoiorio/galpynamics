@@ -165,11 +165,12 @@ test_halo_component(_to_test, 50000)
 
 #core NFW halo
 d0=3
+n=0.5
 rc=2
 rs=5
 mcut=100
 e=0.5
-_to_test=galpynamics.core_NFW_halo(d0=d0, rs=rs, mcut=mcut, e=e)
+_to_test=galpynamics.core_NFW_halo(d0=d0, rc=rc, n=n, rs=rs, mcut=mcut, e=e)
 test_halo_component(_to_test, 50000)
 
 #alfabeta halo
