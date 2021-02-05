@@ -201,7 +201,7 @@ Z=np.linspace(0.05,15,1000)
 Rg=np.linspace(0.05,15, int(np.sqrt(1000)))
 Zg=np.linspace(0.05,5, int(np.sqrt(1000)))
 #L=_to_test.potential(Rg,Zg,grid=True, toll=1e-4,nproc=2)
-print(L,"w")
+#print(L,"w")
 
 #Plummer halo
 rc=5
