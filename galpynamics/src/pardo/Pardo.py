@@ -102,7 +102,7 @@ class ParDo:
             pass
         else:
             raise ValueError('Sorted option %s not valid (it should be sort, input or None'%str(_sorted))
-            
+
         return results
 
 
@@ -134,13 +134,13 @@ class ParDo:
             start = 0
             end = 0
             for i in range(self.n):
-                #start = int(dim * i)
-                #end = int(dim * (i + 1))
-                #DEBUG
-                #print('DEBUG')
-                #print(start,end)
-                #print(array1)
-                #print(array1[start:end], array2[start:end])
+                start = int(dim * i)
+                end = int(dim * (i + 1))
+                DEBUG
+                print('DEBUG')
+                print(start,end)
+                print(array1)
+                print(array1[start:end], array2[start:end])
                 #
                 start = end
                 if i<dimr: end = start + dim +1
