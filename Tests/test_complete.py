@@ -24,41 +24,41 @@ def _check_parallel(checks, checkm, times, timem, idnans, idnanm):
         outmess=colored('Fail','red')
         print('Multi-cpu (2): '+outmess)
     sys.stdout.flush()
-    
+
 def _check_same_output(output1, output2):
-    
+
 
     same_output=(output1==output2).all()
     if same_output:
-        outmess=colored('Success','green') 
+        outmess=colored('Success','green')
         print('Same Output: '+outmess)
-    else: 
+    else:
         outmess=colored('Fail','red')
         print('Same Output: '+outmess)
     sys.stdout.flush()
-    
+
 
 def test_halo_component(halo_component, neval=1000):
-    
+
     print('*'*50)
     print('Test halo component: %s'%halo_component.name)
     print('*'*50)
     sys.stdout.flush()
     ngeval=int(np.sqrt(neval))
     nvel=100
-    
+
     R=np.linspace(0.05,15, neval)
     Z=np.linspace(0.05,5, neval)
     Rg=np.linspace(0.05,15, ngeval)
     Zg=np.linspace(0.05,5, ngeval)
     Rvel=np.linspace(0.05,15, nvel)
-    
+
     H=halo_component
     print('-'*50)
     print('Test potential estimate no grid (%i evalutations)'%neval)
     print('-'*50)
     sys.stdout.flush()
-    
+
     try:
         t1=timer()
         Pot_serial=H.potential(R,Z,grid=False, toll=1e-4,nproc=1)
@@ -69,7 +69,7 @@ def test_halo_component(halo_component, neval=1000):
         times=t2-t1
     except:
         checks=False
-        
+
     try:
         t1=timer()
         Pot_parallel=H.potential(R,Z,grid=False, toll=1e-4,nproc=2)
@@ -83,7 +83,7 @@ def test_halo_component(halo_component, neval=1000):
 
     _check_parallel(checks, checkm, times, timem, idnan_serial, idnan_parallel)
     if checks and checkm: _check_same_output(Pot_serial, Pot_parallel)
-        
+
     print('-'*50)
     print('Test potential estimate grid (%i evalutations)'%(ngeval*ngeval))
     print('-'*50)
@@ -99,10 +99,10 @@ def test_halo_component(halo_component, neval=1000):
         times=t2-t1
     except:
         checks=False
-        
+
     try:
         t1=timer()
-        Pot_parallel=H.potential(Rg, Zg, grid=True, toll=1e-4, nproc=2)  
+        Pot_parallel=H.potential(Rg, Zg, grid=True, toll=1e-4, nproc=2)
         idnan_parallel=np.isnan(Pot_parallel)
         Pot_parallel=np.where(np.isnan(Pot_parallel),-999, Pot_parallel)
         t2=timer()
@@ -110,15 +110,15 @@ def test_halo_component(halo_component, neval=1000):
         checkm=True
     except:
         checkm=False
-    
+
     _check_parallel(checks, checkm, times, timem, idnan_serial, idnan_parallel)
     if checks and checkm: _check_same_output(Pot_serial, Pot_parallel)
-    
+
     print('-'*50)
     print('Test Vcirc estimate  (%i evalutations)'%nvel)
     print('-'*50)
     sys.stdout.flush()
-    
+
     try:
         t1=timer()
         Vel_serial=H.vcirc(Rvel, toll=1e-4,nproc=1)
@@ -129,10 +129,10 @@ def test_halo_component(halo_component, neval=1000):
         times=t2-t1
     except:
         checks=False
-        
+
     try:
         t1=timer()
-        Vel_parallel=H.vcirc(Rvel, toll=1e-4, nproc=2)  
+        Vel_parallel=H.vcirc(Rvel, toll=1e-4, nproc=2)
         idnan_parallel=np.isnan(Vel_parallel)
         Vel_parallel=np.where(np.isnan(Vel_parallel),-999, Vel_parallel)
         t2=timer()
@@ -140,12 +140,12 @@ def test_halo_component(halo_component, neval=1000):
         checkm=True
     except:
         checkm=False
-        
+
     _check_parallel(checks, checkm, times, timem, idnan_serial, idnan_parallel)
     if checks and checkm: _check_same_output(Vel_serial, Vel_parallel)
-    
+
     print('*'*50)
-    
+
 
 #Isothermal halo
 d0=3
@@ -163,6 +163,15 @@ e=0.5
 _to_test=galpynamics.NFW_halo(d0=d0, rs=rs, mcut=mcut, e=e)
 test_halo_component(_to_test, 50000)
 
+#core NFW halo
+d0=3
+rc=2
+rs=5
+mcut=100
+e=0.5
+_to_test=galpynamics.core_NFW_halo(d0=d0, rs=rs, mcut=mcut, e=e)
+test_halo_component(_to_test, 50000)
+
 #alfabeta halo
 d0=3
 rs=5
@@ -172,6 +181,18 @@ mcut=100
 e=0.5
 _to_test=galpynamics.alfabeta_halo(d0=d0, rs=rs, alfa=alfa, beta=beta, mcut=mcut, e=e)
 test_halo_component(_to_test, 50000)
+
+#truncated alfabeta halo
+d0=3
+rs=5
+alfa=1.5
+beta=3.2
+rcut=10
+mcut=100
+e=0.5
+_to_test=galpynamics.truncated_alfabeta_halo(d0=d0, rs=rs, alfa=alfa, beta=beta, rcut=rcut, mcut=mcut, e=e)
+test_halo_component(_to_test, 50000)
+
 
 #Plummer halo
 rc=5
@@ -213,4 +234,3 @@ test_halo_component(_to_test, 100)
 #MWMcMillan17
 _to_test=galpynamics.MWMcMillan17()
 test_halo_component(_to_test, 100)
-
