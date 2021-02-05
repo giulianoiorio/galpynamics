@@ -188,7 +188,7 @@ d0=3
 rs=5
 alfa=1.5
 beta=3.2
-rcut=10
+rcut=30
 mcut=100
 e=0.5
 _to_test=galpynamics.truncated_alfabeta_halo(d0=d0, rs=rs, alfa=alfa, beta=beta, rcut=rcut, mcut=mcut, e=e)
