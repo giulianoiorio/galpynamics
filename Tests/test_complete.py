@@ -196,9 +196,12 @@ _to_test=galpynamics.truncated_alfabeta_halo(d0=d0, rs=rs, alfa=alfa, beta=beta,
 
 R=np.linspace(0.05,15,1000)
 Z=np.linspace(0.05,15,1000)
-L=_to_test.potential(R,Z,grid=False, toll=1e-4,nproc=1)
+L=_to_test.potential(R,Z,grid=False, toll=1e-4,nproc=2)
 print(L)
-
+Rg=np.linspace(0.05,15, int(np.sqrt(1000)))
+Zg=np.linspace(0.05,5, int(np.sqrt(1000)))
+L=_to_test.potential(Rg,Zg,grid=True, toll=1e-4,nproc=2)
+print(L)
 
 #Plummer halo
 rc=5
