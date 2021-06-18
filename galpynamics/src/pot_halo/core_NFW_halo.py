@@ -24,10 +24,10 @@ class core_NFW_halo(halo):
         #if (n>1) or (n<=0):
             #raise ValueError('n must be 0<n<=1')
 
+        super(core_NFW_halo,self).__init__(d0=d0,rc=rs,e=e,mcut=mcut)
         self.rs=rs
         self.rc=rc
         self.n=n
-        super(core_NFW_halo,self).__init__(d0=d0,rc=rs,e=e,mcut=mcut)
         self.name='CoreNFW halo'
 
     def _potential_serial(self, R, Z, grid=False, toll=1e-4, mcut=None):
